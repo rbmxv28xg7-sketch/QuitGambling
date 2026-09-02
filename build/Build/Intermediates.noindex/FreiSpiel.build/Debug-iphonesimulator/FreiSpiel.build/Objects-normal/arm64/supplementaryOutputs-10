@@ -1,0 +1,23 @@
+{
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/UrgeSurfingView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.dia",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.swiftdeps"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Tracker/SobrietyCalendarView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.dia",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.swiftdeps"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Tracker/TrackerView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.dia",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.swiftdeps"
+  }
+}

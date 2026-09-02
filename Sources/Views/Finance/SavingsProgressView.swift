@@ -1,0 +1,48 @@
+import SwiftUI
+
+/// Hero card displaying total money saved since sobriety start date.
+struct SavingsProgressView: View {
+    let totalSaved: Double
+    let startDate: Date
+
+    var body: some View {
+        VStack(spacing: Design.Spacing.md) {
+            HStack {
+                Image(systemName: "leaf.fill")
+                    .font(.title2)
+                    .foregroundStyle(.white.opacity(0.8))
+                Spacer()
+                Image(systemName: "banknote.fill")
+                    .font(.title3)
+                    .foregroundStyle(.white.opacity(0.6))
+            }
+
+            VStack(spacing: Design.Spacing.xs) {
+                Text(totalSaved, format: .currency(code: "EUR"))
+                    .font(.system(size: 40, weight: .bold, design: .rounded))
+                    .foregroundStyle(.white)
+                    .contentTransition(.numericText())
+                    .animation(Design.Anim.normal, value: totalSaved)
+
+                Text("gespart seit \(startDate, format: .dateTime.day().month(.wide).year())")
+                    .font(.subheadline)
+                    .foregroundStyle(.white.opacity(0.8))
+            }
+        }
+        .padding(Design.Spacing.lg)
+        .frame(maxWidth: .infinity)
+        .background(
+            LinearGradient(
+                colors: [Design.Colors.primary, Design.Colors.primaryLight],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+    }
+}
+
+#Preview {
+    SavingsProgressView(totalSaved: 1247.50, startDate: .now.addingTimeInterval(-86400 * 30))
+        .padding()
+}

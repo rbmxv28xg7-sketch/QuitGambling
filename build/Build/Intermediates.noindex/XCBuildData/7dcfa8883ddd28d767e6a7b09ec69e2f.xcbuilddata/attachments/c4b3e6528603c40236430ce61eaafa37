@@ -1,0 +1,549 @@
+{
+  "" : {
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpiel-primary.dia",
+    "emit-module-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpiel-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpiel-primary-emit-module.dia",
+    "pch" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpiel-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpiel-primary.swiftdeps"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/ContentView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Design/DesignTokens.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DesignTokens.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DesignTokens.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DesignTokens.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DesignTokens.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DesignTokens.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DesignTokens.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DesignTokens.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DesignTokens~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/FreiSpielApp.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpielApp.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpielApp.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpielApp.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpielApp.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpielApp.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpielApp.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpielApp.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FreiSpielApp~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Models/CravingLog.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLog.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLog.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLog.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLog.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLog.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLog.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLog.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLog~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Models/EmergencyContact.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyContact.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyContact.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyContact.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyContact.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyContact.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyContact.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyContact.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyContact~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Models/JournalEntry.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntry.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntry.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntry.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntry.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntry.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntry.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntry.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntry~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Models/MilestoneAchievement.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneAchievement.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneAchievement.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneAchievement.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneAchievement.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneAchievement.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneAchievement.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneAchievement.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneAchievement~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Models/ReasonToQuit.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonToQuit.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonToQuit.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonToQuit.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonToQuit.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonToQuit.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonToQuit.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonToQuit.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonToQuit~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Models/SavingsGoal.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoal.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoal.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoal.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoal.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoal.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoal.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoal.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoal~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Models/SelfAssessmentResult.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentResult.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentResult.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentResult.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentResult.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentResult.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentResult.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentResult.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentResult~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Models/UserProfile.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UserProfile.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UserProfile.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UserProfile.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UserProfile.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UserProfile.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UserProfile.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UserProfile.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UserProfile~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Services/NotificationManager.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NotificationManager.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NotificationManager.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NotificationManager.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NotificationManager.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NotificationManager.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NotificationManager.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NotificationManager.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NotificationManager~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Services/PrivacyManager.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/PrivacyManager.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/PrivacyManager.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/PrivacyManager.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/PrivacyManager.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/PrivacyManager.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/PrivacyManager.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/PrivacyManager.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/PrivacyManager~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/ViewModels/DashboardViewModel.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardViewModel.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardViewModel.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardViewModel.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardViewModel.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardViewModel.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardViewModel.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardViewModel.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardViewModel~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/ViewModels/FinanceViewModel.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceViewModel.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceViewModel.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceViewModel.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceViewModel.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceViewModel.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceViewModel.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceViewModel.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceViewModel~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/ViewModels/JournalViewModel.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalViewModel.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalViewModel.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalViewModel.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalViewModel.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalViewModel.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalViewModel.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalViewModel.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalViewModel~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/ViewModels/SOSViewModel.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSViewModel.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSViewModel.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSViewModel.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSViewModel.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSViewModel.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSViewModel.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSViewModel.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSViewModel~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/ViewModels/TrackerViewModel.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerViewModel.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerViewModel.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerViewModel.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerViewModel.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerViewModel.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerViewModel.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerViewModel.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerViewModel~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Dashboard/DailyPledgeView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DailyPledgeView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DailyPledgeView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DailyPledgeView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DailyPledgeView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DailyPledgeView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DailyPledgeView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DailyPledgeView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DailyPledgeView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Dashboard/DashboardView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DashboardView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Dashboard/LiveCounterView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/LiveCounterView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/LiveCounterView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/LiveCounterView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/LiveCounterView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/LiveCounterView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/LiveCounterView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/LiveCounterView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/LiveCounterView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Dashboard/MilestonePreviewView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestonePreviewView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestonePreviewView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestonePreviewView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestonePreviewView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestonePreviewView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestonePreviewView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestonePreviewView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestonePreviewView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Dashboard/SavingsCardView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsCardView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsCardView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsCardView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsCardView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsCardView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsCardView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsCardView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsCardView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Finance/FinanceView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/FinanceView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Finance/SavingsGoalCardView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoalCardView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoalCardView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoalCardView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoalCardView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoalCardView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoalCardView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoalCardView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsGoalCardView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Finance/SavingsProgressView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsProgressView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsProgressView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsProgressView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsProgressView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsProgressView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsProgressView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsProgressView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SavingsProgressView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Journal/JournalEntryView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntryView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntryView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntryView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntryView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntryView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntryView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntryView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalEntryView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Journal/JournalView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/JournalView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Journal/MoodPickerView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoodPickerView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoodPickerView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoodPickerView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoodPickerView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoodPickerView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoodPickerView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoodPickerView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoodPickerView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Journal/NewEntryView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NewEntryView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NewEntryView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NewEntryView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NewEntryView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NewEntryView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NewEntryView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NewEntryView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/NewEntryView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Resources/CognitiveDistortionView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CognitiveDistortionView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CognitiveDistortionView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CognitiveDistortionView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CognitiveDistortionView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CognitiveDistortionView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CognitiveDistortionView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CognitiveDistortionView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CognitiveDistortionView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Resources/ResourcesView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ResourcesView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ResourcesView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ResourcesView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ResourcesView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ResourcesView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ResourcesView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ResourcesView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ResourcesView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Resources/SelfAssessmentView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SelfAssessmentView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/BreathingExerciseView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/BreathingExerciseView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/BreathingExerciseView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/BreathingExerciseView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/BreathingExerciseView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/BreathingExerciseView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/BreathingExerciseView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/BreathingExerciseView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/BreathingExerciseView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/DEADSStrategyView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DEADSStrategyView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DEADSStrategyView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DEADSStrategyView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DEADSStrategyView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DEADSStrategyView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DEADSStrategyView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DEADSStrategyView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/DEADSStrategyView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/EmergencyBuddyView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyBuddyView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyBuddyView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyBuddyView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyBuddyView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyBuddyView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyBuddyView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyBuddyView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmergencyBuddyView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/GroundingExerciseView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GroundingExerciseView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GroundingExerciseView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GroundingExerciseView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GroundingExerciseView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GroundingExerciseView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GroundingExerciseView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GroundingExerciseView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GroundingExerciseView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/HotlineListView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/HotlineListView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/HotlineListView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/HotlineListView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/HotlineListView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/HotlineListView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/HotlineListView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/HotlineListView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/HotlineListView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/ReasonsCardDeckView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonsCardDeckView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonsCardDeckView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonsCardDeckView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonsCardDeckView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonsCardDeckView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonsCardDeckView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonsCardDeckView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/ReasonsCardDeckView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/SOSView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SOSView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/SOS/UrgeSurfingView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/UrgeSurfingView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Settings/MoreView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoreView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoreView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoreView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoreView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoreView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoreView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoreView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MoreView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Settings/OnboardingView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/OnboardingView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/OnboardingView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/OnboardingView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/OnboardingView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/OnboardingView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/OnboardingView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/OnboardingView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Settings/SettingsView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Shared/CamouflageView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CamouflageView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CamouflageView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CamouflageView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CamouflageView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CamouflageView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CamouflageView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CamouflageView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CamouflageView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Shared/EmptyStateView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmptyStateView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmptyStateView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmptyStateView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmptyStateView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmptyStateView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmptyStateView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmptyStateView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/EmptyStateView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Shared/MilestoneIcon.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneIcon.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneIcon.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneIcon.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneIcon.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneIcon.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneIcon.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneIcon.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneIcon~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Tracker/AnalyticsView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/AnalyticsView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/AnalyticsView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/AnalyticsView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/AnalyticsView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/AnalyticsView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/AnalyticsView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/AnalyticsView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/AnalyticsView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Tracker/CravingLoggerView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLoggerView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLoggerView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLoggerView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLoggerView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLoggerView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLoggerView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLoggerView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/CravingLoggerView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Tracker/MilestoneBadgesView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneBadgesView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneBadgesView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneBadgesView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneBadgesView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneBadgesView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneBadgesView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneBadgesView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/MilestoneBadgesView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Tracker/RelapseReflectionView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/RelapseReflectionView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/RelapseReflectionView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/RelapseReflectionView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/RelapseReflectionView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/RelapseReflectionView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/RelapseReflectionView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/RelapseReflectionView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/RelapseReflectionView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Tracker/SobrietyCalendarView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/SobrietyCalendarView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/Sources/Views/Tracker/TrackerView.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/TrackerView~partial.swiftmodule"
+  },
+  "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/freddy/.gemini/antigravity/scratch/FreiSpiel/build/Build/Intermediates.noindex/FreiSpiel.build/Debug-iphonesimulator/FreiSpiel.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}
