@@ -9,18 +9,21 @@ struct RelapseReflectionView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            ZStack {
+                FlutedGlassBackgroundView()
+
+                ScrollView(showsIndicators: false) {
                 VStack(spacing: Design.Spacing.xl) {
                     VStack(spacing: Design.Spacing.sm) {
                         Image(systemName: "heart.fill")
                             .font(.system(size: 48))
                             .foregroundStyle(Design.Colors.accent)
                         
-                        Text("Es ist okay.")
+                        Text("It's okay.")
                             .font(.title)
                             .bold()
                         
-                        Text("Du bist hier, und das ist mutig. Jeder Tag, den du bisher geschafft hast, zählt. Lass uns gemeinsam reflektieren, was passiert ist, ohne dich zu verurteilen.")
+                        Text("You are here, and that takes courage. Every day of freedom you've achieved still counts. Let's reflect together on what happened, without judgment.")
                             .multilineTextAlignment(.center)
                             .foregroundStyle(Design.Colors.secondary)
                     }
@@ -28,27 +31,27 @@ struct RelapseReflectionView: View {
                     
                     VStack(alignment: .leading, spacing: Design.Spacing.lg) {
                         VStack(alignment: .leading) {
-                            Text("Was hat dazu geführt?")
+                            Text("What led up to this?")
                                 .font(.headline)
-                            TextField("Situation, Gefühle, Gedanken...", text: $trigger, axis: .vertical)
+                            TextField("Situation, feelings, thoughts...", text: $trigger, axis: .vertical)
                                 .textFieldStyle(.roundedBorder)
                                 .lineLimit(3...)
                                 .frame(minHeight: 44)
                         }
                         
                         VStack(alignment: .leading) {
-                            Text("Was kannst du das nächste Mal anders machen?")
+                            Text("What can you do differently next time?")
                                 .font(.headline)
-                            TextField("Alternative Handlungen...", text: $futurePlan, axis: .vertical)
+                            TextField("Alternative actions, coping steps...", text: $futurePlan, axis: .vertical)
                                 .textFieldStyle(.roundedBorder)
                                 .lineLimit(3...)
                                 .frame(minHeight: 44)
                         }
                         
                         VStack(alignment: .leading) {
-                            Text("Worauf bist du in deiner spielfreien Zeit stolz?")
+                            Text("What are you proud of during your clean time?")
                                 .font(.headline)
-                            TextField("Deine Erfolge...", text: $achievements, axis: .vertical)
+                            TextField("Your achievements, lessons learned...", text: $achievements, axis: .vertical)
                                 .textFieldStyle(.roundedBorder)
                                 .lineLimit(3...)
                                 .frame(minHeight: 44)
@@ -57,14 +60,16 @@ struct RelapseReflectionView: View {
                     .padding(.horizontal)
                 }
             }
+            .dismissKeyboardOnTap()
+            }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Schließen") { dismiss() }
+                    Button("Close") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Speichern") {
-                        // Logik zum Speichern der Reflexion
+                    Button("Save") {
+                        // Logic to save reflection
                         dismiss()
                     }
                 }

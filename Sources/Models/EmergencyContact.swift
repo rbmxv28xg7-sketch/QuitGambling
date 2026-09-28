@@ -14,7 +14,7 @@ final class EmergencyContact: Identifiable {
         name: String = "",
         phoneNumber: String = "",
         relationship: String = "",
-        customMessage: String = "Hey, ich verspüre gerade starken Spieldruck und bräuchte kurz Unterstützung oder Ablenkung. Hast du kurz Zeit für mich?"
+        customMessage: String = "Hey, I'm experiencing a strong urge right now and could really use some support or a brief distraction. Do you have a quick moment to talk?"
     ) {
         self.name = name
         self.phoneNumber = phoneNumber

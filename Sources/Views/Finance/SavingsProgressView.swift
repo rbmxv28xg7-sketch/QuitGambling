@@ -10,23 +10,23 @@ struct SavingsProgressView: View {
             HStack {
                 Image(systemName: "leaf.fill")
                     .font(.title2)
-                    .foregroundStyle(.white.opacity(0.8))
+                    .foregroundStyle(Design.Colors.textOnPrimary.opacity(0.85))
                 Spacer()
                 Image(systemName: "banknote.fill")
                     .font(.title3)
-                    .foregroundStyle(.white.opacity(0.6))
+                    .foregroundStyle(Design.Colors.textOnPrimary.opacity(0.85))
             }
 
             VStack(spacing: Design.Spacing.xs) {
-                Text(totalSaved, format: .currency(code: "EUR"))
+                Text(totalSaved, format: .currency(code: "USD"))
                     .font(.system(size: 40, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Design.Colors.textOnPrimary)
                     .contentTransition(.numericText())
                     .animation(Design.Anim.normal, value: totalSaved)
 
-                Text("gespart seit \(startDate, format: .dateTime.day().month(.wide).year())")
+                Text("Saved since \(startDate, format: .dateTime.day().month(.wide).year())")
                     .font(.subheadline)
-                    .foregroundStyle(.white.opacity(0.8))
+                    .foregroundStyle(Design.Colors.textOnPrimary.opacity(0.85))
             }
         }
         .padding(Design.Spacing.lg)

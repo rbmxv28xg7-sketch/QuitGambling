@@ -10,29 +10,32 @@ struct EmergencyBuddyView: View {
     @State private var isShowingAddSheet = false
     @State private var newName = ""
     @State private var newPhone = ""
-    @State private var newRelationship = "Partner/in"
-    @State private var newMessage = "Hey, ich verspüre gerade Spieldruck und bräuchte kurz Unterstützung oder ein Gespräch. Hast du kurz Zeit?"
+    @State private var newRelationship = "Partner"
+    @State private var newMessage = "Hey, I'm feeling a strong urge right now and could really use a quick chat or support. Do you have a minute?"
 
     private var buddy: EmergencyContact? { contacts.first }
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: Design.Spacing.xl) {
-                if let buddy {
-                    activeBuddyCard(buddy)
-                } else {
-                    noBuddyCard
-                }
+        ZStack {
+            FlutedGlassBackgroundView()
 
-                tipsCard
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: Design.Spacing.xl) {
+                    if let buddy {
+                        activeBuddyCard(buddy)
+                    } else {
+                        noBuddyCard
+                    }
+
+                    tipsCard
+                }
+                .padding(Design.Spacing.md)
             }
-            .padding(Design.Spacing.md)
         }
-        .navigationTitle("Notfall-Buddy")
-        .background(Design.Colors.background)
+        .navigationTitle("Emergency Buddy".loc)
         .toolbar {
             if buddy != nil {
-                Button("Bearbeiten", systemImage: "pencil") {
+                Button("Edit".loc, systemImage: "pencil") {
                     if let b = buddy {
                         newName = b.name
                         newPhone = b.phoneNumber
@@ -45,7 +48,9 @@ struct EmergencyBuddyView: View {
         }
         .sheet(isPresented: $isShowingAddSheet) {
             editBuddySheet
+                .scrollIndicators(.hidden)
         }
+        .scrollIndicators(.hidden)
     }
 
     // MARK: - Active Buddy Card
@@ -66,28 +71,34 @@ struct EmergencyBuddyView: View {
                     Text(contact.name)
                         .font(.title3)
                         .bold()
-                    Text(contact.relationship.isEmpty ? "Vertrauensperson" : contact.relationship)
+                    Text(contact.relationship.isEmpty ? "Trusted Contact".loc : contact.relationship)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Design.Colors.textSecondary)
                     Text(contact.phoneNumber)
                         .font(.caption)
-                        .foregroundStyle(.tertiary)
+                        .foregroundStyle(Design.Colors.textTertiary)
                 }
                 Spacer()
             }
 
             VStack(alignment: .leading, spacing: Design.Spacing.xs) {
-                Text("Vorbereitete SMS-Nachricht:")
+                Text("Pre-written SOS Message:".loc)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
                 Text("\"\(contact.customMessage)\"")
                     .font(.subheadline)
                     .italic()
-                    .foregroundStyle(Design.Colors.secondary)
-                    .padding(Design.Spacing.sm)
+                    .foregroundStyle(Color.white.opacity(0.90))
+                    .padding(Design.Spacing.md)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Design.Colors.background)
-                    .clipShape(.rect(cornerRadius: Design.Radius.sm))
+                    .background(
+                        RoundedRectangle(cornerRadius: Design.Radius.md, style: .continuous)
+                            .fill(Color.white.opacity(0.06))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: Design.Radius.md, style: .continuous)
+                            .strokeBorder(Color.white.opacity(0.12), lineWidth: 1)
+                    )
             }
 
             HStack(spacing: Design.Spacing.md) {
@@ -95,9 +106,9 @@ struct EmergencyBuddyView: View {
                 Button {
                     sendSOSMessage(contact)
                 } label: {
-                    Label("SMS senden", systemImage: "message.fill")
+                    Label("Send SMS".loc, systemImage: "message.fill")
                         .font(.headline)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(Design.Colors.textOnPrimary)
                         .frame(maxWidth: .infinity)
                         .frame(height: 52)
                         .background(Design.Colors.primary)
@@ -108,9 +119,9 @@ struct EmergencyBuddyView: View {
                 Button {
                     callBuddy(contact)
                 } label: {
-                    Label("Anrufen", systemImage: "phone.fill")
+                    Label("Call".loc, systemImage: "phone.fill")
                         .font(.headline)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(Design.Colors.textOnPrimary)
                         .frame(maxWidth: .infinity)
                         .frame(height: 52)
                         .background(Design.Colors.accent)
@@ -118,10 +129,7 @@ struct EmergencyBuddyView: View {
                 }
             }
         }
-        .padding(Design.Spacing.lg)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
-        .shadow(color: .black.opacity(0.04), radius: 8, y: 3)
+        .sereneCardStyle(padding: Design.Spacing.lg)
     }
 
     // MARK: - No Buddy Card
@@ -129,89 +137,126 @@ struct EmergencyBuddyView: View {
     private var noBuddyCard: some View {
         VStack(spacing: Design.Spacing.lg) {
             Image(systemName: "person.crop.circle.badge.plus")
-                .font(.system(size: 64))
+                .font(.system(size: 56))
                 .foregroundStyle(Design.Colors.primary)
 
             VStack(spacing: Design.Spacing.xs) {
-                Text("Vertrauensperson hinzufügen")
+                Text("Add a Trusted Contact".loc)
                     .font(.title3)
                     .bold()
-                Text("Hinterlege einen Partner, Freund oder Therapeuten. Im Moment des Spieldrucks kannst du dich mit einem Klick melden.")
+                    .foregroundStyle(.white)
+                Text("Set up your partner, friend, or counselor. When an urge hits, you can reach out with a single tap.".loc)
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
                     .multilineTextAlignment(.center)
             }
 
             Button {
                 newName = ""
                 newPhone = ""
-                newRelationship = "Partner/in"
-                newMessage = "Hey, ich verspüre gerade Spieldruck und bräuchte kurz Unterstützung oder ein Gespräch. Hast du kurz Zeit?"
+                newRelationship = "Partner"
+                newMessage = "Hey, I'm feeling a strong urge right now and could really use a quick chat or support. Do you have a minute?"
                 isShowingAddSheet = true
             } label: {
-                Text("Buddy jetzt festlegen")
+                Text("Set Up Buddy Now".loc)
                     .font(.headline)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Design.Colors.textOnPrimary)
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
                     .background(Design.Colors.primary)
                     .clipShape(.rect(cornerRadius: Design.Radius.md))
             }
         }
-        .padding(Design.Spacing.xl)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+        .sereneCardStyle(padding: Design.Spacing.xl)
     }
 
     // MARK: - Tips Card
 
     private var tipsCard: some View {
         VStack(alignment: .leading, spacing: Design.Spacing.sm) {
-            Label("Warum ein Buddy hilft", systemImage: "lightbulb.fill")
+            Label("Why an Emergency Buddy Helps".loc, systemImage: "lightbulb.fill")
                 .font(.headline)
                 .foregroundStyle(Design.Colors.gold)
 
-            Text("• **Verbindung statt Isolation:** Suchtdruck nährt sich von Einsamkeit und Heimlichkeit.\n• **Soziale Hemmschwelle:** Ein offenes Wort zu einer Vertrauensperson unterbricht den Tunnelblick.\n• **Sofortige Entlastung:** Schon das Absenden der Nachricht hilft, die ersten kritischen 15 Minuten zu überbrücken.")
+            Text("• **Connection over isolation:** Compulsive urges thrive on solitude and secrecy.\n• **Accountability brake:** An open word with a trusted person immediately interrupts tunnel vision.\n• **Immediate relief:** Simply sending the prepared SOS message helps bridge the critical first 15 minutes.".loc)
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Design.Colors.textSecondary)
                 .lineSpacing(4)
         }
-        .padding(Design.Spacing.lg)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+        .sereneCardStyle(padding: Design.Spacing.lg)
     }
 
     // MARK: - Edit/Add Sheet
 
     private var editBuddySheet: some View {
         NavigationStack {
-            Form {
-                Section("Kontaktdaten") {
-                    TextField("Vollständiger Name", text: $newName)
-                    TextField("Telefonnummer (z.B. +49 170...)", text: $newPhone)
-                        .keyboardType(.phonePad)
-                    TextField("Beziehung (z.B. Partner, Schwester, Freund)", text: $newRelationship)
-                }
+            ZStack {
+                FlutedGlassBackgroundView()
 
-                Section("Vorgefertigter Hilfetext") {
-                    TextField("Nachricht", text: $newMessage, axis: .vertical)
-                        .lineLimit(3...6)
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: Design.Spacing.lg) {
+                        Text((buddy == nil ? "Add Buddy" : "Edit Buddy").loc)
+                            .font(.title2.weight(.bold))
+                            .foregroundStyle(Color.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.top, Design.Spacing.xs)
+
+                        buddyFormSection("Contact Details".loc) {
+                            TextField("Full Name".loc, text: $newName)
+                                .foregroundStyle(Design.Colors.textPrimary)
+                            Divider().background(Color.white.opacity(0.12))
+                            TextField("Phone Number (e.g. +1 555...)".loc, text: $newPhone)
+                                .keyboardType(.phonePad)
+                                .foregroundStyle(Design.Colors.textPrimary)
+                            Divider().background(Color.white.opacity(0.12))
+                            TextField("Relationship (e.g. Partner, Friend, Sibling)".loc, text: $newRelationship)
+                                .foregroundStyle(Design.Colors.textPrimary)
+                        }
+
+                        buddyFormSection("Pre-written SOS Message".loc) {
+                            TextField("Message".loc, text: $newMessage, axis: .vertical)
+                                .lineLimit(3...6)
+                                .foregroundStyle(Design.Colors.textPrimary)
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, Design.Spacing.md)
+                    .padding(.bottom, 40)
                 }
             }
-            .navigationTitle(buddy == nil ? "Buddy hinzufügen" : "Buddy bearbeiten")
+            .dismissKeyboardOnTap()
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Abbrechen") { isShowingAddSheet = false }
+                    Button("Cancel".loc) { isShowingAddSheet = false }
+                        .foregroundStyle(Design.Colors.textSecondary)
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Speichern") {
+                    Button("Save".loc) {
                         saveBuddy()
                         isShowingAddSheet = false
                     }
+                    .bold()
+                    .foregroundStyle(Design.Colors.gold)
                     .disabled(newName.trimmingCharacters(in: .whitespaces).isEmpty || newPhone.trimmingCharacters(in: .whitespaces).isEmpty)
                 }
             }
+        }
+    }
+
+    private func buddyFormSection<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
+        VStack(alignment: .leading, spacing: Design.Spacing.xs) {
+            Text(title.uppercased())
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(Design.Colors.gold)
+                .padding(.leading, 8)
+
+            VStack(spacing: Design.Spacing.md) {
+                content()
+            }
+            .liquidGlass(cornerRadius: Design.Radius.card, padding: Design.Spacing.md)
         }
     }
 

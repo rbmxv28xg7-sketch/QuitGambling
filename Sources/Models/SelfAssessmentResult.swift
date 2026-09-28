@@ -12,26 +12,26 @@ final class SelfAssessmentResult: Identifiable {
     var riskCategory: String {
         switch score {
         case 0:
-            return "Kein Risikoverhalten"
+            return "Non-problem gambling"
         case 1...2:
-            return "Geringes Risiko"
+            return "Low risk"
         case 3...7:
-            return "Mäßiges Risiko"
+            return "Moderate risk"
         default:
-            return "Problematisches Spielverhalten"
+            return "Problem gambling"
         }
     }
 
     var recommendation: String {
         switch score {
         case 0:
-            return "Dein Spielverhalten zeigt derzeit keine Anzeichen für ein problematisches Muster. Bleibe weiterhin achtsam."
+            return "Your habits show no signs of problem gambling. Continue staying mindful and focused on your goals."
         case 1...2:
-            return "Es gibt leichte Anzeichen für riskantes Verhalten. Nutze die Tracker- und Reflexionsfunktionen, um deine Gewohnheiten im Blick zu behalten."
+            return "There are mild indicators of risk. Use the daily tracker and reflections to stay in control of your habits."
         case 3...7:
-            return "Dein Spielverhalten weist auf ein mäßiges Risikomuster hin, das zu Problemen führen kann. Wir empfehlen, feste Sperren (wie OASIS) und tägliche Pledges zu nutzen."
+            return "Your responses indicate moderate risk that may lead to difficulty. We recommend activating full shield blocks and daily pledges."
         default:
-            return "Dein Testergebnis deutet auf ein problematisches Glücksspielmuster hin. Zögere nicht, sofortige Unterstützung über die BZgA-Hotline oder eine Beratungsstelle in Anspruch zu nehmen."
+            return "Your score indicates problem gambling patterns. Please reach out to confidential support resources or call 1-800-GAMBLER."
         }
     }
 

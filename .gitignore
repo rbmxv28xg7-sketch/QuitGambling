@@ -1,0 +1,29 @@
+# Build artifacts
+build/
+build_output/
+DerivedData/
+*.xcarchive
+
+# Xcode user data
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+
+# Screenshots & test images
+*.png
+*.jpg
+*.jpeg
+*.mp4
+
+# Python scripts (not part of the app)
+*.py
+
+# Misc
+cookies.txt
+main
+*.plist
+!Sources/**/*.plist
+!QuitGambling.entitlements
+
+# OS files
+.DS_Store

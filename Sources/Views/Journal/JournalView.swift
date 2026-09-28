@@ -9,64 +9,87 @@ struct JournalView: View {
     @State private var showingNewEntry = false
     
     var body: some View {
-        NavigationStack {
-            List {
+        ZStack {
+            FlutedGlassBackgroundView()
+
+            ScrollView(showsIndicators: false) {
                 let filtered = viewModel.filteredEntries(entries)
-                
-                if filtered.isEmpty {
-                    ContentUnavailableView(
-                        "Keine Einträge",
-                        systemImage: "book.pages",
-                        description: Text("Beginne dein Tagebuch, indem du deine Gedanken festhältst.")
-                    )
-                    .listRowBackground(Color.clear)
-                } else {
-                    ForEach(filtered) { entry in
-                        NavigationLink(destination: JournalEntryView(entry: entry)) {
-                            VStack(alignment: .leading, spacing: Design.Spacing.sm) {
-                                HStack {
-                                    Text(entry.date, format: .dateTime.day().month().year())
-                                        .font(.subheadline)
-                                        .foregroundStyle(Design.Colors.secondary)
-                                    Spacer()
-                                    if let mood = Design.Mood(rawValue: entry.mood) {
-                                        Text(mood.emoji)
+
+                VStack(spacing: Design.Spacing.md) {
+                    if filtered.isEmpty {
+                        EmptyStateView(
+                            icon: "book.pages",
+                            title: "No Entries",
+                            subtitle: "Start your journal by recording your daily thoughts."
+                        )
+                        .padding(.top, 40)
+                    } else {
+                        ForEach(filtered) { entry in
+                            NavigationLink(destination: JournalEntryView(entry: entry)) {
+                                VStack(alignment: .leading, spacing: Design.Spacing.sm) {
+                                    HStack {
+                                        Text(entry.date, format: .dateTime.day().month().year())
+                                            .font(.subheadline.weight(.semibold))
+                                            .foregroundStyle(Design.Colors.textSecondary)
+                                        Spacer()
+                                        if let mood = Design.Mood(rawValue: entry.mood) {
+                                            ZStack {
+                                                Circle()
+                                                    .fill(mood.color.opacity(0.18))
+                                                    .frame(width: 28, height: 28)
+                                                Image(systemName: mood.iconName)
+                                                    .font(.system(size: 13, weight: .bold))
+                                                    .foregroundStyle(mood.color)
+                                            }
+                                        }
                                     }
+                                    
+                                    Text(entry.text)
+                                        .lineLimit(2)
+                                        .font(.body)
+                                        .foregroundStyle(Design.Colors.textPrimary)
                                 }
-                                
-                                Text(entry.text)
-                                    .lineLimit(2)
-                                    .font(.body)
-                                    .foregroundStyle(Design.Colors.primary)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .liquidGlass(cornerRadius: Design.Radius.card, padding: Design.Spacing.md)
                             }
-                            .padding(.vertical, Design.Spacing.xs)
+                            .buttonStyle(.plain)
+                            .contextMenu {
+                                Button(role: .destructive) {
+                                    SensoryFeedbackService.shared.selectionClick()
+                                    modelContext.delete(entry)
+                                    try? modelContext.save()
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
+                            }
                         }
                     }
-                    .onDelete(perform: deleteEntries)
                 }
+                .padding(.horizontal)
+                .padding(.top, Design.Spacing.md)
+                .padding(.bottom, 96)
             }
-            .navigationTitle("Tagebuch")
-            .searchable(text: $viewModel.searchText, prompt: "Suchen...")
+            .navigationTitle("Journal")
+            .searchable(text: $viewModel.searchText, prompt: "Search...")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button(action: { showingNewEntry = true }) {
+                    Button(action: {
+                        SensoryFeedbackService.shared.buttonTap()
+                        showingNewEntry = true
+                    }) {
                         Image(systemName: "square.and.pencil")
-                            .foregroundStyle(Design.Colors.accent)
+                            .foregroundStyle(Design.Colors.gold)
                     }
                     .frame(minWidth: 44, minHeight: 44)
                 }
             }
             .sheet(isPresented: $showingNewEntry) {
                 NewEntryView(viewModel: viewModel)
+                    .scrollIndicators(.hidden)
             }
+            .scrollIndicators(.hidden)
         }
-    }
-    
-    private func deleteEntries(offsets: IndexSet) {
-        let filtered = viewModel.filteredEntries(entries)
-        for index in offsets {
-            viewModel.deleteEntry(context: modelContext, entry: filtered[index])
-        }
+        .scrollIndicators(.hidden)
     }
 }
 

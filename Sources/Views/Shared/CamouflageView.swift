@@ -1,31 +1,65 @@
 import SwiftUI
 
-/// A discreet camouflage screen resembling a generic notes/checklist app for privacy in public situations.
+/// A versatile camouflage overlay that switches dynamically between a realistic Calculator and a Notes app.
 struct CamouflageView: View {
     var onExit: () -> Void
+    var privacyManager: PrivacyManager? = nil
 
-    @State private var notesText: String = "Projektplanung Q3\n- Aufgaben priorisieren\n- Budgetüberblick vorbereiten\n- Feedback einholen"
+    @Environment(PrivacyManager.self) private var envPrivacyManager: PrivacyManager?
+
+    private var activePrivacy: PrivacyManager {
+        privacyManager ?? envPrivacyManager ?? PrivacyManager()
+    }
+
+    @State private var notesText: String = "Q3 Project Planning\n- Prioritize tasks\n- Prepare budget overview\n- Gather team feedback"
     @State private var tasks: [(title: String, done: Bool)] = [
-        ("Meeting-Notizen abtippen", true),
-        ("Rücksprache mit Team", false),
-        ("Dokumentation aktualisieren", false)
+        ("Type up meeting notes", true),
+        ("Follow up with team", false),
+        ("Update documentation", false)
     ]
 
     var body: some View {
+        Group {
+            if activePrivacy.selectedCamouflageStyle == .calculator {
+                CalculatorCamouflageView(
+                    onExit: onExit,
+                    targetPIN: activePrivacy.camouflagePIN,
+                    onBiometricRecovery: {
+                        await activePrivacy.performAuthentication()
+                    }
+                )
+            } else {
+                notesDisguiseView
+            }
+        }
+    }
+
+    // MARK: - Notes Disguise Mode
+
+    private var notesDisguiseView: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: Design.Spacing.md) {
                 HStack {
-                    Label("Einfache Notizen", systemImage: "note.text")
+                    Label("Simple Notes", systemImage: "note.text")
                         .font(.headline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Design.Colors.textSecondary)
+                        .contentShape(Rectangle())
+                        .onLongPressGesture(minimumDuration: 1.5) {
+                            Task {
+                                let success = await activePrivacy.performAuthentication()
+                                if success { onExit() }
+                            }
+                        }
+
                     Spacer()
+
                     // Discreet exit button
                     Button {
                         onExit()
                     } label: {
                         Image(systemName: "xmark.circle.fill")
                             .font(.title3)
-                            .foregroundStyle(.tertiary)
+                            .foregroundStyle(Design.Colors.textSecondary)
                     }
                     .frame(minWidth: 44, minHeight: 44)
                 }
@@ -35,12 +69,18 @@ struct CamouflageView: View {
                 Divider()
 
                 List {
-                    Section("Kurznotiz") {
-                        TextField("Notiz eingeben...", text: $notesText, axis: .vertical)
+                    Section("Quick Note") {
+                        TextField("Enter note...", text: $notesText, axis: .vertical)
                             .lineLimit(3...6)
+                            .onChange(of: notesText) { _, newText in
+                                if newText.trimmingCharacters(in: .whitespacesAndNewlines) == activePrivacy.camouflagePIN {
+                                    SensoryFeedbackService.shared.successFeedback()
+                                    onExit()
+                                }
+                            }
                     }
 
-                    Section("Aufgaben") {
+                    Section("Tasks") {
                         ForEach(0..<tasks.count, id: \.self) { index in
                             HStack {
                                 Image(systemName: tasks[index].done ? "checkmark.circle.fill" : "circle")
@@ -57,6 +97,7 @@ struct CamouflageView: View {
                     }
                 }
                 .listStyle(.insetGrouped)
+                .scrollIndicators(.hidden)
             }
             .navigationBarHidden(true)
             .background(Color(uiColor: .systemGroupedBackground))
@@ -66,4 +107,5 @@ struct CamouflageView: View {
 
 #Preview {
     CamouflageView(onExit: {})
+        .environment(PrivacyManager())
 }

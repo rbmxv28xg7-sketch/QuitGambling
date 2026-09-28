@@ -12,43 +12,47 @@ struct SelfAssessmentView: View {
     @State private var completedResult: SelfAssessmentResult?
 
     private let questions: [String] = [
-        "Haben Sie mit höheren Beträgen gespielt, als Sie sich leisten konnten zu verlieren?",
-        "Mussten Sie mit immer größeren Geldbeträgen spielen, um die gleiche Spannung zu empfinden?",
-        "Sind Sie an einem anderen Tag zurückgekehrt, um verlorenes Geld zurückzugewinnen (Verlustjagd)?",
-        "Haben Sie sich Geld geliehen oder etwas verkauft, um Geld zum Spielen zu haben?",
-        "Hatten Sie das Gefühl, dass Sie möglicherweise ein Problem mit dem Glücksspiel haben könnten?",
-        "Hat das Glücksspiel bei Ihnen zu gesundheitlichen Problemen geführt (wie Stress oder Schlafprobleme)?",
-        "Haben andere Menschen Ihr Spielverhalten kritisiert oder Ihnen gesagt, dass Sie ein Spielproblem haben?",
-        "Hat Ihr Spielverhalten finanzielle Probleme für Sie oder Ihren Haushalt verursacht?",
-        "Hatten Sie Schuldgefühle wegen der Art und Weise, wie Sie spielen, oder wegen der Folgen des Spielens?"
+        "Have you bet more than you could really afford to lose?",
+        "Have you needed to gamble with larger amounts of money to get the same feeling of excitement?",
+        "When you gambled, did you go back another day to try to win back the money you lost (chasing losses)?",
+        "Have you borrowed money or sold anything to get money to gamble?",
+        "Have you felt that you might have a problem with gambling?",
+        "Has gambling caused you any health problems, including stress or anxiety?",
+        "Have people criticized your betting or told you that you had a gambling problem?",
+        "Has your gambling caused any financial problems for you or your household?",
+        "Have you felt guilty about the way you gamble or what happens when you gamble?"
     ]
 
     private let optionLabels = [
-        ("Nie", 0),
-        ("Manchmal", 1),
-        ("Oft", 2),
-        ("Fast immer", 3)
+        ("Never", 0),
+        ("Sometimes", 1),
+        ("Often", 2),
+        ("Almost Always", 3)
     ]
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: Design.Spacing.xl) {
-                if let result = completedResult {
-                    resultCard(result)
-                } else if isTestActive {
-                    questionFlow
-                } else {
-                    introCard
+        ZStack {
+            FlutedGlassBackgroundView()
 
-                    if !pastResults.isEmpty {
-                        historySection
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: Design.Spacing.xl) {
+                    if let result = completedResult {
+                        resultCard(result)
+                    } else if isTestActive {
+                        questionFlow
+                    } else {
+                        introCard
+
+                        if !pastResults.isEmpty {
+                            historySection
+                        }
                     }
                 }
+                .padding(Design.Spacing.md)
+                .padding(.bottom, 96)
             }
-            .padding(Design.Spacing.md)
         }
-        .navigationTitle("PGSI Selbsttest")
-        .background(Design.Colors.background)
+        .navigationTitle("PGSI Self-Assessment")
     }
 
     // MARK: - Intro Card
@@ -57,49 +61,47 @@ struct SelfAssessmentView: View {
         VStack(spacing: Design.Spacing.lg) {
             Image(systemName: "doc.text.magnifyingglass")
                 .font(.system(size: 60))
-                .foregroundStyle(Design.Colors.primary)
+                .foregroundStyle(Design.Colors.gold)
 
             VStack(spacing: Design.Spacing.sm) {
                 Text("Problem Gambling Severity Index (PGSI)")
                     .font(.title3)
                     .bold()
+                    .foregroundStyle(Design.Colors.textPrimary)
                     .multilineTextAlignment(.center)
 
-                Text("Der PGSI ist ein international anerkannter klinischer Screening-Fragebogen mit 9 Fragen zur objektiven Einschätzung des eigenen Spielverhaltens in den letzten 12 Monaten.")
+                Text("The Problem Gambling Severity Index (PGSI) is an internationally recognized clinical screening tool with 9 standardized questions to evaluate gambling behavior over the past 12 months.")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
                     .multilineTextAlignment(.center)
                     .lineSpacing(3)
             }
 
             VStack(alignment: .leading, spacing: Design.Spacing.xs) {
-                Label("Dauert nur 2–3 Minuten", systemImage: "clock.fill")
-                Label("100% anonym & lokal gespeichert", systemImage: "lock.shield.fill")
-                Label("Wissenschaftlich validiert", systemImage: "checkmark.seal.fill")
+                Label("Takes only 2–3 minutes", systemImage: "clock.fill")
+                Label("100% anonymous & stored locally", systemImage: "lock.shield.fill")
+                Label("Scientifically validated", systemImage: "checkmark.seal.fill")
             }
             .font(.caption)
-            .foregroundStyle(Design.Colors.secondary)
+            .foregroundStyle(Design.Colors.textSecondary)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(Design.Spacing.md)
-            .background(Design.Colors.background)
+            .background(Color.white.opacity(0.06))
             .clipShape(.rect(cornerRadius: Design.Radius.md))
 
             Button {
                 startNewTest()
             } label: {
-                Text("Test jetzt starten")
+                Text("Start Assessment Now")
                     .font(.headline)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Design.Colors.textOnPrimary)
                     .frame(maxWidth: .infinity)
                     .frame(height: 52)
                     .background(Design.Colors.primary)
                     .clipShape(.rect(cornerRadius: Design.Radius.md))
             }
         }
-        .padding(Design.Spacing.xl)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
-        .shadow(color: .black.opacity(0.04), radius: 8, y: 3)
+        .liquidGlass(cornerRadius: Design.Radius.card, padding: Design.Spacing.xl)
     }
 
     // MARK: - Question Flow
@@ -109,9 +111,9 @@ struct SelfAssessmentView: View {
             // Progress
             VStack(spacing: Design.Spacing.xs) {
                 HStack {
-                    Text("Frage \(currentQuestionIndex + 1) von 9")
+                    Text("Question \(currentQuestionIndex + 1) of 9")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Design.Colors.textSecondary)
                     Spacer()
                     Text("\(Int(Double(currentQuestionIndex + 1) / 9.0 * 100))%")
                         .font(.caption)
@@ -127,6 +129,7 @@ struct SelfAssessmentView: View {
             Text(questions[currentQuestionIndex])
                 .font(.title3)
                 .bold()
+                .foregroundStyle(Design.Colors.textPrimary)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.vertical, Design.Spacing.md)
@@ -142,6 +145,7 @@ struct SelfAssessmentView: View {
                             Text(label)
                                 .font(.body)
                                 .fontWeight(.medium)
+                                .foregroundStyle(Design.Colors.textPrimary)
                             Spacer()
                             if answers[currentQuestionIndex] == score {
                                 Image(systemName: "checkmark.circle.fill")
@@ -151,10 +155,10 @@ struct SelfAssessmentView: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                         .frame(minHeight: 52)
-                        .background(answers[currentQuestionIndex] == score ? Design.Colors.primary.opacity(0.12) : Design.Colors.surface)
+                        .background(answers[currentQuestionIndex] == score ? Design.Colors.primary.opacity(0.20) : Color.white.opacity(0.06))
                         .overlay(
                             RoundedRectangle(cornerRadius: Design.Radius.md)
-                                .stroke(answers[currentQuestionIndex] == score ? Design.Colors.primary : Color.clear, lineWidth: 1.5)
+                                .stroke(answers[currentQuestionIndex] == score ? Design.Colors.primary : Color.white.opacity(0.08), lineWidth: 1.5)
                         )
                         .clipShape(.rect(cornerRadius: Design.Radius.md))
                     }
@@ -165,17 +169,17 @@ struct SelfAssessmentView: View {
             // Navigation Buttons
             HStack {
                 if currentQuestionIndex > 0 {
-                    Button("Zurück") {
+                    Button("Back") {
                         withAnimation(Design.Anim.normal) {
                             currentQuestionIndex -= 1
                         }
                     }
-                    .tint(.secondary)
+                    .tint(Design.Colors.textSecondary)
                 }
 
                 Spacer()
 
-                Button("Abbrechen") {
+                Button("Cancel") {
                     withAnimation {
                         isTestActive = false
                     }
@@ -184,9 +188,7 @@ struct SelfAssessmentView: View {
             }
             .padding(.top, Design.Spacing.md)
         }
-        .padding(Design.Spacing.xl)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+        .liquidGlass(cornerRadius: Design.Radius.card, padding: Design.Spacing.xl)
     }
 
     // MARK: - Result Card
@@ -205,7 +207,7 @@ struct SelfAssessmentView: View {
                         .foregroundStyle(scoreBadgeColor(result.score))
                     Text("/ 27")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Design.Colors.textSecondary)
                 }
             }
 
@@ -217,36 +219,39 @@ struct SelfAssessmentView: View {
 
                 Text(result.recommendation)
                     .font(.body)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.top, Design.Spacing.xs)
                     .lineSpacing(3)
             }
 
-            Divider()
+            Divider().background(Color.white.opacity(0.12))
 
             VStack(alignment: .leading, spacing: Design.Spacing.sm) {
-                Text("Empfohlene nächste Schritte:")
+                Text("Recommended Next Steps:")
                     .font(.headline)
+                    .foregroundStyle(Design.Colors.textPrimary)
 
                 if result.score >= 3 {
                     NavigationLink {
                         HotlineListView()
                     } label: {
-                        Label("Kostenlose BZgA-Hotline anrufen (0800 1 37 27 00)", systemImage: "phone.fill")
+                        Label("Call 1-800-GAMBLER Helpline", systemImage: "phone.fill")
                             .font(.subheadline)
+                            .foregroundStyle(Design.Colors.textPrimary)
                     }
 
                     NavigationLink {
                         BreathingExerciseView()
                     } label: {
-                        Label("Atemübung bei Spieldruck durchführen", systemImage: "lungs.fill")
+                        Label("Practice Box Breathing for Urges", systemImage: "lungs.fill")
                             .font(.subheadline)
+                            .foregroundStyle(Design.Colors.textPrimary)
                     }
                 } else {
-                    Text("• Führe weiterhin regelmäßig dein Tagebuch.\n• Beobachte emotionale Auslöser wie Stress oder Langeweile.\n• Nutze bei Bedarf jederzeit die Übungen im SOS-Bereich.")
+                    Text("• Continue logging your daily thoughts and check-ins in your journal.\n• Observe emotional triggers like stress, boredom, or loneliness.\n• Use the SOS interactive tools anytime you experience urges.")
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Design.Colors.textSecondary)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -257,26 +262,25 @@ struct SelfAssessmentView: View {
                     isTestActive = false
                 }
             } label: {
-                Text("Fertig")
+                Text("Done")
                     .font(.headline)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(Design.Colors.textOnPrimary)
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
                     .background(Design.Colors.primary)
                     .clipShape(.rect(cornerRadius: Design.Radius.md))
             }
         }
-        .padding(Design.Spacing.xl)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+        .liquidGlass(cornerRadius: Design.Radius.card, padding: Design.Spacing.xl)
     }
 
     // MARK: - History Section
 
     private var historySection: some View {
         VStack(alignment: .leading, spacing: Design.Spacing.sm) {
-            Text("Vergangene Testergebnisse")
+            Text("Past Assessment Results")
                 .font(.headline)
+                .foregroundStyle(Design.Colors.textPrimary)
                 .padding(.horizontal, Design.Spacing.xs)
 
             ForEach(pastResults.prefix(5)) { res in
@@ -285,6 +289,7 @@ struct SelfAssessmentView: View {
                         Text(res.date, format: .dateTime.day().month().year())
                             .font(.subheadline)
                             .bold()
+                            .foregroundStyle(Design.Colors.textPrimary)
                         Text(res.riskCategory)
                             .font(.caption)
                             .foregroundStyle(scoreBadgeColor(res.score))
@@ -292,14 +297,12 @@ struct SelfAssessmentView: View {
 
                     Spacer()
 
-                    Text("\(res.score) Punkte")
+                    Text("\(res.score) Points")
                         .font(.subheadline)
                         .bold()
                         .foregroundStyle(scoreBadgeColor(res.score))
                 }
-                .padding(Design.Spacing.md)
-                .background(Design.Colors.surface)
-                .clipShape(.rect(cornerRadius: Design.Radius.md))
+                .liquidGlass(cornerRadius: Design.Radius.md, padding: Design.Spacing.md)
             }
         }
     }

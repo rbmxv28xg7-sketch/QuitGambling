@@ -1,0 +1,87 @@
+name: QuitGambling
+options:
+  bundleIdPrefix: com.lennertroehrig
+  deploymentTarget:
+    iOS: "18.0"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: true
+packages:
+  RevenueCat:
+    url: https://github.com/RevenueCat/purchases-ios.git
+    from: "5.0.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    DEVELOPMENT_TEAM: "U52XZVLMTC"
+    CURRENT_PROJECT_VERSION: "5"
+    MARKETING_VERSION: "1.0"
+    INFOPLIST_KEY_CFBundleDisplayName: "Quit Gambling"
+    INFOPLIST_KEY_CFBundleShortVersionString: "1.0"
+    INFOPLIST_KEY_CFBundleVersion: "5"
+    INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.healthcare-fitness"
+    INFOPLIST_KEY_UIRequiresFullScreen: true
+    INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: false
+    SWIFT_STRICT_CONCURRENCY: complete
+targets:
+  QuitGambling:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies:
+      - package: RevenueCat
+      - target: QuitGamblingShieldConfiguration
+        embed: true
+      - target: QuitGamblingShieldAction
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lennertroehrig.freispiel
+        DEVELOPMENT_TEAM: "U52XZVLMTC"
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: Sources/Info.plist
+        INFOPLIST_KEY_CFBundleDisplayName: "Quit Gambling"
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_ENTITLEMENTS: QuitGambling.entitlements
+        CODE_SIGN_STYLE: Automatic
+        INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "Quit Gambling nutzt deinen Standort, um dich vor Gefahrenorten wie Spielhallen durch subtile Achtsamkeit zu schützen."
+        INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription: "Quit Gambling benötigt den Hintergrund-Standort, um das Schutzschild automatisch in der Nähe markierter Gefahrenzonen zu aktivieren."
+        ENABLE_PREVIEWS: true
+
+  QuitGamblingShieldConfiguration:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: ShieldConfiguration
+    settings:
+      base:
+        PRODUCT_NAME: "QuitGamblingShieldConfiguration"
+        PRODUCT_BUNDLE_IDENTIFIER: com.lennertroehrig.freispiel.ShieldConfiguration
+        DEVELOPMENT_TEAM: "U52XZVLMTC"
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: ShieldConfiguration/Info.plist
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_STRICT_CONCURRENCY: complete
+
+  QuitGamblingShieldAction:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: ShieldAction
+    settings:
+      base:
+        PRODUCT_NAME: "QuitGamblingShieldAction"
+        PRODUCT_BUNDLE_IDENTIFIER: com.lennertroehrig.freispiel.ShieldAction
+        DEVELOPMENT_TEAM: "U52XZVLMTC"
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: ShieldAction/Info.plist
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_STRICT_CONCURRENCY: complete

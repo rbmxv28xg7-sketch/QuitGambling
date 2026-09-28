@@ -7,6 +7,7 @@ import SwiftUI
 final class TrackerViewModel {
     var selectedMonth: Date = .now
 
+    @MainActor
     enum DayStatus {
         case clean
         case craving
@@ -23,9 +24,9 @@ final class TrackerViewModel {
             case .relapse:
                 return Design.Colors.calendarRelapse
             case .future:
-                return Design.Colors.surfaceHover
+                return Color.white.opacity(0.04)
             case .beforeStart:
-                return Design.Colors.background
+                return Color.white.opacity(0.04)
             }
         }
     }
@@ -42,7 +43,7 @@ final class TrackerViewModel {
         }
     }
 
-    func dayStatus(for date: Date, logs: [CravingLog], startDate: Date) -> DayStatus {
+    func dayStatus(for date: Date, logs: [CravingLog], journalEntries: [JournalEntry] = [], startDate: Date) -> DayStatus {
         let calendar = Calendar.current
 
         if calendar.isDate(date, inSameDayAs: .now) {
@@ -51,14 +52,13 @@ final class TrackerViewModel {
             return .future
         }
 
-        if date < calendar.startOfDay(for: startDate) {
-            return .beforeStart
-        }
-
         let logsForDay = logs.filter { calendar.isDate($0.date, inSameDayAs: date) }
+        let hasRelapseJournal = journalEntries.contains(where: { calendar.isDate($0.date, inSameDayAs: date) && $0.wasRelapse })
 
-        if logsForDay.contains(where: { $0.wasRelapse }) {
+        if logsForDay.contains(where: { $0.wasRelapse }) || hasRelapseJournal {
             return .relapse
+        } else if date < calendar.startOfDay(for: startDate) {
+            return .beforeStart
         } else if !logsForDay.isEmpty {
             return .craving
         } else {
@@ -76,6 +76,16 @@ final class TrackerViewModel {
             wasRelapse: wasRelapse
         )
         context.insert(log)
+
+        if wasRelapse {
+            let descriptor = FetchDescriptor<UserProfile>()
+            if let profile = try? context.fetch(descriptor).first {
+                profile.sobrietyStartDate = .now
+                profile.pledgedToday = false
+                profile.lastPledgeDate = nil
+            }
+        }
+
         try? context.save()
     }
 }

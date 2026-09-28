@@ -10,9 +10,9 @@ struct AnalyticsView: View {
     @State private var selectedTimeRange: TimeRange = .twoWeeks
 
     enum TimeRange: String, CaseIterable, Identifiable {
-        case week = "7 Tage"
-        case twoWeeks = "14 Tage"
-        case month = "30 Tage"
+        case week = "7 Days"
+        case twoWeeks = "14 Days"
+        case month = "30 Days"
 
         var id: String { rawValue }
 
@@ -37,36 +37,92 @@ struct AnalyticsView: View {
         journalEntries.filter { $0.date >= cutoffDate }
     }
 
+    @Environment(SubscriptionManager.self) private var subscriptionManager
+    @State private var showingPaywall = false
+
     var body: some View {
-        ScrollView {
-            VStack(spacing: Design.Spacing.xl) {
-                // Time range picker
-                Picker("Zeitraum", selection: $selectedTimeRange) {
-                    ForEach(TimeRange.allCases) { range in
-                        Text(range.rawValue).tag(range)
+        ZStack {
+            FlutedGlassBackgroundView()
+
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: Design.Spacing.xl) {
+                    // Time range picker
+                    Picker("Time Range", selection: $selectedTimeRange) {
+                        ForEach(TimeRange.allCases) { range in
+                            Text(range.rawValue).tag(range)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(.horizontal, Design.Spacing.xs)
+
+                    if cravingLogs.isEmpty && journalEntries.isEmpty {
+                        ContentUnavailableView(
+                            "No Analytics Data Yet",
+                            systemImage: "chart.xyaxis.line",
+                            description: Text("As soon as you log journal entries or urges, your personal patterns will appear here.")
+                        )
+                        .padding(.top, Design.Spacing.xxl)
+                    } else {
+                        cravingIntensityChartSection
+                        triggerDistributionChartSection
+                        moodTrendChartSection
+                        summaryInsightsCard
                     }
                 }
-                .pickerStyle(.segmented)
-                .padding(.horizontal, Design.Spacing.xs)
-
-                if cravingLogs.isEmpty && journalEntries.isEmpty {
-                    ContentUnavailableView(
-                        "Noch keine Statistik-Daten",
-                        systemImage: "chart.xyaxis.line",
-                        description: Text("Sobald du Tagebucheinträge oder Verlangen protokollierst, siehst du hier deine persönlichen Muster.")
-                    )
-                    .padding(.top, Design.Spacing.xxl)
-                } else {
-                    cravingIntensityChartSection
-                    triggerDistributionChartSection
-                    moodTrendChartSection
-                    summaryInsightsCard
-                }
+                .padding(Design.Spacing.md)
+                .padding(.bottom, 96)
+                .blur(radius: subscriptionManager.isPro ? 0 : 8)
+                .allowsHitTesting(subscriptionManager.isPro)
             }
-            .padding(Design.Spacing.md)
+
+            if !subscriptionManager.isPro {
+                VStack(spacing: Design.Spacing.md) {
+                    ProBadge()
+
+                    Text("Urge & Trigger Analytics")
+                        .font(.title3.weight(.bold))
+                        .foregroundStyle(Color.white)
+
+                    Text("Gain deep clinical clarity into your craving peaks, psychological triggers, and mood dynamics over time.")
+                        .font(.caption)
+                        .foregroundStyle(Design.Colors.textSecondary)
+                        .multilineTextAlignment(.center)
+                        .lineSpacing(2)
+                        .padding(.horizontal, Design.Spacing.sm)
+
+                    Button {
+                        showingPaywall = true
+                    } label: {
+                        HStack(spacing: 6) {
+                            Image(systemName: "crown.fill")
+                            Text("Unlock Analytics with Pro")
+                        }
+                        .font(.subheadline.weight(.bold))
+                        .foregroundStyle(Color.black)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 48)
+                        .background(Design.Colors.goldGradient)
+                        .clipShape(Capsule())
+                        .shadow(color: Design.Colors.gold.opacity(0.35), radius: 8, y: 3)
+                    }
+                    .padding(.top, 4)
+                }
+                .padding(Design.Spacing.lg)
+                .liquidGlass(cornerRadius: Design.Radius.card, padding: Design.Spacing.lg)
+                .padding(.horizontal, Design.Spacing.lg)
+                .transition(.opacity)
+            }
         }
-        .navigationTitle("Muster & Analysen")
-        .background(Design.Colors.background)
+        .fullScreenCover(isPresented: $showingPaywall) {
+            PaywallView()
+        }
+        .navigationTitle("Patterns & Analytics")
+        .onAppear {
+            SensoryFeedbackService.shared.selectionClick()
+        }
+        .onChange(of: selectedTimeRange) { _, _ in
+            SensoryFeedbackService.shared.selectionClick()
+        }
     }
 
     // MARK: - Craving Intensity Chart
@@ -74,15 +130,16 @@ struct AnalyticsView: View {
     private var cravingIntensityChartSection: some View {
         VStack(alignment: .leading, spacing: Design.Spacing.md) {
             VStack(alignment: .leading, spacing: 2) {
-                Text("Verlangens-Intensität")
+                Text("Urge Intensity")
                     .font(.headline)
-                Text("Skala von 1 (leicht) bis 10 (extrem)")
+                    .foregroundStyle(Design.Colors.ivory)
+                Text("Scale from 1 (mild) to 10 (extreme)")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
             }
 
             if filteredCravings.isEmpty {
-                Text("Kein Verlangen im ausgewählten Zeitraum protokolliert. Sehr gut!")
+                Text("No urges logged during the selected period. Excellent job!")
                     .font(.subheadline)
                     .foregroundStyle(Design.Colors.primary)
                     .padding(.vertical, Design.Spacing.lg)
@@ -91,22 +148,22 @@ struct AnalyticsView: View {
                 Chart {
                     ForEach(filteredCravings) { log in
                         LineMark(
-                            x: .value("Datum", log.date, unit: .day),
-                            y: .value("Intensität", log.intensity)
+                            x: .value("Date", log.date, unit: .day),
+                            y: .value("Intensity", log.intensity)
                         )
                         .foregroundStyle(Design.Colors.accent)
                         .interpolationMethod(.catmullRom)
 
                         PointMark(
-                            x: .value("Datum", log.date, unit: .day),
-                            y: .value("Intensität", log.intensity)
+                            x: .value("Date", log.date, unit: .day),
+                            y: .value("Intensity", log.intensity)
                         )
                         .foregroundStyle(log.wasRelapse ? Design.Colors.sos : Design.Colors.accent)
                         .symbolSize(log.wasRelapse ? 60 : 35)
 
                         AreaMark(
-                            x: .value("Datum", log.date, unit: .day),
-                            y: .value("Intensität", log.intensity)
+                            x: .value("Date", log.date, unit: .day),
+                            y: .value("Intensity", log.intensity)
                         )
                         .foregroundStyle(
                             LinearGradient(
@@ -129,9 +186,7 @@ struct AnalyticsView: View {
                 .frame(height: 200)
             }
         }
-        .padding(Design.Spacing.lg)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+        .sereneCardStyle(padding: Design.Spacing.lg)
     }
 
     // MARK: - Trigger Distribution Chart
@@ -139,23 +194,24 @@ struct AnalyticsView: View {
     private var triggerDistributionChartSection: some View {
         VStack(alignment: .leading, spacing: Design.Spacing.md) {
             VStack(alignment: .leading, spacing: 2) {
-                Text("Häufigste Auslöser (Trigger)")
+                Text("Top Triggers")
                     .font(.headline)
-                Text("Was treibt den Spieldruck an?")
+                    .foregroundStyle(Design.Colors.ivory)
+                Text("What activates gambling pressure?")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
             }
 
             let counts = triggerCounts
             if counts.isEmpty {
-                Text("Keine Trigger erfasst.")
+                Text("No triggers recorded.")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
                     .padding(.vertical, Design.Spacing.md)
             } else {
                 Chart(counts, id: \.trigger) { item in
                     BarMark(
-                        x: .value("Anzahl", item.count),
+                        x: .value("Count", item.count),
                         y: .value("Trigger", item.trigger)
                     )
                     .foregroundStyle(Design.Colors.primary)
@@ -164,9 +220,7 @@ struct AnalyticsView: View {
                 .frame(height: max(140, CGFloat(counts.count * 32)))
             }
         }
-        .padding(Design.Spacing.lg)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+        .sereneCardStyle(padding: Design.Spacing.lg)
     }
 
     // MARK: - Mood Trend Chart
@@ -174,31 +228,32 @@ struct AnalyticsView: View {
     private var moodTrendChartSection: some View {
         VStack(alignment: .leading, spacing: Design.Spacing.md) {
             VStack(alignment: .leading, spacing: 2) {
-                Text("Stimmungsverlauf")
+                Text("Mood Trends")
                     .font(.headline)
-                Text("1 (😢 Sehr schlecht) bis 5 (😊 Sehr gut)")
+                    .foregroundStyle(Design.Colors.ivory)
+                Text("Scale from 1 (overwhelmed) to 5 (strong)")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
             }
 
             if filteredJournals.isEmpty {
-                Text("Keine Tagebucheinträge im Zeitraum.")
+                Text("No journal entries in this period.")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
                     .padding(.vertical, Design.Spacing.md)
             } else {
                 Chart {
                     ForEach(filteredJournals) { entry in
                         LineMark(
-                            x: .value("Tag", entry.date, unit: .day),
-                            y: .value("Stimmung", entry.mood)
+                            x: .value("Day", entry.date, unit: .day),
+                            y: .value("Mood", entry.mood)
                         )
                         .foregroundStyle(Design.Colors.secondary)
                         .interpolationMethod(.monotone)
 
                         PointMark(
-                            x: .value("Tag", entry.date, unit: .day),
-                            y: .value("Stimmung", entry.mood)
+                            x: .value("Day", entry.date, unit: .day),
+                            y: .value("Mood", entry.mood)
                         )
                         .foregroundStyle(Design.Colors.secondary)
                         .symbolSize(30)
@@ -209,7 +264,9 @@ struct AnalyticsView: View {
                     AxisMarks(values: [1, 2, 3, 4, 5]) { val in
                         if let intVal = val.as(Int.self), let mood = Design.Mood(rawValue: intVal) {
                             AxisValueLabel {
-                                Text(mood.emoji)
+                                Text("\(intVal)")
+                                    .font(.caption2.weight(.bold))
+                                    .foregroundStyle(mood.color)
                             }
                         }
                     }
@@ -217,42 +274,38 @@ struct AnalyticsView: View {
                 .frame(height: 160)
             }
         }
-        .padding(Design.Spacing.lg)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+        .sereneCardStyle(padding: Design.Spacing.lg)
     }
 
     // MARK: - Summary Insights
 
     private var summaryInsightsCard: some View {
         VStack(alignment: .leading, spacing: Design.Spacing.sm) {
-            Label("Wichtigste Erkenntnisse", systemImage: "sparkles")
+            Label("Key Insights", systemImage: "sparkles")
                 .font(.headline)
                 .foregroundStyle(Design.Colors.gold)
 
             let totalCravingCount = filteredCravings.count
             let avgIntensity = filteredCravings.isEmpty ? 0 : Double(filteredCravings.reduce(0) { $0 + $1.intensity }) / Double(totalCravingCount)
 
-            Text("• **Ereignisse:** In den letzten \(selectedTimeRange.rawValue) hast du \(totalCravingCount) Verlangensphasen erfolgreich überstanden.")
+            Text("• **Events:** In the last \(selectedTimeRange.rawValue), you successfully overcame \(totalCravingCount) urge moments.")
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Design.Colors.textSecondary)
 
             if avgIntensity > 0 {
-                Text("• **Durchschnittliche Intensität:** \(avgIntensity, format: .number.precision(.fractionLength(1))) von 10.")
+                Text("• **Average Intensity:** \(avgIntensity, format: .number.precision(.fractionLength(1))) of 10.")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
             }
 
             if let topTrigger = triggerCounts.first {
-                Text("• **Haupttrigger:** Am häufigsten trat Verlangen durch **\(topTrigger.trigger)** auf.")
+                Text("• **Primary Trigger:** Urges occurred most frequently from **\(topTrigger.trigger)**.")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(Design.Colors.textSecondary)
             }
         }
-        .padding(Design.Spacing.lg)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.lg))
+        .sereneCardStyle(padding: Design.Spacing.lg)
     }
 
     // MARK: - Helpers
@@ -260,7 +313,7 @@ struct AnalyticsView: View {
     private var triggerCounts: [(trigger: String, count: Int)] {
         var map: [String: Int] = [:]
         for log in filteredCravings {
-            let key = log.trigger.isEmpty ? "Nicht angegeben" : log.trigger
+            let key = log.trigger.isEmpty ? "Unspecified" : log.trigger
             map[key, default: 0] += 1
         }
         return map.map { (trigger: $0.key, count: $0.value) }

@@ -8,6 +8,9 @@ final class DashboardViewModel {
     var hoursClean: Int = 0
     var minutesClean: Int = 0
     var secondsClean: Int = 0
+    var baselineSaved: Double = 0
+    var acutePreventedSaved: Double = 0
+    var preventedLossEntriesCount: Int = 0
     var moneySaved: Double = 0
     var dailySpend: Double = 0
     var hasPledgedToday: Bool = false
@@ -32,17 +35,30 @@ final class DashboardViewModel {
     
     func loadProfile(context: ModelContext) {
         let descriptor = FetchDescriptor<UserProfile>()
-        guard let profile = try? context.fetch(descriptor).first else { return }
-        sobrietyStartDate = profile.sobrietyStartDate
-        dailySpend = profile.dailyGamblingSpend
-        hasPledgedToday = profile.pledgedToday && Calendar.current.isDateInToday(profile.lastPledgeDate ?? .distantPast)
+        if let profile = try? context.fetch(descriptor).first {
+            sobrietyStartDate = profile.sobrietyStartDate
+            dailySpend = profile.dailyGamblingSpend
+            hasPledgedToday = profile.pledgedToday && Calendar.current.isDateInToday(profile.lastPledgeDate ?? .distantPast)
+        }
+
+        let preventedDescriptor = FetchDescriptor<PreventedLossEntry>()
+        if let entries = try? context.fetch(preventedDescriptor) {
+            acutePreventedSaved = entries.reduce(0) { $0 + $1.amount }
+            preventedLossEntriesCount = entries.count
+        } else {
+            acutePreventedSaved = 0
+            preventedLossEntriesCount = 0
+        }
+
         updateTimer()
     }
     
     func updateTimer() {
         let interval = Date.now.timeIntervalSince(sobrietyStartDate)
         guard interval > 0 else {
-            daysClean = 0; hoursClean = 0; minutesClean = 0; secondsClean = 0; moneySaved = 0
+            daysClean = 0; hoursClean = 0; minutesClean = 0; secondsClean = 0
+            baselineSaved = 0
+            moneySaved = acutePreventedSaved
             return
         }
         let totalSeconds = Int(interval)
@@ -50,7 +66,8 @@ final class DashboardViewModel {
         hoursClean = (totalSeconds % 86400) / 3600
         minutesClean = (totalSeconds % 3600) / 60
         secondsClean = totalSeconds % 60
-        moneySaved = Double(daysClean) * dailySpend + (Double(totalSeconds % 86400) / 86400.0) * dailySpend
+        baselineSaved = Double(daysClean) * dailySpend + (Double(totalSeconds % 86400) / 86400.0) * dailySpend
+        moneySaved = baselineSaved + acutePreventedSaved
     }
     
     func confirmPledge(context: ModelContext) {
@@ -60,5 +77,19 @@ final class DashboardViewModel {
         profile.lastPledgeDate = .now
         try? context.save()
         hasPledgedToday = true
+    }
+
+    func addPreventedLoss(amount: Double, contextTag: String = "Manuell", note: String = "", context: ModelContext) {
+        guard amount > 0 else { return }
+        let entry = PreventedLossEntry(amount: amount, note: note, contextTag: contextTag)
+        context.insert(entry)
+        try? context.save()
+        loadProfile(context: context)
+    }
+
+    func deletePreventedLoss(_ entry: PreventedLossEntry, context: ModelContext) {
+        context.delete(entry)
+        try? context.save()
+        loadProfile(context: context)
     }
 }

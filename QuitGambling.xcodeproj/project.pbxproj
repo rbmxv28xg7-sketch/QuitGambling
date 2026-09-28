@@ -1,0 +1,1422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00F5C2697FD7F1E7B225023B /* CalculatorIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCDC805BD3F413EB18C1BE1D /* CalculatorIcon@3x.png */; };
+		016A34A6076FFBC8394D93B0 /* SavingsMetricCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557308D97CB159CCBD306BB /* SavingsMetricCard.swift */; };
+		0192AFBABCA212378A7D94A3 /* sound_urge_waves.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0ED6E5F281A3A537E039991E /* sound_urge_waves.m4a */; };
+		0353E7892C09F1B182FE0E65 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4B3F23DE2556A0B97FF2BE /* JournalViewModel.swift */; };
+		03D36039684B8CFD728AC0B1 /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E030009A5738FA6A008A68 /* TrackerView.swift */; };
+		0591FF383BEF0ED574D66959 /* MinigameSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22608E32108D2F00457EE0B7 /* MinigameSessionManager.swift */; };
+		08998D4DF441C41EB561F7A1 /* sound_1_harmony.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9208389124C26835FF6DE74C /* sound_1_harmony.m4a */; };
+		08CEDD18A89861886E8912BB /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1732D39C7DF97527D62DF5 /* RevenueCat */; };
+		0C6E65DABDBDF2F33F84865B /* FreedomScoreCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8AF051207CCB8DAF1C9C6 /* FreedomScoreCalculator.swift */; };
+		0E4AA3D129BB06E187B7BC19 /* NotesIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 133200230615BED21B5D45D1 /* NotesIcon60x60@2x.png */; };
+		0EBAE8A081127A5CDFA3B365 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675AD287D57AA19BC7A84E16 /* OnboardingView.swift */; };
+		110AD45B1664046D1401C360 /* NotesIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F41B13C55FB16526FA3AE203 /* NotesIcon60x60@3x.png */; };
+		12EA2ED80B2FB21A7E8C412D /* QuitGamblingSafariExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8585F7DE9DC8D0E1429700CD /* QuitGamblingSafariExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		153349F47D8A8D60976CA3AB /* Timeline 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 29BB2F06F87A9ACA5BC5B674 /* Timeline 1.mp4 */; };
+		15C51EC613F612BBB0A83AD5 /* DNSProtectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FABCC7E73D573FBC43F4CE /* DNSProtectionService.swift */; };
+		1AF866ECB36557EE5AA0A86F /* ShieldDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8189C73C124F4CF41772F53 /* ShieldDashboardView.swift */; };
+		1BD1417CCD1D9D7C8C0CAACE /* CognitiveDistortionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412841887CD00335AFE4BDE /* CognitiveDistortionView.swift */; };
+		1D7ACD4894BB38778DE2FEF1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A3E55A9CC47FA30CCD370 /* NotificationManager.swift */; };
+		21205346B98523EFB177EFE0 /* UrgeSurfingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ECC46C9E57D0ED22F8F85D /* UrgeSurfingView.swift */; };
+		228A4B2F311D46590B4A730F /* sound_3_singing_wind.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 01652BAC8CAC396EE60A2193 /* sound_3_singing_wind.m4a */; };
+		2805EF86D4E5B00825542CC5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2998B0F352D6F88ADF3AB /* SettingsView.swift */; };
+		2930199B49152AE1C05ED51C /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA5910C1D3F83D0337590C /* JournalView.swift */; };
+		2EAA8C947E142DBBFC45B3ED /* CravingLoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4144189A501255931DE33C /* CravingLoggerView.swift */; };
+		2FED7962C72F116BE3CBB332 /* TriggerZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C3495489959089BA99BA9F /* TriggerZone.swift */; };
+		3240E66AD0DFEAD13AAA7971 /* MilestoneMetricCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029D6CD935E6E103E373E9AB /* MilestoneMetricCard.swift */; };
+		32766E6FFC068163C4C49C24 /* AmbientVideoPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778E65E8F0AAFCC687B302C /* AmbientVideoPlayerService.swift */; };
+		338AB668A2F5E35D9A6A99AB /* SelfAssessmentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E3E6A47F20549A8494B2B /* SelfAssessmentResult.swift */; };
+		350730A3D8ED1744F8E08983 /* DailyPledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373E8795EBE26D3E654B0DC /* DailyPledgeView.swift */; };
+		36846966D3EE8C3F13889A0A /* QuitGamblingShieldAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FED1128E360BA6A1DA30241D /* QuitGamblingShieldAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		36AD7324F18471BCC16AE252 /* MindfulFrictionGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4864B83D268FCB1D89EA8F2 /* MindfulFrictionGateView.swift */; };
+		379B01736B8BE69742443A1B /* CalculatorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC47142B799E1905A9DAD84D /* CalculatorIcon@2x.png */; };
+		385FFA6A8871FFD1112434A3 /* DNSProtectionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DF5A67DB80AC03947A5B61 /* DNSProtectionSheet.swift */; };
+		3B844008F8E344BB83FBC2C2 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFDC807B5ED2F7A3709EA63 /* SafariWebExtensionHandler.swift */; };
+		3BC406718332CB5A8A2F3C23 /* AddPreventedLossSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94369631A53E6A2D6AE4776B /* AddPreventedLossSheet.swift */; };
+		3D3A5ADA6069C012522888EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3965A910DFFB3F5993AFBDE9 /* Assets.xcassets */; };
+		B10C99E02CA86F1200000001 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B10C99E02CA86F1200000002 /* PrivacyInfo.xcprivacy */; };
+		3F35744DD3B38EAAA976825F /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 3BAB80D58AC1DFF4906568F5 /* background.js */; };
+		3FB6AAD6CD9DF05A047D50B7 /* NotesIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16FFC63F5CD7161916D04C63 /* NotesIcon@3x.png */; };
+		41B3842B7BDAA5146A970734 /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDA3EE34D9BFF7F08F0E738 /* EmergencyContact.swift */; };
+		436E6A03B78327BAE3DF8906 /* LoopingVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122BCF2386B25E27B0FD3CC /* LoopingVideoPlayerView.swift */; };
+		47AFE918E8F0DB02023D5E66 /* LiveCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A31622402479E057BB7340A /* LiveCounterView.swift */; };
+		48911AFF4CB8177FBF6F81EC /* LocationShieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B52D3748604766F18FFE8 /* LocationShieldManager.swift */; };
+		4AF66C8F97AA33DA8CD6CB06 /* DailyCheckInSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF61D978F797B7D1D30F56C /* DailyCheckInSheet.swift */; };
+		4D05B9DBBE043B8E228BE5A0 /* ZoneRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4F132832025571CDF2240 /* ZoneRadarView.swift */; };
+		4D76FF0DED529AD28861CE46 /* ShieldActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6E89C0A11FA721A7E9052 /* ShieldActionExtension.swift */; };
+		50763632FE2944EF4F0B9F3F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A33A4EC61FB39844E9B5B73 /* ThemeManager.swift */; };
+		523926CACA4C6183C8F6CC75 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2968379BC9278CBE91802D /* DesignTokens.swift */; };
+		5317DF39BCCA7350AC354888 /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C657308DE613DBB38975D16 /* ShimmerModifier.swift */; };
+		537DE3429FA8DE985BB9435D /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5048EB9726A249A748245967 /* PaywallView.swift */; };
+		5448A07AF196312FCD8A7B98 /* SavingsProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E31D42E06012365F4CBE58 /* SavingsProgressView.swift */; };
+		54CE6BD2981341B867E9EE41 /* SelfAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C4B2197E877764A5B9686 /* SelfAssessmentView.swift */; };
+		567BCF05449957720DB44A71 /* sfsffsf.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 16A19B1CAF054A9DE2A583C2 /* sfsffsf.mp4 */; };
+		5723524F3552F930336C9E69 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA246ADFE71A0496C47DDB4 /* JournalEntryView.swift */; };
+		58C57ED9FC83BFF0313F1191 /* CurvedMoodDockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E4B0B70CE3EF31905B669D /* CurvedMoodDockView.swift */; };
+		590F91441ABB502A21BEF23E /* AmbientSoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8D9D285272211110367C6 /* AmbientSoundService.swift */; };
+		5DA67BC0D4BA8FB539FE4EF3 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = 296FC89418A143060D566C9B /* content.css */; };
+		5E6606B6D56AACB1BCBE8EFE /* soothing_wind.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BD15477CC45A1D1B8A553CE8 /* soothing_wind.m4a */; };
+		61AEDDDD265BDB80327D3C5E /* MilestoneAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59244D9CDF33BFF49AD97F1D /* MilestoneAchievement.swift */; };
+		6358AEC22AFC113160EF3968 /* SavingsEquivalentsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F362553BAF016C355E170F /* SavingsEquivalentsSheet.swift */; };
+		655A1F378DBE3F263EC19693 /* NotesIcon76x76@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5CBBA8E9B58118343D5DA /* NotesIcon76x76@2x~ipad.png */; };
+		6AC3D3041447F62894252BB7 /* CravingLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE6B7B6C1B59418D169BC5 /* CravingLog.swift */; };
+		6D1E8734322998786A0375C3 /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1583E1D4A3C774D2B572B9E /* ResourcesView.swift */; };
+		6FE6D9965311EB984CBBE3E9 /* AnimatedWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE6FC47C8841C6F0C272E7 /* AnimatedWaveView.swift */; };
+		707BF075EC49F37D97731E01 /* ShieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B52570638514B857C7DF1 /* ShieldManager.swift */; };
+		72638D45634C48CA1D0D7A74 /* sound_ocean.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 823BCB6B2D36A388540A2211 /* sound_ocean.m4a */; };
+		72BE33458AE599514DD42178 /* SavingsEquivalentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150C6E342099F47778646947 /* SavingsEquivalentService.swift */; };
+		B10C99E12CA86F1200000003 /* PeriodicPaywallService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10C99E12CA86F1200000004 /* PeriodicPaywallService.swift */; };
+		B2C3D4E5F6A7B8C9D0E1F2A3 /* LocalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* LocalizationService.swift */; };
+		72EB09770E28A4233228B15E /* TrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACE901AD1DA3E9E41AEC9A /* TrackerViewModel.swift */; };
+		7331A5974F3332EA2A9DEDDF /* gambling_hashes.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7CE475C81EB7202797ED9148 /* gambling_hashes.bin */; };
+		73EC910A47D177BCDB4372B1 /* sound_2_breath_wind.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B6CB7C81165976E664DF25A2 /* sound_2_breath_wind.m4a */; };
+		762199B94452B7FBEED3C3FE /* CalculatorIcon76x76@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AF74663DC0B7769503039811 /* CalculatorIcon76x76@2x~ipad.png */; };
+		790306432C58CB797E07B402 /* SolidSurfaceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AEF83CE42AB6073AE68175 /* SolidSurfaceModifier.swift */; };
+		79CCC6A2AA6626B26C19E095 /* ReasonToQuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259ADFE6BA37924584DB0468 /* ReasonToQuit.swift */; };
+		7AAE28715AA5E6B0722337DA /* SafariExtensionTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D9B262CF8D494B75C23453 /* SafariExtensionTutorialView.swift */; };
+		7BA7480AF5974734F0A96D61 /* CalculatorCamouflageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCB1B822CA764756EC0034E /* CalculatorCamouflageView.swift */; };
+		7FB7300B2A332828E12A8DF0 /* GroundingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355580B9AB73F139EEF90296 /* GroundingExerciseView.swift */; };
+		82039EE2C0BF68C79AE855C3 /* HotlineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA297D237AB995223861176B /* HotlineListView.swift */; };
+		85DE7150B988A4D6205A85DB /* sound_3_ocean_wave.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6DD558907FA914603D5FE6D0 /* sound_3_ocean_wave.m4a */; };
+		85EBDEEAB31C1DF3C18DF737 /* sound_4_summer_breeze.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EA4C5BA63874BA0304380373 /* sound_4_summer_breeze.m4a */; };
+		8AF5AEF0476872FE20FC4C4D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF03A563F4931A92C1F315C /* UserProfile.swift */; };
+		8B84253F1005797B497CBA78 /* DailyMorningCheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE4393DAF894FD44032BB1F /* DailyMorningCheckinView.swift */; };
+		8BEADDB6B48BC2459663F15C /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = C8C8400D7BED0FC2E4FA8C44 /* manifest.json */; };
+		8F3325993132ECFFC7E1A630 /* SavingsGoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2BB355B887BBF4067E98C /* SavingsGoalCardView.swift */; };
+		94AB58DA4C98150C2AE253AE /* SavingsGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5698976F12CCB3BAEF9FD8 /* SavingsGoal.swift */; };
+		97942D7CFB2C2F6D0128DEF0 /* GrowingPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7A5944E063A1A129F86E2 /* GrowingPlantView.swift */; };
+		9B781852096012077A83E51E /* QuitGamblingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11CD549EDFC4905EB19FE9 /* QuitGamblingApp.swift */; };
+		9F909277ED05AC6C812F3410 /* NotesIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 354E2C96D299F56CB68E52D6 /* NotesIcon@2x.png */; };
+		9FBF50BE4870EB071E2B02ED /* CalculatorIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A95EE6784CFA8D689F627F4 /* CalculatorIcon60x60@2x.png */; };
+		A277053ED6F54B23963B22CB /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABD75326C46C2A9FCE869A7 /* ShieldConfigurationExtension.swift */; };
+		A2A00B9DC5446921B319D6E1 /* DEADSStrategyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037C14A8E2B3815813AAA627 /* DEADSStrategyView.swift */; };
+		A3E21AB57B76A9630E1AD581 /* PreventedLossEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84DB9C1C0CEE39BB3802BC2 /* PreventedLossEntry.swift */; };
+		A6A2D6D54E9FCF6EF326AA76 /* CamouflageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B2F2A45F98B2409BAB81EF /* CamouflageView.swift */; };
+		A8D7414107CEE65E7636F94E /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC00A33D1692F63A7A127B48 /* DashboardViewModel.swift */; };
+		A99BAFEFDFD460935F6DEEDC /* EmergencyBuddyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C5181FEFE2D1D70E62406 /* EmergencyBuddyView.swift */; };
+		B03DA9411E1E246CFDBEBD50 /* DailyCheckInCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAE48420B07726ED06BB57F /* DailyCheckInCardView.swift */; };
+		B06B897BAFDC036099A061C2 /* ReasonsCardDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9EA5D5BF21B4E4962D173 /* ReasonsCardDeckView.swift */; };
+		B196F0C6ADD02CBD8DF009E9 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520FE1BB2C5AB8E45D66258D /* EmptyStateView.swift */; };
+		B6BA3D223DA674FB50885403 /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C32BA259F73E483400EE79 /* NewEntryView.swift */; };
+		B6C3D0E596A383AB9D568A39 /* FinanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801AF012DFD661D1687BB313 /* FinanceViewModel.swift */; };
+		BAF588BCACEA36D6DDD5FD7C /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410FA274BC97ADF672076D40 /* AnalyticsView.swift */; };
+		BAFBC479060E01D936B1C7BE /* SOSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9197CB96BD0B0C3701BB298E /* SOSViewModel.swift */; };
+		BDDC55C84FA2E9167716C278 /* AppPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F0DA9D4C93B3301249A2D /* AppPreferences.swift */; };
+		BE406E11DFB70D186B9D8E4E /* SavingsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F7A60D89951E73E9AB20F /* SavingsCardView.swift */; };
+		BF9B6A21F557B6408D6D42F4 /* MoodPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5368032F1AE73BB9303A01 /* MoodPickerView.swift */; };
+		C24EFC7752C392A254695A04 /* SobrietyCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BA0A31CB1D2719E5DC8C1 /* SobrietyCalendarView.swift */; };
+		C261AC3EB93AC3C922E1AE31 /* DomainBlocklistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A2D812FC9E74414926970C /* DomainBlocklistService.swift */; };
+		C33F87DD8DDAAA01BB3AA324 /* PrivacyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B9B3870A2555EF1FD4FE3 /* PrivacyManager.swift */; };
+		B3C880AF3B161DE59AF189D6 /* ShakeMotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47192FC88AE5126E55AD2D4D /* ShakeMotionService.swift */; };
+		C5C66384EE5175AFE4BE0786 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8523F08DCC25F1D6952767 /* Icon.png */; };
+		C7E0F9D36D1DFFDE391F1174 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = C84621FAC516086202F015AC /* content.js */; };
+		CA0E0A819A2B3F574FF92D9E /* MilestoneIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1EAB3F3C3DE166537C8CAA /* MilestoneIcon.swift */; };
+		CDE0F01CA20D3D42522E8147 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A4BAE33D85AD57DEA8F0FB /* MoreView.swift */; };
+		CDFAC6EF5AD291943CEF5545 /* SOSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6F04E98CBEA44AAA9E35A /* SOSView.swift */; };
+		CE4433781CB315A35F8EF036 /* sound_4_zen_bells.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6617D5642C182D0C3B2ECF9C /* sound_4_zen_bells.m4a */; };
+		CE6AF9ACD7B320F1D9581DCD /* NotesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B12EB345A387D619D1F50C /* NotesIcon.png */; };
+		CFA759D6073C2DA693107578 /* CalculatorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 424D052584BE101383E832FE /* CalculatorIcon.png */; };
+		D09E2A8C402C21B4486841D6 /* BackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A834B2FB418A7F29367299EA /* BackgroundVideo.mp4 */; };
+		D1A14958551F645E8B8A9506 /* BreathingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416643A3009B680A29AF0779 /* BreathingExerciseView.swift */; };
+		D24FA57552EE648513279497 /* SavingsEquivalentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E121D0C3DCCAD4B685C269 /* SavingsEquivalentCardView.swift */; };
+		D3A61FBDA2875175C02109C7 /* sound_stream.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A88D17863D0DF78D8D2D2D04 /* sound_stream.m4a */; };
+		D70E5152714E74A6BC4E41F7 /* RelapseReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1650D2AD9BCFA7F9263FC3 /* RelapseReflectionView.swift */; };
+		D7D2B99B0AA03CF3650B569E /* ClinicalReportExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF0C1AF8AF45F6440605A27 /* ClinicalReportExportService.swift */; };
+		D85E46E6CA5DEB40BBA3BEA8 /* AddZoneSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36D7BC89D3953E267E93C69 /* AddZoneSheet.swift */; };
+		D993AE02E994D55BE0E7DA1B /* QuitGamblingShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 15982989878919A3FF9F9536 /* QuitGamblingShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DB28BF2919423EC4591C36F4 /* sound_1_forest.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D48B5D3FC5BC7EA13AE384EB /* sound_1_forest.m4a */; };
+		DB93ACAD540B8ECC5A752298 /* BioluminescentCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FD20CC4304DF41441A0C24 /* BioluminescentCanvasView.swift */; };
+		DE49EC6ADD5ACA61ADED5A0E /* MilestonePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38511BED19F3281894EE368 /* MilestonePreviewView.swift */; };
+		E3D278B5679C39D234DBFF66 /* ClinicalReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2CEC0A5E8D277F710F5AF /* ClinicalReportView.swift */; };
+		E7C12AAF29F233B3BD874D01 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27F954411D2334ACDA5662 /* JournalEntry.swift */; };
+		E7F99482481AC618DE82384C /* CountryBlocklistCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF699B1D8276F6F8752E44C /* CountryBlocklistCatalog.swift */; };
+		E822C61E4F9E416EEF1C6EF0 /* FreedomGemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7907784F5EB514596C28B0 /* FreedomGemView.swift */; };
+		EA34CAC55E40258AAD710A0D /* FlutedGlassBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196948AE2A906E36D5CB9118 /* FlutedGlassBackgroundView.swift */; };
+		EBB34041C446B19403C91845 /* ZenCounterDialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7DBD638C8C55311B84BD5 /* ZenCounterDialView.swift */; };
+		ED2BCE8E861FCC8D057F1C6C /* SensoryFeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF4E42BFA272F5999D0264 /* SensoryFeedbackService.swift */; };
+		EFC2E720263CEB501F38B793 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221F266AD879011433DEB62 /* FinanceView.swift */; };
+		F15D5F81A3ADA58F32A2F816 /* MilestoneBadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697A9E537A72039033CCC9DE /* MilestoneBadgesView.swift */; };
+		F2FEB4DDE33679DBB065C260 /* sound_2_ocean.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F7B64A190BD984BE6828DFC1 /* sound_2_ocean.m4a */; };
+		F438D657D35914B4BEE324F1 /* CalculatorIcon60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E9380F021A2595D0CFBC962 /* CalculatorIcon60x60@3x.png */; };
+		F43A056DF48EA0ED4BF68DB6 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A2B6A2F1BDA725C57E63C /* DashboardView.swift */; };
+		F5AE0643D94FBCD9B9927C69 /* gambling_hashes.bin in Resources */ = {isa = PBXBuildFile; fileRef = 9AB96EF85F3F8B005E66B60D /* gambling_hashes.bin */; };
+		F5DB2A1B5A83FD6A5E6C055C /* ZenMindOrbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E203A0B1F4FDFCAAF66948EA /* ZenMindOrbView.swift */; };
+		F99AFE8796E40110DC34B560 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114BA6708B501906D135560 /* SubscriptionManager.swift */; };
+		FD1781FCD7A06EB0D93C3470 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6AD8F2D82CA698C6857AE /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4BFBAEBCC4FC1037F4E9A97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB72D5B60588E69D7D991965 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD81CAD76E5800C53B4764D0;
+			remoteInfo = QuitGamblingShieldConfiguration;
+		};
+		CE2B5FFFEA2B2B29B9B45B53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB72D5B60588E69D7D991965 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26FA27F1A84F1029EE8307F1;
+			remoteInfo = QuitGamblingShieldAction;
+		};
+		E0A772498925FBFE4BE1BFD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB72D5B60588E69D7D991965 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38E26CABD0C0A4069B715A0A;
+			remoteInfo = QuitGamblingSafariExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F372A97C8479D6B2D9830051 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D993AE02E994D55BE0E7DA1B /* QuitGamblingShieldConfiguration.appex in Embed Foundation Extensions */,
+				36846966D3EE8C3F13889A0A /* QuitGamblingShieldAction.appex in Embed Foundation Extensions */,
+				12EA2ED80B2FB21A7E8C412D /* QuitGamblingSafariExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01652BAC8CAC396EE60A2193 /* sound_3_singing_wind.m4a */ = {isa = PBXFileReference; path = sound_3_singing_wind.m4a; sourceTree = "<group>"; };
+		01B7A5944E063A1A129F86E2 /* GrowingPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingPlantView.swift; sourceTree = "<group>"; };
+		029D6CD935E6E103E373E9AB /* MilestoneMetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneMetricCard.swift; sourceTree = "<group>"; };
+		0373E8795EBE26D3E654B0DC /* DailyPledgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPledgeView.swift; sourceTree = "<group>"; };
+		037C14A8E2B3815813AAA627 /* DEADSStrategyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEADSStrategyView.swift; sourceTree = "<group>"; };
+		04ACE901AD1DA3E9E41AEC9A /* TrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewModel.swift; sourceTree = "<group>"; };
+		0BDA3EE34D9BFF7F08F0E738 /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
+		0CCB1B822CA764756EC0034E /* CalculatorCamouflageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCamouflageView.swift; sourceTree = "<group>"; };
+		0ED6E5F281A3A537E039991E /* sound_urge_waves.m4a */ = {isa = PBXFileReference; path = sound_urge_waves.m4a; sourceTree = "<group>"; };
+		133200230615BED21B5D45D1 /* NotesIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotesIcon60x60@2x.png"; sourceTree = "<group>"; };
+		150C6E342099F47778646947 /* SavingsEquivalentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsEquivalentService.swift; sourceTree = "<group>"; };
+		B10C99E12CA86F1200000004 /* PeriodicPaywallService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicPaywallService.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* LocalizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationService.swift; sourceTree = "<group>"; };
+		15982989878919A3FF9F9536 /* QuitGamblingShieldConfiguration.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = QuitGamblingShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		16A19B1CAF054A9DE2A583C2 /* sfsffsf.mp4 */ = {isa = PBXFileReference; path = sfsffsf.mp4; sourceTree = "<group>"; };
+		16FFC63F5CD7161916D04C63 /* NotesIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotesIcon@3x.png"; sourceTree = "<group>"; };
+		1778E65E8F0AAFCC687B302C /* AmbientVideoPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbientVideoPlayerService.swift; sourceTree = "<group>"; };
+		196948AE2A906E36D5CB9118 /* FlutedGlassBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutedGlassBackgroundView.swift; sourceTree = "<group>"; };
+		197C5181FEFE2D1D70E62406 /* EmergencyBuddyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyBuddyView.swift; sourceTree = "<group>"; };
+		22608E32108D2F00457EE0B7 /* MinigameSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinigameSessionManager.swift; sourceTree = "<group>"; };
+		22ECC46C9E57D0ED22F8F85D /* UrgeSurfingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrgeSurfingView.swift; sourceTree = "<group>"; };
+		24E4B0B70CE3EF31905B669D /* CurvedMoodDockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedMoodDockView.swift; sourceTree = "<group>"; };
+		259ADFE6BA37924584DB0468 /* ReasonToQuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonToQuit.swift; sourceTree = "<group>"; };
+		279F0DA9D4C93B3301249A2D /* AppPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferences.swift; sourceTree = "<group>"; };
+		27E7DBD638C8C55311B84BD5 /* ZenCounterDialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenCounterDialView.swift; sourceTree = "<group>"; };
+		296FC89418A143060D566C9B /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = content.css; sourceTree = "<group>"; };
+		29BB2F06F87A9ACA5BC5B674 /* Timeline 1.mp4 */ = {isa = PBXFileReference; path = "Timeline 1.mp4"; sourceTree = "<group>"; };
+		29F362553BAF016C355E170F /* SavingsEquivalentsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsEquivalentsSheet.swift; sourceTree = "<group>"; };
+		2A31622402479E057BB7340A /* LiveCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCounterView.swift; sourceTree = "<group>"; };
+		2A33A4EC61FB39844E9B5B73 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		2E2B52D3748604766F18FFE8 /* LocationShieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationShieldManager.swift; sourceTree = "<group>"; };
+		2EA6AD8F2D82CA698C6857AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		34DF5A67DB80AC03947A5B61 /* DNSProtectionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProtectionSheet.swift; sourceTree = "<group>"; };
+		354E2C96D299F56CB68E52D6 /* NotesIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotesIcon@2x.png"; sourceTree = "<group>"; };
+		355580B9AB73F139EEF90296 /* GroundingExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingExerciseView.swift; sourceTree = "<group>"; };
+		366A3E55A9CC47FA30CCD370 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		3965A910DFFB3F5993AFBDE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B10C99E02CA86F1200000002 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		39A2D812FC9E74414926970C /* DomainBlocklistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainBlocklistService.swift; sourceTree = "<group>"; };
+		3BAB80D58AC1DFF4906568F5 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		40D9B262CF8D494B75C23453 /* SafariExtensionTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionTutorialView.swift; sourceTree = "<group>"; };
+		410FA274BC97ADF672076D40 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		416643A3009B680A29AF0779 /* BreathingExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseView.swift; sourceTree = "<group>"; };
+		41B6F04E98CBEA44AAA9E35A /* SOSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSView.swift; sourceTree = "<group>"; };
+		424D052584BE101383E832FE /* CalculatorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalculatorIcon.png; sourceTree = "<group>"; };
+		42A4BAE33D85AD57DEA8F0FB /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		4A0D46C330DE3307D2CF907C /* QuitGambling.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = QuitGambling.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E11CD549EDFC4905EB19FE9 /* QuitGamblingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitGamblingApp.swift; sourceTree = "<group>"; };
+		4EAE48420B07726ED06BB57F /* DailyCheckInCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCheckInCardView.swift; sourceTree = "<group>"; };
+		4FE4393DAF894FD44032BB1F /* DailyMorningCheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMorningCheckinView.swift; sourceTree = "<group>"; };
+		5048EB9726A249A748245967 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		520FE1BB2C5AB8E45D66258D /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		53C32BA259F73E483400EE79 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
+		55B2CEC0A5E8D277F710F5AF /* ClinicalReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicalReportView.swift; sourceTree = "<group>"; };
+		58E121D0C3DCCAD4B685C269 /* SavingsEquivalentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsEquivalentCardView.swift; sourceTree = "<group>"; };
+		59244D9CDF33BFF49AD97F1D /* MilestoneAchievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneAchievement.swift; sourceTree = "<group>"; };
+		5AA246ADFE71A0496C47DDB4 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
+		5BF5CBBA8E9B58118343D5DA /* NotesIcon76x76@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotesIcon76x76@2x~ipad.png"; sourceTree = "<group>"; };
+		61B8AF051207CCB8DAF1C9C6 /* FreedomScoreCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreedomScoreCalculator.swift; sourceTree = "<group>"; };
+		622C4B2197E877764A5B9686 /* SelfAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAssessmentView.swift; sourceTree = "<group>"; };
+		6412841887CD00335AFE4BDE /* CognitiveDistortionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitiveDistortionView.swift; sourceTree = "<group>"; };
+		64DA5910C1D3F83D0337590C /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		6617D5642C182D0C3B2ECF9C /* sound_4_zen_bells.m4a */ = {isa = PBXFileReference; path = sound_4_zen_bells.m4a; sourceTree = "<group>"; };
+		675AD287D57AA19BC7A84E16 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		690B52570638514B857C7DF1 /* ShieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldManager.swift; sourceTree = "<group>"; };
+		697A9E537A72039033CCC9DE /* MilestoneBadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneBadgesView.swift; sourceTree = "<group>"; };
+		6A95EE6784CFA8D689F627F4 /* CalculatorIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatorIcon60x60@2x.png"; sourceTree = "<group>"; };
+		6C3A2B6A2F1BDA725C57E63C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		6D4144189A501255931DE33C /* CravingLoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CravingLoggerView.swift; sourceTree = "<group>"; };
+		6DD558907FA914603D5FE6D0 /* sound_3_ocean_wave.m4a */ = {isa = PBXFileReference; path = sound_3_ocean_wave.m4a; sourceTree = "<group>"; };
+		6F8523F08DCC25F1D6952767 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6FF699B1D8276F6F8752E44C /* CountryBlocklistCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryBlocklistCatalog.swift; sourceTree = "<group>"; };
+		7221F266AD879011433DEB62 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
+		77FD20CC4304DF41441A0C24 /* BioluminescentCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioluminescentCanvasView.swift; sourceTree = "<group>"; };
+		782E3E6A47F20549A8494B2B /* SelfAssessmentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAssessmentResult.swift; sourceTree = "<group>"; };
+		7C657308DE613DBB38975D16 /* ShimmerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerModifier.swift; sourceTree = "<group>"; };
+		7CE475C81EB7202797ED9148 /* gambling_hashes.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gambling_hashes.bin; sourceTree = "<group>"; };
+		7CF0C1AF8AF45F6440605A27 /* ClinicalReportExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicalReportExportService.swift; sourceTree = "<group>"; };
+		801AF012DFD661D1687BB313 /* FinanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewModel.swift; sourceTree = "<group>"; };
+		823BCB6B2D36A388540A2211 /* sound_ocean.m4a */ = {isa = PBXFileReference; path = sound_ocean.m4a; sourceTree = "<group>"; };
+		8585F7DE9DC8D0E1429700CD /* QuitGamblingSafariExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = QuitGamblingSafariExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E030009A5738FA6A008A68 /* TrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerView.swift; sourceTree = "<group>"; };
+		85FE6FC47C8841C6F0C272E7 /* AnimatedWaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedWaveView.swift; sourceTree = "<group>"; };
+		86C3495489959089BA99BA9F /* TriggerZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerZone.swift; sourceTree = "<group>"; };
+		87B2F2A45F98B2409BAB81EF /* CamouflageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamouflageView.swift; sourceTree = "<group>"; };
+		8BF2BB355B887BBF4067E98C /* SavingsGoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsGoalCardView.swift; sourceTree = "<group>"; };
+		9197CB96BD0B0C3701BB298E /* SOSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSViewModel.swift; sourceTree = "<group>"; };
+		9208389124C26835FF6DE74C /* sound_1_harmony.m4a */ = {isa = PBXFileReference; path = sound_1_harmony.m4a; sourceTree = "<group>"; };
+		94369631A53E6A2D6AE4776B /* AddPreventedLossSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPreventedLossSheet.swift; sourceTree = "<group>"; };
+		9474C223E8F329E216207BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		964EE4DD47870FEBD0F45FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9AB96EF85F3F8B005E66B60D /* gambling_hashes.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = gambling_hashes.bin; sourceTree = "<group>"; };
+		9ABD75326C46C2A9FCE869A7 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		9ADE6B7B6C1B59418D169BC5 /* CravingLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CravingLog.swift; sourceTree = "<group>"; };
+		9E9380F021A2595D0CFBC962 /* CalculatorIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatorIcon60x60@3x.png"; sourceTree = "<group>"; };
+		9F5368032F1AE73BB9303A01 /* MoodPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerView.swift; sourceTree = "<group>"; };
+		A122BCF2386B25E27B0FD3CC /* LoopingVideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingVideoPlayerView.swift; sourceTree = "<group>"; };
+		A557308D97CB159CCBD306BB /* SavingsMetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsMetricCard.swift; sourceTree = "<group>"; };
+		A834B2FB418A7F29367299EA /* BackgroundVideo.mp4 */ = {isa = PBXFileReference; path = BackgroundVideo.mp4; sourceTree = "<group>"; };
+		A88D17863D0DF78D8D2D2D04 /* sound_stream.m4a */ = {isa = PBXFileReference; path = sound_stream.m4a; sourceTree = "<group>"; };
+		ABCF4E42BFA272F5999D0264 /* SensoryFeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoryFeedbackService.swift; sourceTree = "<group>"; };
+		ACA9EA5D5BF21B4E4962D173 /* ReasonsCardDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonsCardDeckView.swift; sourceTree = "<group>"; };
+		AD4B3F23DE2556A0B97FF2BE /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
+		AF74663DC0B7769503039811 /* CalculatorIcon76x76@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatorIcon76x76@2x~ipad.png"; sourceTree = "<group>"; };
+		B1583E1D4A3C774D2B572B9E /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
+		B4864B83D268FCB1D89EA8F2 /* MindfulFrictionGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulFrictionGateView.swift; sourceTree = "<group>"; };
+		B5C2998B0F352D6F88ADF3AB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B6CB7C81165976E664DF25A2 /* sound_2_breath_wind.m4a */ = {isa = PBXFileReference; path = sound_2_breath_wind.m4a; sourceTree = "<group>"; };
+		B8FABCC7E73D573FBC43F4CE /* DNSProtectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProtectionService.swift; sourceTree = "<group>"; };
+		BBA4F132832025571CDF2240 /* ZoneRadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneRadarView.swift; sourceTree = "<group>"; };
+		BC2968379BC9278CBE91802D /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
+		BD15477CC45A1D1B8A553CE8 /* soothing_wind.m4a */ = {isa = PBXFileReference; path = soothing_wind.m4a; sourceTree = "<group>"; };
+		C84621FAC516086202F015AC /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		C8C8400D7BED0FC2E4FA8C44 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		CA297D237AB995223861176B /* HotlineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineListView.swift; sourceTree = "<group>"; };
+		CC47142B799E1905A9DAD84D /* CalculatorIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatorIcon@2x.png"; sourceTree = "<group>"; };
+		CD7907784F5EB514596C28B0 /* FreedomGemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreedomGemView.swift; sourceTree = "<group>"; };
+		CDF03A563F4931A92C1F315C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		CEA8D9D285272211110367C6 /* AmbientSoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbientSoundService.swift; sourceTree = "<group>"; };
+		D1A252B3D547A167AB194386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D38511BED19F3281894EE368 /* MilestonePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonePreviewView.swift; sourceTree = "<group>"; };
+		D48B5D3FC5BC7EA13AE384EB /* sound_1_forest.m4a */ = {isa = PBXFileReference; path = sound_1_forest.m4a; sourceTree = "<group>"; };
+		D66F7A60D89951E73E9AB20F /* SavingsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsCardView.swift; sourceTree = "<group>"; };
+		D84DB9C1C0CEE39BB3802BC2 /* PreventedLossEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventedLossEntry.swift; sourceTree = "<group>"; };
+		DC1EAB3F3C3DE166537C8CAA /* MilestoneIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneIcon.swift; sourceTree = "<group>"; };
+		DCDC805BD3F413EB18C1BE1D /* CalculatorIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CalculatorIcon@3x.png"; sourceTree = "<group>"; };
+		DCFDC807B5ED2F7A3709EA63 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		DE5698976F12CCB3BAEF9FD8 /* SavingsGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsGoal.swift; sourceTree = "<group>"; };
+		E203A0B1F4FDFCAAF66948EA /* ZenMindOrbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenMindOrbView.swift; sourceTree = "<group>"; };
+		E2AEF83CE42AB6073AE68175 /* SolidSurfaceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidSurfaceModifier.swift; sourceTree = "<group>"; };
+		E31BA0A31CB1D2719E5DC8C1 /* SobrietyCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobrietyCalendarView.swift; sourceTree = "<group>"; };
+		E36D7BC89D3953E267E93C69 /* AddZoneSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZoneSheet.swift; sourceTree = "<group>"; };
+		E5E31D42E06012365F4CBE58 /* SavingsProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsProgressView.swift; sourceTree = "<group>"; };
+		E8189C73C124F4CF41772F53 /* ShieldDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldDashboardView.swift; sourceTree = "<group>"; };
+		EA4C5BA63874BA0304380373 /* sound_4_summer_breeze.m4a */ = {isa = PBXFileReference; path = sound_4_summer_breeze.m4a; sourceTree = "<group>"; };
+		EC00A33D1692F63A7A127B48 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		EC5B9B3870A2555EF1FD4FE3 /* PrivacyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyManager.swift; sourceTree = "<group>"; };
+		47192FC88AE5126E55AD2D4D /* ShakeMotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeMotionService.swift; sourceTree = "<group>"; };
+		EF084DB85BFCB68F762B8566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F114BA6708B501906D135560 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		F41B13C55FB16526FA3AE203 /* NotesIcon60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotesIcon60x60@3x.png"; sourceTree = "<group>"; };
+		F6E6E89C0A11FA721A7E9052 /* ShieldActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldActionExtension.swift; sourceTree = "<group>"; };
+		F7B12EB345A387D619D1F50C /* NotesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotesIcon.png; sourceTree = "<group>"; };
+		F7B64A190BD984BE6828DFC1 /* sound_2_ocean.m4a */ = {isa = PBXFileReference; path = sound_2_ocean.m4a; sourceTree = "<group>"; };
+		FA1650D2AD9BCFA7F9263FC3 /* RelapseReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelapseReflectionView.swift; sourceTree = "<group>"; };
+		FB27F954411D2334ACDA5662 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		FED1128E360BA6A1DA30241D /* QuitGamblingShieldAction.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = QuitGamblingShieldAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF61D978F797B7D1D30F56C /* DailyCheckInSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCheckInSheet.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35D88CA0031C2CCEB3E40D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08CEDD18A89861886E8912BB /* RevenueCat in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		061297805844D287EA494369 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9ADE6B7B6C1B59418D169BC5 /* CravingLog.swift */,
+				0BDA3EE34D9BFF7F08F0E738 /* EmergencyContact.swift */,
+				FB27F954411D2334ACDA5662 /* JournalEntry.swift */,
+				59244D9CDF33BFF49AD97F1D /* MilestoneAchievement.swift */,
+				D84DB9C1C0CEE39BB3802BC2 /* PreventedLossEntry.swift */,
+				259ADFE6BA37924584DB0468 /* ReasonToQuit.swift */,
+				DE5698976F12CCB3BAEF9FD8 /* SavingsGoal.swift */,
+				782E3E6A47F20549A8494B2B /* SelfAssessmentResult.swift */,
+				86C3495489959089BA99BA9F /* TriggerZone.swift */,
+				CDF03A563F4931A92C1F315C /* UserProfile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		28A9DE26C06BB9AFD43E134B /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				5AA246ADFE71A0496C47DDB4 /* JournalEntryView.swift */,
+				64DA5910C1D3F83D0337590C /* JournalView.swift */,
+				9F5368032F1AE73BB9303A01 /* MoodPickerView.swift */,
+				53C32BA259F73E483400EE79 /* NewEntryView.swift */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		3F7B90A96CE989158F020554 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8D9D285272211110367C6 /* AmbientSoundService.swift */,
+				1778E65E8F0AAFCC687B302C /* AmbientVideoPlayerService.swift */,
+				279F0DA9D4C93B3301249A2D /* AppPreferences.swift */,
+				7CF0C1AF8AF45F6440605A27 /* ClinicalReportExportService.swift */,
+				6FF699B1D8276F6F8752E44C /* CountryBlocklistCatalog.swift */,
+				B8FABCC7E73D573FBC43F4CE /* DNSProtectionService.swift */,
+				39A2D812FC9E74414926970C /* DomainBlocklistService.swift */,
+				61B8AF051207CCB8DAF1C9C6 /* FreedomScoreCalculator.swift */,
+				2E2B52D3748604766F18FFE8 /* LocationShieldManager.swift */,
+				22608E32108D2F00457EE0B7 /* MinigameSessionManager.swift */,
+				366A3E55A9CC47FA30CCD370 /* NotificationManager.swift */,
+				EC5B9B3870A2555EF1FD4FE3 /* PrivacyManager.swift */,
+				47192FC88AE5126E55AD2D4D /* ShakeMotionService.swift */,
+				150C6E342099F47778646947 /* SavingsEquivalentService.swift */,
+				B10C99E12CA86F1200000004 /* PeriodicPaywallService.swift */,
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* LocalizationService.swift */,
+				ABCF4E42BFA272F5999D0264 /* SensoryFeedbackService.swift */,
+				690B52570638514B857C7DF1 /* ShieldManager.swift */,
+				F114BA6708B501906D135560 /* SubscriptionManager.swift */,
+				2A33A4EC61FB39844E9B5B73 /* ThemeManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		45977E71A4849FCF69FF6C46 /* ShieldAction */ = {
+			isa = PBXGroup;
+			children = (
+				9474C223E8F329E216207BEB /* Info.plist */,
+				F6E6E89C0A11FA721A7E9052 /* ShieldActionExtension.swift */,
+			);
+			path = ShieldAction;
+			sourceTree = "<group>";
+		};
+		4C6453F499BCA09709645520 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A0D46C330DE3307D2CF907C /* QuitGambling.app */,
+				8585F7DE9DC8D0E1429700CD /* QuitGamblingSafariExtension.appex */,
+				FED1128E360BA6A1DA30241D /* QuitGamblingShieldAction.appex */,
+				15982989878919A3FF9F9536 /* QuitGamblingShieldConfiguration.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CF980FEBA17FF304468A877 /* Checkin */ = {
+			isa = PBXGroup;
+			children = (
+				24E4B0B70CE3EF31905B669D /* CurvedMoodDockView.swift */,
+				4FE4393DAF894FD44032BB1F /* DailyMorningCheckinView.swift */,
+				E203A0B1F4FDFCAAF66948EA /* ZenMindOrbView.swift */,
+			);
+			path = Checkin;
+			sourceTree = "<group>";
+		};
+		541748BE728E77CEF3808F03 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		762B7BE862B6D7D87D90EAF4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EC00A33D1692F63A7A127B48 /* DashboardViewModel.swift */,
+				801AF012DFD661D1687BB313 /* FinanceViewModel.swift */,
+				AD4B3F23DE2556A0B97FF2BE /* JournalViewModel.swift */,
+				9197CB96BD0B0C3701BB298E /* SOSViewModel.swift */,
+				04ACE901AD1DA3E9E41AEC9A /* TrackerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		850D410D8CCD957123490D9B /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				94369631A53E6A2D6AE4776B /* AddPreventedLossSheet.swift */,
+				4EAE48420B07726ED06BB57F /* DailyCheckInCardView.swift */,
+				FFF61D978F797B7D1D30F56C /* DailyCheckInSheet.swift */,
+				0373E8795EBE26D3E654B0DC /* DailyPledgeView.swift */,
+				6C3A2B6A2F1BDA725C57E63C /* DashboardView.swift */,
+				2A31622402479E057BB7340A /* LiveCounterView.swift */,
+				029D6CD935E6E103E373E9AB /* MilestoneMetricCard.swift */,
+				D38511BED19F3281894EE368 /* MilestonePreviewView.swift */,
+				D66F7A60D89951E73E9AB20F /* SavingsCardView.swift */,
+				58E121D0C3DCCAD4B685C269 /* SavingsEquivalentCardView.swift */,
+				29F362553BAF016C355E170F /* SavingsEquivalentsSheet.swift */,
+				A557308D97CB159CCBD306BB /* SavingsMetricCard.swift */,
+				27E7DBD638C8C55311B84BD5 /* ZenCounterDialView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		86777DA055B53AECD436CAA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6412841887CD00335AFE4BDE /* CognitiveDistortionView.swift */,
+				B1583E1D4A3C774D2B572B9E /* ResourcesView.swift */,
+				622C4B2197E877764A5B9686 /* SelfAssessmentView.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		884EFB4F9624BA0D286085C4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				55B2CEC0A5E8D277F710F5AF /* ClinicalReportView.swift */,
+				42A4BAE33D85AD57DEA8F0FB /* MoreView.swift */,
+				675AD287D57AA19BC7A84E16 /* OnboardingView.swift */,
+				5048EB9726A249A748245967 /* PaywallView.swift */,
+				B5C2998B0F352D6F88ADF3AB /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9CF4D5E19402221A54595120 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3965A910DFFB3F5993AFBDE9 /* Assets.xcassets */,
+				B10C99E02CA86F1200000002 /* PrivacyInfo.xcprivacy */,
+				A834B2FB418A7F29367299EA /* BackgroundVideo.mp4 */,
+				424D052584BE101383E832FE /* CalculatorIcon.png */,
+				CC47142B799E1905A9DAD84D /* CalculatorIcon@2x.png */,
+				DCDC805BD3F413EB18C1BE1D /* CalculatorIcon@3x.png */,
+				6A95EE6784CFA8D689F627F4 /* CalculatorIcon60x60@2x.png */,
+				9E9380F021A2595D0CFBC962 /* CalculatorIcon60x60@3x.png */,
+				AF74663DC0B7769503039811 /* CalculatorIcon76x76@2x~ipad.png */,
+				9AB96EF85F3F8B005E66B60D /* gambling_hashes.bin */,
+				F7B12EB345A387D619D1F50C /* NotesIcon.png */,
+				354E2C96D299F56CB68E52D6 /* NotesIcon@2x.png */,
+				16FFC63F5CD7161916D04C63 /* NotesIcon@3x.png */,
+				133200230615BED21B5D45D1 /* NotesIcon60x60@2x.png */,
+				F41B13C55FB16526FA3AE203 /* NotesIcon60x60@3x.png */,
+				5BF5CBBA8E9B58118343D5DA /* NotesIcon76x76@2x~ipad.png */,
+				16A19B1CAF054A9DE2A583C2 /* sfsffsf.mp4 */,
+				BD15477CC45A1D1B8A553CE8 /* soothing_wind.m4a */,
+				D48B5D3FC5BC7EA13AE384EB /* sound_1_forest.m4a */,
+				9208389124C26835FF6DE74C /* sound_1_harmony.m4a */,
+				B6CB7C81165976E664DF25A2 /* sound_2_breath_wind.m4a */,
+				F7B64A190BD984BE6828DFC1 /* sound_2_ocean.m4a */,
+				6DD558907FA914603D5FE6D0 /* sound_3_ocean_wave.m4a */,
+				01652BAC8CAC396EE60A2193 /* sound_3_singing_wind.m4a */,
+				EA4C5BA63874BA0304380373 /* sound_4_summer_breeze.m4a */,
+				6617D5642C182D0C3B2ECF9C /* sound_4_zen_bells.m4a */,
+				823BCB6B2D36A388540A2211 /* sound_ocean.m4a */,
+				A88D17863D0DF78D8D2D2D04 /* sound_stream.m4a */,
+				0ED6E5F281A3A537E039991E /* sound_urge_waves.m4a */,
+				29BB2F06F87A9ACA5BC5B674 /* Timeline 1.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A563ABE4E8323DF0FB5DB70D /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				410FA274BC97ADF672076D40 /* AnalyticsView.swift */,
+				6D4144189A501255931DE33C /* CravingLoggerView.swift */,
+				697A9E537A72039033CCC9DE /* MilestoneBadgesView.swift */,
+				FA1650D2AD9BCFA7F9263FC3 /* RelapseReflectionView.swift */,
+				E31BA0A31CB1D2719E5DC8C1 /* SobrietyCalendarView.swift */,
+				85E030009A5738FA6A008A68 /* TrackerView.swift */,
+			);
+			path = Tracker;
+			sourceTree = "<group>";
+		};
+		AA90EA8902D8201A3FE99F90 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				85FE6FC47C8841C6F0C272E7 /* AnimatedWaveView.swift */,
+				77FD20CC4304DF41441A0C24 /* BioluminescentCanvasView.swift */,
+				0CCB1B822CA764756EC0034E /* CalculatorCamouflageView.swift */,
+				87B2F2A45F98B2409BAB81EF /* CamouflageView.swift */,
+				520FE1BB2C5AB8E45D66258D /* EmptyStateView.swift */,
+				196948AE2A906E36D5CB9118 /* FlutedGlassBackgroundView.swift */,
+				CD7907784F5EB514596C28B0 /* FreedomGemView.swift */,
+				01B7A5944E063A1A129F86E2 /* GrowingPlantView.swift */,
+				A122BCF2386B25E27B0FD3CC /* LoopingVideoPlayerView.swift */,
+				DC1EAB3F3C3DE166537C8CAA /* MilestoneIcon.swift */,
+				B4864B83D268FCB1D89EA8F2 /* MindfulFrictionGateView.swift */,
+				7C657308DE613DBB38975D16 /* ShimmerModifier.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		ADDB1FBA3AC541CE257EC418 /* SafariExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3BAB80D58AC1DFF4906568F5 /* background.js */,
+				296FC89418A143060D566C9B /* content.css */,
+				C84621FAC516086202F015AC /* content.js */,
+				7CE475C81EB7202797ED9148 /* gambling_hashes.bin */,
+				6F8523F08DCC25F1D6952767 /* Icon.png */,
+				D1A252B3D547A167AB194386 /* Info.plist */,
+				C8C8400D7BED0FC2E4FA8C44 /* manifest.json */,
+				DCFDC807B5ED2F7A3709EA63 /* SafariWebExtensionHandler.swift */,
+			);
+			path = SafariExtension;
+			sourceTree = "<group>";
+		};
+		B7C3BF2BEC23BC8EF973D50A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2EA6AD8F2D82CA698C6857AE /* ContentView.swift */,
+				964EE4DD47870FEBD0F45FC0 /* Info.plist */,
+				4E11CD549EDFC4905EB19FE9 /* QuitGamblingApp.swift */,
+				FAA1E8056B63FB2343CE551C /* Design */,
+				061297805844D287EA494369 /* Models */,
+				541748BE728E77CEF3808F03 /* Preview Content */,
+				9CF4D5E19402221A54595120 /* Resources */,
+				3F7B90A96CE989158F020554 /* Services */,
+				762B7BE862B6D7D87D90EAF4 /* ViewModels */,
+				E339E00483944697066B6779 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BABFF872A3373CB8A07E0823 /* ShieldConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				EF084DB85BFCB68F762B8566 /* Info.plist */,
+				9ABD75326C46C2A9FCE869A7 /* ShieldConfigurationExtension.swift */,
+			);
+			path = ShieldConfiguration;
+			sourceTree = "<group>";
+		};
+		BAD3E794F3701528EFAC8FCA /* SOS */ = {
+			isa = PBXGroup;
+			children = (
+				416643A3009B680A29AF0779 /* BreathingExerciseView.swift */,
+				037C14A8E2B3815813AAA627 /* DEADSStrategyView.swift */,
+				197C5181FEFE2D1D70E62406 /* EmergencyBuddyView.swift */,
+				355580B9AB73F139EEF90296 /* GroundingExerciseView.swift */,
+				CA297D237AB995223861176B /* HotlineListView.swift */,
+				ACA9EA5D5BF21B4E4962D173 /* ReasonsCardDeckView.swift */,
+				41B6F04E98CBEA44AAA9E35A /* SOSView.swift */,
+				22ECC46C9E57D0ED22F8F85D /* UrgeSurfingView.swift */,
+			);
+			path = SOS;
+			sourceTree = "<group>";
+		};
+		CCECAAA767C3A7D76AD868D8 /* Shield */ = {
+			isa = PBXGroup;
+			children = (
+				E36D7BC89D3953E267E93C69 /* AddZoneSheet.swift */,
+				34DF5A67DB80AC03947A5B61 /* DNSProtectionSheet.swift */,
+				40D9B262CF8D494B75C23453 /* SafariExtensionTutorialView.swift */,
+				E8189C73C124F4CF41772F53 /* ShieldDashboardView.swift */,
+				BBA4F132832025571CDF2240 /* ZoneRadarView.swift */,
+			);
+			path = Shield;
+			sourceTree = "<group>";
+		};
+		CDA8D90874074BF3CF48009D /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				7221F266AD879011433DEB62 /* FinanceView.swift */,
+				8BF2BB355B887BBF4067E98C /* SavingsGoalCardView.swift */,
+				E5E31D42E06012365F4CBE58 /* SavingsProgressView.swift */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		E339E00483944697066B6779 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CF980FEBA17FF304468A877 /* Checkin */,
+				850D410D8CCD957123490D9B /* Dashboard */,
+				CDA8D90874074BF3CF48009D /* Finance */,
+				28A9DE26C06BB9AFD43E134B /* Journal */,
+				86777DA055B53AECD436CAA1 /* Resources */,
+				884EFB4F9624BA0D286085C4 /* Settings */,
+				AA90EA8902D8201A3FE99F90 /* Shared */,
+				CCECAAA767C3A7D76AD868D8 /* Shield */,
+				BAD3E794F3701528EFAC8FCA /* SOS */,
+				A563ABE4E8323DF0FB5DB70D /* Tracker */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAA1E8056B63FB2343CE551C /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				BC2968379BC9278CBE91802D /* DesignTokens.swift */,
+				E2AEF83CE42AB6073AE68175 /* SolidSurfaceModifier.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		FAFFDE9C737B517537FDA500 = {
+			isa = PBXGroup;
+			children = (
+				ADDB1FBA3AC541CE257EC418 /* SafariExtension */,
+				45977E71A4849FCF69FF6C46 /* ShieldAction */,
+				BABFF872A3373CB8A07E0823 /* ShieldConfiguration */,
+				B7C3BF2BEC23BC8EF973D50A /* Sources */,
+				4C6453F499BCA09709645520 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26FA27F1A84F1029EE8307F1 /* QuitGamblingShieldAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2856D5E53042E62405A9EA5 /* Build configuration list for PBXNativeTarget "QuitGamblingShieldAction" */;
+			buildPhases = (
+				84F5E4EA18E8AF8D659ED16D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuitGamblingShieldAction;
+			packageProductDependencies = (
+			);
+			productName = QuitGamblingShieldAction;
+			productReference = FED1128E360BA6A1DA30241D /* QuitGamblingShieldAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		2798C5758E6F860F54BB6B3E /* QuitGambling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CEE2BC27A2FED9D1DCBFAC3 /* Build configuration list for PBXNativeTarget "QuitGambling" */;
+			buildPhases = (
+				DA873F7225A897B48F29A7FD /* Sources */,
+				EB071433E9A11FD335C81499 /* Resources */,
+				35D88CA0031C2CCEB3E40D40 /* Frameworks */,
+				F372A97C8479D6B2D9830051 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED150D29D9B77050156002D9 /* PBXTargetDependency */,
+				AC6DDAD76020A12B2194F9AF /* PBXTargetDependency */,
+				28222064DD2C7AB8952A77B9 /* PBXTargetDependency */,
+			);
+			name = QuitGambling;
+			packageProductDependencies = (
+				0E1732D39C7DF97527D62DF5 /* RevenueCat */,
+			);
+			productName = QuitGambling;
+			productReference = 4A0D46C330DE3307D2CF907C /* QuitGambling.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38E26CABD0C0A4069B715A0A /* QuitGamblingSafariExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 690FA88581D6B1B3C295E1BE /* Build configuration list for PBXNativeTarget "QuitGamblingSafariExtension" */;
+			buildPhases = (
+				CCEEF563F708BD39471055D2 /* Sources */,
+				66FEC67104AB907113ACF378 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuitGamblingSafariExtension;
+			packageProductDependencies = (
+			);
+			productName = QuitGamblingSafariExtension;
+			productReference = 8585F7DE9DC8D0E1429700CD /* QuitGamblingSafariExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		AD81CAD76E5800C53B4764D0 /* QuitGamblingShieldConfiguration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 643CE4608697200E18D101DD /* Build configuration list for PBXNativeTarget "QuitGamblingShieldConfiguration" */;
+			buildPhases = (
+				E9B075AAC1495BDC059E0C57 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuitGamblingShieldConfiguration;
+			packageProductDependencies = (
+			);
+			productName = QuitGamblingShieldConfiguration;
+			productReference = 15982989878919A3FF9F9536 /* QuitGamblingShieldConfiguration.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB72D5B60588E69D7D991965 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					26FA27F1A84F1029EE8307F1 = {
+						DevelopmentTeam = U52XZVLMTC;
+						ProvisioningStyle = Automatic;
+					};
+					2798C5758E6F860F54BB6B3E = {
+						DevelopmentTeam = U52XZVLMTC;
+						ProvisioningStyle = Automatic;
+					};
+					38E26CABD0C0A4069B715A0A = {
+						DevelopmentTeam = U52XZVLMTC;
+						ProvisioningStyle = Automatic;
+					};
+					AD81CAD76E5800C53B4764D0 = {
+						DevelopmentTeam = U52XZVLMTC;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 993D87BD43C6879F4B89F750 /* Build configuration list for PBXProject "QuitGambling" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = FAFFDE9C737B517537FDA500;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6413F5F5173254ECA2561A37 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4C6453F499BCA09709645520 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2798C5758E6F860F54BB6B3E /* QuitGambling */,
+				AD81CAD76E5800C53B4764D0 /* QuitGamblingShieldConfiguration */,
+				26FA27F1A84F1029EE8307F1 /* QuitGamblingShieldAction */,
+				38E26CABD0C0A4069B715A0A /* QuitGamblingSafariExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66FEC67104AB907113ACF378 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5C66384EE5175AFE4BE0786 /* Icon.png in Resources */,
+				3F35744DD3B38EAAA976825F /* background.js in Resources */,
+				5DA67BC0D4BA8FB539FE4EF3 /* content.css in Resources */,
+				C7E0F9D36D1DFFDE391F1174 /* content.js in Resources */,
+				7331A5974F3332EA2A9DEDDF /* gambling_hashes.bin in Resources */,
+				8BEADDB6B48BC2459663F15C /* manifest.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB071433E9A11FD335C81499 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3A5ADA6069C012522888EA /* Assets.xcassets in Resources */,
+				B10C99E02CA86F1200000001 /* PrivacyInfo.xcprivacy in Resources */,
+				D09E2A8C402C21B4486841D6 /* BackgroundVideo.mp4 in Resources */,
+				CFA759D6073C2DA693107578 /* CalculatorIcon.png in Resources */,
+				9FBF50BE4870EB071E2B02ED /* CalculatorIcon60x60@2x.png in Resources */,
+				F438D657D35914B4BEE324F1 /* CalculatorIcon60x60@3x.png in Resources */,
+				762199B94452B7FBEED3C3FE /* CalculatorIcon76x76@2x~ipad.png in Resources */,
+				379B01736B8BE69742443A1B /* CalculatorIcon@2x.png in Resources */,
+				00F5C2697FD7F1E7B225023B /* CalculatorIcon@3x.png in Resources */,
+				CE6AF9ACD7B320F1D9581DCD /* NotesIcon.png in Resources */,
+				0E4AA3D129BB06E187B7BC19 /* NotesIcon60x60@2x.png in Resources */,
+				110AD45B1664046D1401C360 /* NotesIcon60x60@3x.png in Resources */,
+				655A1F378DBE3F263EC19693 /* NotesIcon76x76@2x~ipad.png in Resources */,
+				9F909277ED05AC6C812F3410 /* NotesIcon@2x.png in Resources */,
+				3FB6AAD6CD9DF05A047D50B7 /* NotesIcon@3x.png in Resources */,
+				153349F47D8A8D60976CA3AB /* Timeline 1.mp4 in Resources */,
+				F5AE0643D94FBCD9B9927C69 /* gambling_hashes.bin in Resources */,
+				567BCF05449957720DB44A71 /* sfsffsf.mp4 in Resources */,
+				5E6606B6D56AACB1BCBE8EFE /* soothing_wind.m4a in Resources */,
+				DB28BF2919423EC4591C36F4 /* sound_1_forest.m4a in Resources */,
+				08998D4DF441C41EB561F7A1 /* sound_1_harmony.m4a in Resources */,
+				73EC910A47D177BCDB4372B1 /* sound_2_breath_wind.m4a in Resources */,
+				F2FEB4DDE33679DBB065C260 /* sound_2_ocean.m4a in Resources */,
+				85DE7150B988A4D6205A85DB /* sound_3_ocean_wave.m4a in Resources */,
+				228A4B2F311D46590B4A730F /* sound_3_singing_wind.m4a in Resources */,
+				85EBDEEAB31C1DF3C18DF737 /* sound_4_summer_breeze.m4a in Resources */,
+				CE4433781CB315A35F8EF036 /* sound_4_zen_bells.m4a in Resources */,
+				72638D45634C48CA1D0D7A74 /* sound_ocean.m4a in Resources */,
+				D3A61FBDA2875175C02109C7 /* sound_stream.m4a in Resources */,
+				0192AFBABCA212378A7D94A3 /* sound_urge_waves.m4a in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F5E4EA18E8AF8D659ED16D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D76FF0DED529AD28861CE46 /* ShieldActionExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEEF563F708BD39471055D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B844008F8E344BB83FBC2C2 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA873F7225A897B48F29A7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC406718332CB5A8A2F3C23 /* AddPreventedLossSheet.swift in Sources */,
+				D85E46E6CA5DEB40BBA3BEA8 /* AddZoneSheet.swift in Sources */,
+				590F91441ABB502A21BEF23E /* AmbientSoundService.swift in Sources */,
+				32766E6FFC068163C4C49C24 /* AmbientVideoPlayerService.swift in Sources */,
+				BAF588BCACEA36D6DDD5FD7C /* AnalyticsView.swift in Sources */,
+				6FE6D9965311EB984CBBE3E9 /* AnimatedWaveView.swift in Sources */,
+				BDDC55C84FA2E9167716C278 /* AppPreferences.swift in Sources */,
+				DB93ACAD540B8ECC5A752298 /* BioluminescentCanvasView.swift in Sources */,
+				D1A14958551F645E8B8A9506 /* BreathingExerciseView.swift in Sources */,
+				7BA7480AF5974734F0A96D61 /* CalculatorCamouflageView.swift in Sources */,
+				A6A2D6D54E9FCF6EF326AA76 /* CamouflageView.swift in Sources */,
+				D7D2B99B0AA03CF3650B569E /* ClinicalReportExportService.swift in Sources */,
+				E3D278B5679C39D234DBFF66 /* ClinicalReportView.swift in Sources */,
+				1BD1417CCD1D9D7C8C0CAACE /* CognitiveDistortionView.swift in Sources */,
+				FD1781FCD7A06EB0D93C3470 /* ContentView.swift in Sources */,
+				E7F99482481AC618DE82384C /* CountryBlocklistCatalog.swift in Sources */,
+				6AC3D3041447F62894252BB7 /* CravingLog.swift in Sources */,
+				2EAA8C947E142DBBFC45B3ED /* CravingLoggerView.swift in Sources */,
+				58C57ED9FC83BFF0313F1191 /* CurvedMoodDockView.swift in Sources */,
+				A2A00B9DC5446921B319D6E1 /* DEADSStrategyView.swift in Sources */,
+				15C51EC613F612BBB0A83AD5 /* DNSProtectionService.swift in Sources */,
+				385FFA6A8871FFD1112434A3 /* DNSProtectionSheet.swift in Sources */,
+				B03DA9411E1E246CFDBEBD50 /* DailyCheckInCardView.swift in Sources */,
+				4AF66C8F97AA33DA8CD6CB06 /* DailyCheckInSheet.swift in Sources */,
+				8B84253F1005797B497CBA78 /* DailyMorningCheckinView.swift in Sources */,
+				350730A3D8ED1744F8E08983 /* DailyPledgeView.swift in Sources */,
+				F43A056DF48EA0ED4BF68DB6 /* DashboardView.swift in Sources */,
+				A8D7414107CEE65E7636F94E /* DashboardViewModel.swift in Sources */,
+				523926CACA4C6183C8F6CC75 /* DesignTokens.swift in Sources */,
+				C261AC3EB93AC3C922E1AE31 /* DomainBlocklistService.swift in Sources */,
+				A99BAFEFDFD460935F6DEEDC /* EmergencyBuddyView.swift in Sources */,
+				41B3842B7BDAA5146A970734 /* EmergencyContact.swift in Sources */,
+				B196F0C6ADD02CBD8DF009E9 /* EmptyStateView.swift in Sources */,
+				EFC2E720263CEB501F38B793 /* FinanceView.swift in Sources */,
+				B6C3D0E596A383AB9D568A39 /* FinanceViewModel.swift in Sources */,
+				EA34CAC55E40258AAD710A0D /* FlutedGlassBackgroundView.swift in Sources */,
+				E822C61E4F9E416EEF1C6EF0 /* FreedomGemView.swift in Sources */,
+				0C6E65DABDBDF2F33F84865B /* FreedomScoreCalculator.swift in Sources */,
+				7FB7300B2A332828E12A8DF0 /* GroundingExerciseView.swift in Sources */,
+				97942D7CFB2C2F6D0128DEF0 /* GrowingPlantView.swift in Sources */,
+				82039EE2C0BF68C79AE855C3 /* HotlineListView.swift in Sources */,
+				E7C12AAF29F233B3BD874D01 /* JournalEntry.swift in Sources */,
+				5723524F3552F930336C9E69 /* JournalEntryView.swift in Sources */,
+				2930199B49152AE1C05ED51C /* JournalView.swift in Sources */,
+				0353E7892C09F1B182FE0E65 /* JournalViewModel.swift in Sources */,
+				47AFE918E8F0DB02023D5E66 /* LiveCounterView.swift in Sources */,
+				48911AFF4CB8177FBF6F81EC /* LocationShieldManager.swift in Sources */,
+				436E6A03B78327BAE3DF8906 /* LoopingVideoPlayerView.swift in Sources */,
+				61AEDDDD265BDB80327D3C5E /* MilestoneAchievement.swift in Sources */,
+				F15D5F81A3ADA58F32A2F816 /* MilestoneBadgesView.swift in Sources */,
+				CA0E0A819A2B3F574FF92D9E /* MilestoneIcon.swift in Sources */,
+				3240E66AD0DFEAD13AAA7971 /* MilestoneMetricCard.swift in Sources */,
+				DE49EC6ADD5ACA61ADED5A0E /* MilestonePreviewView.swift in Sources */,
+				36AD7324F18471BCC16AE252 /* MindfulFrictionGateView.swift in Sources */,
+				0591FF383BEF0ED574D66959 /* MinigameSessionManager.swift in Sources */,
+				BF9B6A21F557B6408D6D42F4 /* MoodPickerView.swift in Sources */,
+				CDE0F01CA20D3D42522E8147 /* MoreView.swift in Sources */,
+				B6BA3D223DA674FB50885403 /* NewEntryView.swift in Sources */,
+				1D7ACD4894BB38778DE2FEF1 /* NotificationManager.swift in Sources */,
+				0EBAE8A081127A5CDFA3B365 /* OnboardingView.swift in Sources */,
+				537DE3429FA8DE985BB9435D /* PaywallView.swift in Sources */,
+				A3E21AB57B76A9630E1AD581 /* PreventedLossEntry.swift in Sources */,
+				C33F87DD8DDAAA01BB3AA324 /* PrivacyManager.swift in Sources */,
+				B3C880AF3B161DE59AF189D6 /* ShakeMotionService.swift in Sources */,
+				9B781852096012077A83E51E /* QuitGamblingApp.swift in Sources */,
+				79CCC6A2AA6626B26C19E095 /* ReasonToQuit.swift in Sources */,
+				B06B897BAFDC036099A061C2 /* ReasonsCardDeckView.swift in Sources */,
+				D70E5152714E74A6BC4E41F7 /* RelapseReflectionView.swift in Sources */,
+				6D1E8734322998786A0375C3 /* ResourcesView.swift in Sources */,
+				CDFAC6EF5AD291943CEF5545 /* SOSView.swift in Sources */,
+				BAFBC479060E01D936B1C7BE /* SOSViewModel.swift in Sources */,
+				7AAE28715AA5E6B0722337DA /* SafariExtensionTutorialView.swift in Sources */,
+				BE406E11DFB70D186B9D8E4E /* SavingsCardView.swift in Sources */,
+				D24FA57552EE648513279497 /* SavingsEquivalentCardView.swift in Sources */,
+				72BE33458AE599514DD42178 /* SavingsEquivalentService.swift in Sources */,
+				B10C99E12CA86F1200000003 /* PeriodicPaywallService.swift in Sources */,
+				B2C3D4E5F6A7B8C9D0E1F2A3 /* LocalizationService.swift in Sources */,
+				6358AEC22AFC113160EF3968 /* SavingsEquivalentsSheet.swift in Sources */,
+				94AB58DA4C98150C2AE253AE /* SavingsGoal.swift in Sources */,
+				8F3325993132ECFFC7E1A630 /* SavingsGoalCardView.swift in Sources */,
+				016A34A6076FFBC8394D93B0 /* SavingsMetricCard.swift in Sources */,
+				5448A07AF196312FCD8A7B98 /* SavingsProgressView.swift in Sources */,
+				338AB668A2F5E35D9A6A99AB /* SelfAssessmentResult.swift in Sources */,
+				54CE6BD2981341B867E9EE41 /* SelfAssessmentView.swift in Sources */,
+				ED2BCE8E861FCC8D057F1C6C /* SensoryFeedbackService.swift in Sources */,
+				2805EF86D4E5B00825542CC5 /* SettingsView.swift in Sources */,
+				1AF866ECB36557EE5AA0A86F /* ShieldDashboardView.swift in Sources */,
+				707BF075EC49F37D97731E01 /* ShieldManager.swift in Sources */,
+				5317DF39BCCA7350AC354888 /* ShimmerModifier.swift in Sources */,
+				C24EFC7752C392A254695A04 /* SobrietyCalendarView.swift in Sources */,
+				790306432C58CB797E07B402 /* SolidSurfaceModifier.swift in Sources */,
+				F99AFE8796E40110DC34B560 /* SubscriptionManager.swift in Sources */,
+				50763632FE2944EF4F0B9F3F /* ThemeManager.swift in Sources */,
+				03D36039684B8CFD728AC0B1 /* TrackerView.swift in Sources */,
+				72EB09770E28A4233228B15E /* TrackerViewModel.swift in Sources */,
+				2FED7962C72F116BE3CBB332 /* TriggerZone.swift in Sources */,
+				21205346B98523EFB177EFE0 /* UrgeSurfingView.swift in Sources */,
+				8AF5AEF0476872FE20FC4C4D /* UserProfile.swift in Sources */,
+				EBB34041C446B19403C91845 /* ZenCounterDialView.swift in Sources */,
+				F5DB2A1B5A83FD6A5E6C055C /* ZenMindOrbView.swift in Sources */,
+				4D05B9DBBE043B8E228BE5A0 /* ZoneRadarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9B075AAC1495BDC059E0C57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A277053ED6F54B23963B22CB /* ShieldConfigurationExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28222064DD2C7AB8952A77B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38E26CABD0C0A4069B715A0A /* QuitGamblingSafariExtension */;
+			targetProxy = E0A772498925FBFE4BE1BFD7 /* PBXContainerItemProxy */;
+		};
+		AC6DDAD76020A12B2194F9AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26FA27F1A84F1029EE8307F1 /* QuitGamblingShieldAction */;
+			targetProxy = CE2B5FFFEA2B2B29B9B45B53 /* PBXContainerItemProxy */;
+		};
+		ED150D29D9B77050156002D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD81CAD76E5800C53B4764D0 /* QuitGamblingShieldConfiguration */;
+			targetProxy = A4BFBAEBCC4FC1037F4E9A97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		393D4A6C2A278DE507F88C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lennertroehrig.freispiel.ShieldConfiguration;
+				PRODUCT_NAME = QuitGamblingShieldConfiguration;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4C4D89D1F31CB502FD5D6AB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 13;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Quit Gambling";
+				INFOPLIST_KEY_CFBundleShortVersionString = 1.0.1;
+				INFOPLIST_KEY_CFBundleVersion = 9;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		53DA945B557F11AD95E3891A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "CalculatorIcon NotesIcon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = QuitGambling.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Quit Gambling";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Quit Gambling benötigt den Hintergrund-Standort, um das Schutzschild automatisch in der Nähe markierter Gefahrenzonen zu aktivieren.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Quit Gambling nutzt deinen Standort, um dich vor Gefahrenorten wie Spielhallen durch subtile Achtsamkeit zu schützen.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lennertroehrig.freispiel;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		56578434B2C0E25ABA4ED6FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShieldAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lennertroehrig.freispiel.ShieldAction;
+				PRODUCT_NAME = QuitGamblingShieldAction;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		56A3634A38F9E54283C81B9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SafariExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lennertroehrig.freispiel.SafariExtension;
+				PRODUCT_NAME = QuitGamblingSafariExtension;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		729830910EFDB646DE96E726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "CalculatorIcon NotesIcon";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = QuitGambling.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Quit Gambling";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Quit Gambling benötigt den Hintergrund-Standort, um das Schutzschild automatisch in der Nähe markierter Gefahrenzonen zu aktivieren.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Quit Gambling nutzt deinen Standort, um dich vor Gefahrenorten wie Spielhallen durch subtile Achtsamkeit zu schützen.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lennertroehrig.freispiel;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94305DF10B6B585CAEDDBD78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 13;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Quit Gambling";
+				INFOPLIST_KEY_CFBundleShortVersionString = 1.0.1;
+				INFOPLIST_KEY_CFBundleVersion = 9;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BAB12977355423B34CED9C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SafariExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lennertroehrig.freispiel.SafariExtension;
+				PRODUCT_NAME = QuitGamblingSafariExtension;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F566CDB170D89D113F6828B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lennertroehrig.freispiel.ShieldConfiguration;
+				PRODUCT_NAME = QuitGamblingShieldConfiguration;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F7ED6310F5D83D89343C9F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U52XZVLMTC;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShieldAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lennertroehrig.freispiel.ShieldAction;
+				PRODUCT_NAME = QuitGamblingShieldAction;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CEE2BC27A2FED9D1DCBFAC3 /* Build configuration list for PBXNativeTarget "QuitGambling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				729830910EFDB646DE96E726 /* Debug */,
+				53DA945B557F11AD95E3891A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		643CE4608697200E18D101DD /* Build configuration list for PBXNativeTarget "QuitGamblingShieldConfiguration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				393D4A6C2A278DE507F88C40 /* Debug */,
+				F566CDB170D89D113F6828B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		690FA88581D6B1B3C295E1BE /* Build configuration list for PBXNativeTarget "QuitGamblingSafariExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB12977355423B34CED9C2C /* Debug */,
+				56A3634A38F9E54283C81B9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		993D87BD43C6879F4B89F750 /* Build configuration list for PBXProject "QuitGambling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94305DF10B6B585CAEDDBD78 /* Debug */,
+				4C4D89D1F31CB502FD5D6AB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E2856D5E53042E62405A9EA5 /* Build configuration list for PBXNativeTarget "QuitGamblingShieldAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56578434B2C0E25ABA4ED6FB /* Debug */,
+				F7ED6310F5D83D89343C9F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6413F5F5173254ECA2561A37 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E1732D39C7DF97527D62DF5 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6413F5F5173254ECA2561A37 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AB72D5B60588E69D7D991965 /* Project object */;
+}

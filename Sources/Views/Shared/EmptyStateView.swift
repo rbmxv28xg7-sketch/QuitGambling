@@ -26,9 +26,9 @@ struct EmptyStateView: View {
 #Preview {
     EmptyStateView(
         icon: "book.fill",
-        title: "Noch keine Einträge",
-        subtitle: "Schreibe deinen ersten Tagebucheintrag.",
-        actionTitle: "Eintrag erstellen"
+        title: "No Entries Yet",
+        subtitle: "Write your first journal entry.",
+        actionTitle: "Create Entry"
     ) {
         // action
     }

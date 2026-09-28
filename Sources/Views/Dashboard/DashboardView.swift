@@ -1,73 +1,165 @@
 import SwiftUI
 import SwiftData
 
+/// Pure Apple Craftsmanship Dashboard.
+/// True OLED black, massive monolithic typography, solid tactile controls, zero Dribbble clichés.
 struct DashboardView: View {
+    @Binding var selectedTab: AppTab
     @Environment(\.modelContext) private var modelContext
     @State private var viewModel = DashboardViewModel()
-    
+    @State private var showingSavingsEquivalents = false
+    @State private var showingLogger = false
+
+    init(selectedTab: Binding<AppTab> = .constant(.home)) {
+        self._selectedTab = selectedTab
+    }
+
+    @Query private var profiles: [UserProfile]
+    @Query private var preventedEntries: [PreventedLossEntry]
+    @Query private var cravingLogs: [CravingLog]
+    @Query private var journalEntries: [JournalEntry]
+    @Query private var assessmentResults: [SelfAssessmentResult]
+
+    private var freedomScoreData: (score: Int, grade: String, summary: String) {
+        FreedomScoreCalculator.calculateScore(
+            daysClean: viewModel.daysClean,
+            hasPledgedToday: viewModel.hasPledgedToday,
+            cravingLogs: cravingLogs,
+            journalEntries: journalEntries,
+            selfAssessmentResults: assessmentResults
+        )
+    }
+
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: Design.Spacing.md) {
-                    greetingView
-                    
-                    TimelineView(.periodic(from: .now, by: 1)) { _ in
-                        LiveCounterView(viewModel: viewModel)
-                            .onAppear {
-                                viewModel.updateTimer()
+            ZStack {
+                FlutedGlassBackgroundView()
+
+                // Continuous Natural ScrollView
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: Design.Spacing.xl) {
+                        // Top Date (Pure, quiet typography)
+                        topDateHeader
+
+                        // The Monolithic Streak Hero
+                        ZenCounterDialView(
+                            viewModel: viewModel,
+                            score: freedomScoreData.score,
+                            grade: freedomScoreData.grade
+                        )
+
+
+                        // Tactile Mechanical Daily Pledge Control
+                        DailyPledgeView(
+                            hasPledgedToday: viewModel.hasPledgedToday,
+                            onPledge: {
+                                viewModel.confirmPledge(context: modelContext)
                             }
-                            .onChange(of: Date.now) { _, _ in
-                                viewModel.updateTimer()
+                        )
+
+                        // 15-Second Daily Check-in & Micro-Reflection
+                        DailyCheckInCardView()
+
+                        // 2 Solid Metric Pods
+                        HStack(spacing: Design.Spacing.md) {
+                            Button {
+                                SensoryFeedbackService.shared.cardTap()
+                                showingSavingsEquivalents = true
+                            } label: {
+                                SavingsMetricCard(moneySaved: viewModel.moneySaved)
                             }
-                    }
-                    
-                    SavingsCardView(moneySaved: viewModel.moneySaved)
-                    
-                    DailyPledgeView(
-                        hasPledgedToday: viewModel.hasPledgedToday,
-                        onPledge: {
-                            viewModel.confirmPledge(context: modelContext)
+                            .buttonStyle(.plain)
+
+                            Button {
+                                SensoryFeedbackService.shared.selectionClick()
+                                withAnimation(Design.Anim.spring) {
+                                    selectedTab = .tracker
+                                }
+                            } label: {
+                                MilestoneMetricCard(viewModel: viewModel)
+                            }
+                            .buttonStyle(.plain)
                         }
-                    )
-                    
-                    MilestonePreviewView(viewModel: viewModel)
-                }
-                .padding(.horizontal, Design.Spacing.md)
-            }
-            .background(Design.Colors.background)
-            .navigationTitle("Übersicht")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink(destination: Text("Finanzen")) {
-                        Image(systemName: "banknote")
-                            .foregroundStyle(Design.Colors.primary)
-                            .frame(width: 44, height: 44)
                     }
+                    .padding(.horizontal, Design.Spacing.lg)
+                    .padding(.bottom, 96)
+                }
+            }
+            .sheet(isPresented: $showingSavingsEquivalents) {
+                SavingsEquivalentsSheet(moneySaved: viewModel.moneySaved)
+                    .scrollIndicators(.hidden)
+            }
+            .sheet(isPresented: $showingLogger) {
+                CravingLoggerView()
+                    .scrollIndicators(.hidden)
+            }
+            .scrollIndicators(.hidden)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        SensoryFeedbackService.shared.buttonTap()
+                        showingLogger = true
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundStyle(Design.Colors.accent)
+                    }
+                    .frame(minWidth: 44, minHeight: 44)
                 }
             }
             .task {
                 viewModel.loadProfile(context: modelContext)
+                while !Task.isCancelled {
+                    try? await Task.sleep(for: .seconds(1))
+                    viewModel.updateTimer()
+                }
+            }
+            .onChange(of: preventedEntries.count) { _, _ in
+                viewModel.loadProfile(context: modelContext)
+            }
+            .onChange(of: profiles.first?.dailyGamblingSpend) { _, _ in
+                viewModel.loadProfile(context: modelContext)
+            }
+            .onChange(of: profiles.first?.sobrietyStartDate) { _, _ in
+                viewModel.loadProfile(context: modelContext)
+            }
+            .onChange(of: profiles.first?.pledgedToday) { _, _ in
+                viewModel.loadProfile(context: modelContext)
+            }
+            .onChange(of: cravingLogs.count) { _, _ in
+                viewModel.loadProfile(context: modelContext)
+            }
+            .onChange(of: journalEntries.count) { _, _ in
+                viewModel.loadProfile(context: modelContext)
             }
         }
+        .scrollIndicators(.hidden)
+        .preferredColorScheme(.dark)
     }
-    
-    private var greetingView: some View {
-        let hour = Calendar.current.component(.hour, from: .now)
-        let greeting = switch hour {
-        case 5..<12: "Guten Morgen"
-        case 12..<18: "Guten Tag"
-        default: "Guten Abend"
+
+    // MARK: - Discrete Top Date
+
+    private var topDateHeader: some View {
+        let dateString = Date.now.formatted(
+            .dateTime.weekday(.wide).day().month(.wide).locale(Locale(identifier: AppPreferences.shared.languageCode))
+        )
+
+        return HStack(spacing: 6) {
+            Circle()
+                .fill(Design.Colors.amberGold)
+                .frame(width: 6, height: 6)
+                .shadow(color: Design.Colors.amberGold.opacity(0.8), radius: 4)
+
+            Text(dateString.uppercased())
+                .font(.system(size: 11, weight: .bold, design: .rounded))
+                .tracking(2.5)
+                .foregroundStyle(Design.Colors.textSecondary)
+
+            Spacer()
         }
-        
-        return Text(greeting)
-            .font(.title2)
-            .fontWeight(.semibold)
-            .foregroundStyle(Design.Colors.primary)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.top, Design.Spacing.sm)
     }
 }
 
 #Preview {
     DashboardView()
+        .modelContainer(for: [UserProfile.self, CravingLog.self, JournalEntry.self, SelfAssessmentResult.self], inMemory: true)
 }

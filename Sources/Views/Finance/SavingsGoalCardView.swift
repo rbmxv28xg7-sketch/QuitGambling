@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// Card showing progress toward a specific savings goal.
+/// Redesigned Apple-grade card showing progress toward a specific savings goal.
+/// Strictly single-line title + single-line subtitle, with fluid animated progress bar.
 struct SavingsGoalCardView: View {
     let goalName: String
     let savedAmount: Double
@@ -16,50 +17,113 @@ struct SavingsGoalCardView: View {
         Int(progress * 100)
     }
 
+    private var isAchieved: Bool {
+        progress >= 1.0
+    }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: Design.Spacing.sm) {
-            HStack {
-                Image(systemName: icon)
-                    .font(.title3)
-                    .foregroundStyle(Design.Colors.gold)
+        VStack(spacing: Design.Spacing.sm) {
+            HStack(spacing: 12) {
+                // Goal Icon Badge
+                ZStack {
+                    Circle()
+                        .fill(isAchieved ? Design.Colors.primary.opacity(0.18) : Design.Colors.gold.opacity(0.14))
+                        .frame(width: 42, height: 42)
 
-                Text(goalName)
-                    .font(.headline)
+                    Image(systemName: icon)
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundStyle(isAchieved ? Design.Colors.primary : Design.Colors.gold)
+                }
 
-                Spacer()
+                // Title (Line 1) + Subtitle (Line 2)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(goalName)
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(Color.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.75)
 
-                Text("\(percentage)%")
-                    .font(.subheadline)
-                    .bold()
-                    .foregroundStyle(progress >= 1.0 ? Design.Colors.primary : .secondary)
+                    HStack(spacing: 4) {
+                        Text(savedAmount, format: .currency(code: AppPreferences.shared.currencyCode))
+                            .font(.caption)
+                            .fontWeight(.medium)
+                            .foregroundStyle(isAchieved ? Design.Colors.primary : Design.Colors.textSecondary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+
+                        Text("of".loc)
+                            .font(.caption2)
+                            .foregroundStyle(Design.Colors.textTertiary)
+
+                        Text(targetAmount, format: .currency(code: AppPreferences.shared.currencyCode))
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(Design.Colors.champagne)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
+                    .lineLimit(1)
+                }
+
+                Spacer(minLength: 4)
+
+                // Percentage or Achieved Pill
+                if isAchieved {
+                    HStack(spacing: 4) {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.caption)
+                        Text("Reached".loc)
+                            .font(.caption.weight(.bold))
+                    }
+                    .foregroundStyle(Color.black)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(Design.Colors.primary)
+                    .clipShape(Capsule())
+                } else {
+                    Text("\(percentage)%")
+                        .font(.system(size: 14, weight: .bold, design: .rounded))
+                        .foregroundStyle(Design.Colors.gold)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 3)
+                        .background(Design.Colors.gold.opacity(0.14))
+                        .clipShape(Capsule())
+                }
             }
 
-            ProgressView(value: progress)
-                .tint(Design.Colors.gold)
+            // Sleek Custom Progress Capsule
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color.white.opacity(0.08))
+                        .frame(height: 6)
 
-            HStack {
-                Text(savedAmount, format: .currency(code: "EUR"))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                Text("von")
-                    .font(.caption)
-                    .foregroundStyle(.tertiary)
-                Text(targetAmount, format: .currency(code: "EUR"))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .bold()
+                    Capsule()
+                        .fill(
+                            LinearGradient(
+                                colors: isAchieved
+                                    ? [Design.Colors.primary, Design.Colors.primaryLight]
+                                    : [Design.Colors.gold, Design.Colors.amberGold],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .frame(width: max(6, geo.size.width * CGFloat(progress)), height: 6)
+                        .animation(Design.Anim.spring, value: progress)
+                }
             }
+            .frame(height: 6)
+            .padding(.top, 2)
         }
-        .padding(Design.Spacing.md)
-        .background(Design.Colors.surface)
-        .clipShape(.rect(cornerRadius: Design.Radius.md))
+        .sereneCardStyle(padding: Design.Spacing.md)
     }
 }
 
 #Preview {
-    VStack {
-        SavingsGoalCardView(goalName: "Urlaub", savedAmount: 1200, targetAmount: 2000, icon: "airplane")
-        SavingsGoalCardView(goalName: "Schulden", savedAmount: 3500, targetAmount: 5000, icon: "creditcard.fill")
+    VStack(spacing: 12) {
+        SavingsGoalCardView(goalName: "Notgroschen", savedAmount: 1200, targetAmount: 2000, icon: "shield.fill")
+        SavingsGoalCardView(goalName: "Urlaub nach New York", savedAmount: 3500, targetAmount: 3500, icon: "airplane")
     }
     .padding()
 }

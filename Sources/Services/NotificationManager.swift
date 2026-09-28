@@ -65,7 +65,8 @@ final class NotificationManager {
 
     func requestPermission() async -> Bool {
         do {
-            let granted = try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])
+            // Request silent visual alerts only (Silent Sanctuary principle: no loud chime triggers)
+            let granted = try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge])
             isPermissionGranted = granted
             if granted {
                 updateSchedules()
@@ -85,9 +86,9 @@ final class NotificationManager {
 
         if morningReminderEnabled {
             let content = UNMutableNotificationContent()
-            content.title = "Dein tägliches Versprechen 🌿"
-            content.body = "Ein neuer Tag beginnt. Bestätige dein Versprechen: Heute bleibe ich frei vom Glücksspiel."
-            content.sound = .default
+            content.title = "Daily Pledge"
+            content.body = "A new day begins. Renew your commitment: Today I stay free from gambling."
+            content.sound = nil // Silent Sanctuary: 100% silent, no stress chime
 
             let comps = Calendar.current.dateComponents([.hour, .minute], from: morningTime)
             let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
@@ -97,9 +98,9 @@ final class NotificationManager {
 
         if eveningReminderEnabled {
             let content = UNMutableNotificationContent()
-            content.title = "Abendliche Reflexion 📓"
-            content.body = "Wie war dein Tag heute? Halte kurz deine Gedanken und deine Dankbarkeit im Tagebuch fest."
-            content.sound = .default
+            content.title = "Evening Reflection"
+            content.body = "How was your day? Take a quiet moment to record your thoughts and progress in your journal."
+            content.sound = nil // Silent Sanctuary: 100% silent, no stress chime
 
             let comps = Calendar.current.dateComponents([.hour, .minute], from: eveningTime)
             let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
