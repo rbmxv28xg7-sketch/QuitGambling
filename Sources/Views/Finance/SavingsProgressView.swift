@@ -18,13 +18,13 @@ struct SavingsProgressView: View {
             }
 
             VStack(spacing: Design.Spacing.xs) {
-                Text(totalSaved, format: .currency(code: "USD"))
+                Text(totalSaved, format: .currency(code: AppPreferences.shared.currencyCode))
                     .font(.system(size: 40, weight: .bold, design: .rounded))
                     .foregroundStyle(Design.Colors.textOnPrimary)
                     .contentTransition(.numericText())
                     .animation(Design.Anim.normal, value: totalSaved)
 
-                Text("Saved since \(startDate, format: .dateTime.day().month(.wide).year())")
+                Text("Saved since %@".loc(startDate.formatted(Date.FormatStyle(date: .long, time: .omitted).locale(Locale(identifier: LocalizationService.shared.currentLanguage)))))
                     .font(.subheadline)
                     .foregroundStyle(Design.Colors.textOnPrimary.opacity(0.85))
             }
