@@ -262,7 +262,7 @@ struct OnboardingView: View {
 
                     // Title & Subtitle
                     VStack(spacing: Design.Spacing.xs) {
-                        Text("How FreiSpiel Protects You".loc)
+                        Text("How Quit Gambling Protects You".loc)
                             .font(.system(size: 24, weight: .bold, design: .rounded))
                             .foregroundStyle(Design.Colors.textPrimary)
                             .multilineTextAlignment(.center)

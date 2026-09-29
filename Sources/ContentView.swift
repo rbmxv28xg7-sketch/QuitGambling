@@ -83,11 +83,23 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(initialStep: onboardingInitialStep)
                 .id("onboarding_\(onboardingInitialStep)")
+                // Full-screen covers sit outside the .environment modifiers above,
+                // so they need the shared services passed in explicitly.
+                .environment(preferences)
+                .environment(privacyManager)
+                .environment(notificationManager)
+                .environment(shieldManager)
+                .environment(subscriptionManager)
                 .dismissKeyboardOnTap()
                 .scrollIndicators(.hidden)
         }
         .fullScreenCover(isPresented: $showMorningCheckin) {
             DailyMorningCheckinView()
+                .environment(preferences)
+                .environment(privacyManager)
+                .environment(notificationManager)
+                .environment(shieldManager)
+                .environment(subscriptionManager)
                 .dismissKeyboardOnTap()
                 .scrollIndicators(.hidden)
         }
