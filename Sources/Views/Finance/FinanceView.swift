@@ -100,16 +100,16 @@ struct FinanceView: View {
                         }
 
                         if !subscriptionManager.isPro {
-                            Text("\(goals.count) of 1 free goal used • Pro unlocks unlimited parallel goals")
+                            Text("%d of 1 free goal used • Pro unlocks unlimited parallel goals".loc(goals.count))
                                 .font(.caption2)
                                 .foregroundStyle(Design.Colors.textTertiary)
                         }
 
                         if goals.isEmpty {
                             ContentUnavailableView(
-                                "No Savings Goals",
+                                "No Savings Goals".loc,
                                 systemImage: "target",
-                                description: Text("Add a goal to watch your saved money grow.")
+                                description: Text("Add a goal to watch your saved money grow.".loc)
                             )
                         } else {
                             ForEach(goals) { goal in
@@ -124,7 +124,7 @@ struct FinanceView: View {
                                         viewModel.deleteGoal(context: modelContext, goal: goal)
                                         SensoryFeedbackService.shared.selectionClick()
                                     } label: {
-                                        Label("Delete Goal", systemImage: "trash")
+                                        Label("Delete Goal".loc, systemImage: "trash")
                                     }
                                 }
                             }
@@ -134,9 +134,9 @@ struct FinanceView: View {
                 .padding(Design.Spacing.md)
             }
         }
-        .navigationTitle("Finances")
+        .navigationTitle("Finances".loc)
         .toolbar {
-            Button("New Goal", systemImage: "plus") {
+            Button("New Goal".loc, systemImage: "plus") {
                 if !subscriptionManager.isPro && goals.count >= 1 {
                     showingPaywall = true
                 } else {
@@ -261,7 +261,7 @@ struct FinanceView: View {
                                 .lineLimit(1)
 
                             if newGoalAmount > 0 {
-                                Text(newGoalAmount, format: .currency(code: "USD"))
+                                Text(newGoalAmount, format: .currency(code: AppPreferences.shared.currencyCode))
                                     .font(.subheadline.weight(.semibold))
                                     .foregroundStyle(Design.Colors.gold)
                             }
@@ -270,7 +270,7 @@ struct FinanceView: View {
 
                         // 2. Quick Presets
                         VStack(alignment: .leading, spacing: Design.Spacing.xs) {
-                            Text("QUICK PRESETS")
+                            Text("QUICK PRESETS".loc)
                                 .font(.caption.weight(.semibold))
                                 .foregroundStyle(Design.Colors.gold)
                                 .padding(.leading, 8)
@@ -293,7 +293,7 @@ struct FinanceView: View {
 
                         // 3. Goal Details (Single clean card)
                         VStack(alignment: .leading, spacing: Design.Spacing.xs) {
-                            Text("GOAL DETAILS")
+                            Text("GOAL DETAILS".loc)
                                 .font(.caption.weight(.semibold))
                                 .foregroundStyle(Design.Colors.gold)
                                 .padding(.leading, 8)
@@ -306,7 +306,7 @@ struct FinanceView: View {
                                         .foregroundStyle(Design.Colors.gold)
                                         .frame(width: 24)
 
-                                    TextField("Goal Name (e.g. Vacation)", text: $newGoalName)
+                                    TextField("Goal Name (e.g. Vacation)".loc, text: $newGoalName)
                                         .foregroundStyle(Design.Colors.textPrimary)
                                         .font(.body)
                                 }
@@ -319,7 +319,7 @@ struct FinanceView: View {
                                         .foregroundStyle(Design.Colors.primary)
                                         .frame(width: 24)
 
-                                    TextField("Target Amount in USD", value: $newGoalAmount, format: .currency(code: "USD"))
+                                    TextField("Target Amount".loc, value: $newGoalAmount, format: .currency(code: AppPreferences.shared.currencyCode))
                                         .keyboardType(.decimalPad)
                                         .foregroundStyle(Design.Colors.textPrimary)
                                         .font(.body.weight(.semibold))
@@ -330,7 +330,7 @@ struct FinanceView: View {
 
                         // 4. Circular Icon Badges
                         VStack(alignment: .leading, spacing: Design.Spacing.xs) {
-                            Text("SELECT ICON")
+                            Text("SELECT ICON".loc)
                                 .font(.caption.weight(.semibold))
                                 .foregroundStyle(Design.Colors.gold)
                                 .padding(.leading, 8)
@@ -407,11 +407,11 @@ struct FinanceView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { showingAddGoal = false }
+                    Button("Cancel".loc) { showingAddGoal = false }
                         .foregroundStyle(Design.Colors.textSecondary)
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
+                    Button("Save".loc) {
                         guard !newGoalName.isEmpty, newGoalAmount > 0 else { return }
                         viewModel.addGoal(context: modelContext, name: newGoalName, targetAmount: newGoalAmount, icon: newGoalIcon)
                         showingAddGoal = false
@@ -449,7 +449,7 @@ struct FinanceView: View {
                     .foregroundStyle(Color.white)
                     .lineLimit(1)
 
-                Text(amount, format: .currency(code: "USD"))
+                Text(amount, format: .currency(code: AppPreferences.shared.currencyCode))
                     .font(.caption2.weight(.medium))
                     .foregroundStyle(Design.Colors.champagne)
                     .lineLimit(1)

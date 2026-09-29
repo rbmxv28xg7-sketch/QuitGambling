@@ -19,7 +19,7 @@ struct SavingsEquivalentCardView: View {
                             .font(.system(size: 10, weight: .bold))
                             .foregroundStyle(Design.Colors.gold)
 
-                        Text("WHAT YOUR MONEY BUYS")
+                        Text("WHAT YOUR MONEY BUYS".loc)
                             .font(.system(size: 10, weight: .bold, design: .rounded))
                             .tracking(1.2)
                             .foregroundStyle(Design.Colors.gold)
@@ -32,7 +32,7 @@ struct SavingsEquivalentCardView: View {
                             ProBadge(isCompact: true)
                         }
 
-                        Text("All")
+                        Text("All".loc)
                             .font(.caption2)
                             .fontWeight(.semibold)
                             .foregroundStyle(Design.Colors.textSecondary)
@@ -56,13 +56,13 @@ struct SavingsEquivalentCardView: View {
                     }
 
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(moneySaved >= 5 ? "≈ \(current.title)" : "First Goal: $5 (Coffee & Snack)")
+                        Text(moneySaved >= 5 ? "≈ \(current.title.loc)" : "First goal: a coffee and a snack".loc)
                             .font(.subheadline)
                             .bold()
                             .foregroundStyle(Color.white)
                             .lineLimit(1)
 
-                        Text(moneySaved >= 5 ? current.description : "Every gamble-free day puts real money back into your life.")
+                        Text(moneySaved >= 5 ? current.description.loc : "Every gamble-free day puts real money back into your life.".loc)
                             .font(.caption2)
                             .foregroundStyle(Design.Colors.textSecondary)
                             .lineLimit(2)
@@ -95,14 +95,14 @@ struct SavingsEquivalentCardView: View {
                         .frame(height: 4)
 
                         HStack {
-                            Text("Next Goal: \(next.next.shortTitle)")
+                            Text("Next Goal: %@".loc(next.next.shortTitle.loc))
                                 .font(.system(size: 10, weight: .medium))
                                 .foregroundStyle(Design.Colors.textTertiary)
                                 .lineLimit(1)
 
                             Spacer()
 
-                            Text("\(next.remaining, format: .currency(code: "USD")) left")
+                            Text("%@ left".loc(next.remaining.formatted(.currency(code: AppPreferences.shared.currencyCode).locale(Locale(identifier: LocalizationService.shared.currentLanguage)))))
                                 .font(.system(size: 10, weight: .bold))
                                 .foregroundStyle(Design.Colors.gold)
                                 .lineLimit(1)
