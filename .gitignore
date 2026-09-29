@@ -6,24 +6,26 @@ DerivedData/
 
 # Xcode user data
 *.xcuserstate
-*.xcuserdatad/
 xcuserdata/
 
-# Screenshots & test images
-*.png
-*.jpg
-*.jpeg
-*.mp4
+# Root-level screenshots & test images (not part of the app)
+/device_*.png
+/phone_*.png
+/safari_*.png
+/screenshot*.png
+/dns_*.png
+/live_device_*.png
 
 # Python scripts (not part of the app)
-*.py
+/*.py
 
-# Misc
-cookies.txt
-main
-*.plist
-!Sources/**/*.plist
-!QuitGambling.entitlements
+# Misc root files
+/cookies.txt
+/main
+/device_prefs.plist
+/exportOptions.plist
+/ExportOptions-export.plist
+/ExportOptions_local.plist
 
 # OS files
 .DS_Store
