@@ -9,11 +9,15 @@ DerivedData/
 *.xcuserdatad/
 xcuserdata/
 
-# Screenshots & test images
+# Screenshots & test images (app assets are NOT ignored)
 *.png
 *.jpg
 *.jpeg
 *.mp4
+!Sources/Resources/**/*.png
+!Sources/Resources/**/*.jpg
+!SafariExtension/*.png
+!Sources/Resources/**/*.mp4
 
 # Python scripts (not part of the app)
 *.py
@@ -23,7 +27,14 @@ cookies.txt
 main
 *.plist
 !Sources/**/*.plist
+!ShieldConfiguration/Info.plist
+!ShieldAction/Info.plist
+!SafariExtension/Info.plist
 !QuitGambling.entitlements
 
 # OS files
 .DS_Store
+
+# iCloud duplicates
+* 2.*
+*.bak

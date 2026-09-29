@@ -236,7 +236,7 @@ struct SelfAssessmentView: View {
                     NavigationLink {
                         HotlineListView()
                     } label: {
-                        Label("Call 1-800-GAMBLER Helpline", systemImage: "phone.fill")
+                        Label("Call a Gambling Helpline", systemImage: "phone.fill")
                             .font(.subheadline)
                             .foregroundStyle(Design.Colors.textPrimary)
                     }

@@ -31,11 +31,11 @@ struct ResourcesView: View {
 
                     resourceSection("Emergency Helplines & Immediate Support") {
                         resourceLinkRow(
-                            title: "1-800-GAMBLER",
-                            subtitle: "24/7 Call or Text: 1-800-426-2537",
+                            title: "National Problem Gambling Helpline (US)",
+                            subtitle: "24/7 Call or Text: 1-800-522-4700",
                             icon: "phone.fill",
                             iconColor: Design.Colors.primary,
-                            url: "tel:18004262537"
+                            url: "tel:18005224700"
                         )
                         Divider().background(Color.white.opacity(0.12))
                         resourceLinkRow(
@@ -65,7 +65,7 @@ struct ResourcesView: View {
 
                     resourceSection("International Support Services") {
                         resourceLinkRow(
-                            title: "BZgA Gambling Helpline",
+                            title: "BIÖG Gambling Helpline",
                             subtitle: "0800 1 37 27 00 • Free in Germany",
                             icon: "phone.circle.fill",
                             iconColor: Design.Colors.primary,

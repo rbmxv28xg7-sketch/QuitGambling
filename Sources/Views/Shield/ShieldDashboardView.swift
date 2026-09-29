@@ -794,13 +794,13 @@ struct ShieldDashboardView: View {
             }
 
             VStack(alignment: .leading, spacing: 2) {
-                Text("100% Secure & Private".loc)
+                Text("Private by Design".loc)
                     .font(.subheadline)
                     .bold()
                     .foregroundStyle(Color.white)
                     .lineLimit(1)
                     .minimumScaleFactor(0.8)
-                Text("Filtering is performed strictly locally on your iPhone. No personal data is transmitted or stored.".loc)
+                Text("App and Safari blocking runs on your iPhone. Your journal and recovery data stay on the device. Only the optional DNS shield sends web lookups to Control D.".loc)
                     .font(.caption2)
                     .foregroundStyle(Design.Colors.textSecondary)
                     .lineSpacing(2)

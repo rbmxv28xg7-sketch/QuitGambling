@@ -16,8 +16,8 @@ final class LocalizationService: @unchecked Sendable {
         if let saved = UserDefaults.standard.string(forKey: "app_language_code"), !saved.isEmpty {
             self.currentLanguage = saved
         } else {
-            let deviceLang = Locale.current.language.languageCode?.identifier ?? "de"
-            self.currentLanguage = ["de", "es", "fr", "en"].contains(deviceLang) ? deviceLang : "de"
+            let deviceLang = Locale.current.language.languageCode?.identifier ?? "en"
+            self.currentLanguage = ["de", "es", "fr", "en"].contains(deviceLang) ? deviceLang : "en"
         }
     }
 
@@ -158,8 +158,8 @@ final class LocalizationService: @unchecked Sendable {
             "Network Shield": "Network Shield",
             "Danger Zone Radar": "Danger Zone Radar",
             "Automatic geofence protection with dwell-time filter": "Automatic geofence protection with dwell-time filter",
-            "100% Secure & Private": "100% Secure & Private",
-            "Filtering is performed strictly locally on your iPhone. No personal data is transmitted or stored.": "Filtering is performed strictly locally on your iPhone. No personal data is transmitted or stored.",
+            "Private by Design": "Private by Design",
+            "App and Safari blocking runs on your iPhone. Your journal and recovery data stay on the device. Only the optional DNS shield sends web lookups to Control D.": "App and Safari blocking runs on your iPhone. Your journal and recovery data stay on the device. Only the optional DNS shield sends web lookups to Control D.",
             "Deactivate Shield?": "Deactivate Shield?",
             "Take 5 seconds to breathe calmly before turning off protection.": "Take 5 seconds to breathe calmly before turning off protection.",
             "Really Turn Off Shield Now": "Really Turn Off Shield Now",
@@ -322,6 +322,9 @@ final class LocalizationService: @unchecked Sendable {
             "Manage Subscription in App Store": "Manage Subscription in App Store",
             "Modify or cancel your plan at any time in Apple Settings": "Modify or cancel your plan at any time in Apple Settings",
             "SAVE 50%": "SAVE 50%",
+            "SAVE %d%%": "SAVE %d%%",
+            "BEST VALUE": "BEST VALUE",
+            "Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account. Manage or cancel anytime in your App Store account settings. Lifetime is a one-time purchase.": "Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account. Manage or cancel anytime in your App Store account settings. Lifetime is a one-time purchase.",
             "FLEXIBLE": "FLEXIBLE",
             "Annual": "Annual",
             "Monthly": "Monthly",
@@ -846,8 +849,8 @@ final class LocalizationService: @unchecked Sendable {
             "Network Shield": "Netzwerk-Schutzschild",
             "Danger Zone Radar": "Gefahrenzonen-Radar",
             "Automatic geofence protection with dwell-time filter": "Automatischer Geofence-Schutz mit Verweilzeit-Erkennung",
-            "100% Secure & Private": "100% Sicher & Privat",
-            "Filtering is performed strictly locally on your iPhone. No personal data is transmitted or stored.": "Die Filterung erfolgt rein lokal auf deinem iPhone. Keine persönlichen Daten werden übertragen.",
+            "Private by Design": "Privat von Grund auf",
+            "App and Safari blocking runs on your iPhone. Your journal and recovery data stay on the device. Only the optional DNS shield sends web lookups to Control D.": "App- und Safari-Sperren laufen auf deinem iPhone. Tagebuch und Fortschritt bleiben auf dem Gerät. Nur der optionale DNS-Schutz schickt Webadressen-Anfragen an Control D.",
             "Deactivate Shield?": "Schutz deaktivieren?",
             "Take 5 seconds to breathe calmly before turning off protection.": "Nimm dir 5 Sekunden Zeit zum Durchatmen, bevor du den Schutz abschaltest.",
             "Really Turn Off Shield Now": "Schutz jetzt wirklich abschalten",
@@ -1010,6 +1013,9 @@ final class LocalizationService: @unchecked Sendable {
             "Manage Subscription in App Store": "Abo im App Store verwalten",
             "Modify or cancel your plan at any time in Apple Settings": "Jederzeit in den Apple-Einstellungen anpassen oder kündigen",
             "SAVE 50%": "50% SPAREN",
+            "SAVE %d%%": "%d%% SPAREN",
+            "BEST VALUE": "BESTER WERT",
+            "Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account. Manage or cancel anytime in your App Store account settings. Lifetime is a one-time purchase.": "Abos verlängern sich automatisch, wenn sie nicht spätestens 24 Stunden vor Ende des Zeitraums gekündigt werden. Die Zahlung erfolgt über deinen Apple Account. Verwalten oder kündigen jederzeit in den Einstellungen deines App-Store-Kontos. Lifetime ist ein Einmalkauf.",
             "FLEXIBLE": "FLEXIBEL",
             "Annual": "Jährlich",
             "Monthly": "Monatlich",
@@ -1535,8 +1541,8 @@ final class LocalizationService: @unchecked Sendable {
             "Network Shield": "Escudo de red",
             "Danger Zone Radar": "Radar de zonas de riesgo",
             "Automatic geofence protection with dwell-time filter": "Protección por geolocalización con filtro de permanencia",
-            "100% Secure & Private": "100% Seguro y privado",
-            "Filtering is performed strictly locally on your iPhone. No personal data is transmitted or stored.": "El filtrado se hace exclusivamente en tu iPhone. Ningún dato personal se envía a servidores externos.",
+            "Private by Design": "Privado por diseño",
+            "App and Safari blocking runs on your iPhone. Your journal and recovery data stay on the device. Only the optional DNS shield sends web lookups to Control D.": "El bloqueo de apps y Safari funciona en tu iPhone. Tu diario y tu progreso se quedan en el dispositivo. Solo el escudo DNS opcional envía consultas web a Control D.",
             "Deactivate Shield?": "¿Desactivar escudo?",
             "Take 5 seconds to breathe calmly before turning off protection.": "Tómate 5 segundos para respirar con calma antes de desactivar la protección.",
             "Really Turn Off Shield Now": "Desactivar escudo ahora",
@@ -1698,6 +1704,9 @@ final class LocalizationService: @unchecked Sendable {
             "Manage Subscription in App Store": "Gestionar suscripción en App Store",
             "Modify or cancel your plan at any time in Apple Settings": "Cancela o modifica en Ajustes de Apple cuando quieras",
             "SAVE 50%": "AHORRA 50%",
+            "SAVE %d%%": "AHORRA %d%%",
+            "BEST VALUE": "MEJOR VALOR",
+            "Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account. Manage or cancel anytime in your App Store account settings. Lifetime is a one-time purchase.": "Las suscripciones se renuevan automáticamente salvo que se cancelen al menos 24 horas antes del final del periodo actual. El pago se carga a tu Apple Account. Gestiona o cancela en cualquier momento en los ajustes de tu cuenta del App Store. Lifetime es una compra única.",
             "FLEXIBLE": "FLEXIBLE",
             "Annual": "Anual",
             "Monthly": "Mensual",
@@ -2222,8 +2231,8 @@ final class LocalizationService: @unchecked Sendable {
             "Network Shield": "Bouclier réseau",
             "Danger Zone Radar": "Radar des zones à risque",
             "Automatic geofence protection with dwell-time filter": "Protection par géolocalisation avec filtre de présence",
-            "100% Secure & Private": "100% Sécurisé & Privé",
-            "Filtering is performed strictly locally on your iPhone. No personal data is transmitted or stored.": "Le filtrage s'effectue strictement en local sur votre iPhone. Aucune donnée personnelle n'est transmise.",
+            "Private by Design": "Privé par conception",
+            "App and Safari blocking runs on your iPhone. Your journal and recovery data stay on the device. Only the optional DNS shield sends web lookups to Control D.": "Le blocage des apps et de Safari fonctionne sur votre iPhone. Votre journal et vos progrès restent sur l'appareil. Seul le bouclier DNS optionnel envoie des requêtes web à Control D.",
             "Deactivate Shield?": "Désactiver le bouclier ?",
             "Take 5 seconds to breathe calmly before turning off protection.": "Prenez 5 secondes pour respirer calmement avant de désactiver la protection.",
             "Really Turn Off Shield Now": "Désactiver le bouclier maintenant",
@@ -2385,6 +2394,9 @@ final class LocalizationService: @unchecked Sendable {
             "Manage Subscription in App Store": "Gérer l'abonnement dans l'App Store",
             "Modify or cancel your plan at any time in Apple Settings": "Modifiable ou résiliable à tout moment dans les Réglages Apple",
             "SAVE 50%": "ÉCONOMISEZ 50%",
+            "SAVE %d%%": "ÉCONOMISEZ %d%%",
+            "BEST VALUE": "MEILLEURE OFFRE",
+            "Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account. Manage or cancel anytime in your App Store account settings. Lifetime is a one-time purchase.": "Les abonnements se renouvellent automatiquement sauf résiliation au moins 24 heures avant la fin de la période en cours. Le paiement est débité sur votre compte Apple. Gérez ou résiliez à tout moment dans les réglages de votre compte App Store. Lifetime est un achat unique.",
             "FLEXIBLE": "FLEXIBLE",
             "Annual": "Annuel",
             "Monthly": "Mensuel",

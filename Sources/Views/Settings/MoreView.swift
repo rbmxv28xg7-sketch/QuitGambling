@@ -178,6 +178,7 @@ struct MoreView: View {
                 PaywallView()
             }
             .onOpenURL { url in
+                #if DEBUG
                 if url.scheme == "quitgambling" {
                     if url.host == "open-settings" || url.host == "open-themes" {
                         navigationPath = NavigationPath([MoreRoute.settings])
@@ -192,6 +193,7 @@ struct MoreView: View {
                         }
                     }
                 }
+                #endif
             }
         }
     }

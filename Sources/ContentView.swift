@@ -103,6 +103,9 @@ struct ContentView: View {
             await subscriptionManager.fetchOfferings()
         }
         .onOpenURL { url in
+            // Developer deep links (screenshots, QA). Release builds ignore them so no web page
+            // can switch off the shield, swap the RevenueCat key or unlock Pro via a link.
+            #if DEBUG
             print("APP_DEBUG: onOpenURL received: \(url)")
             if url.scheme == "quitgambling" {
                 if url.host == "set-revenuecat-key", let key = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.first(where: { $0.name == "key" })?.value {
@@ -180,6 +183,7 @@ struct ContentView: View {
                     selectedTab = .tracker
                 }
             }
+            #endif
         }
         .task {
             // Check onboarding

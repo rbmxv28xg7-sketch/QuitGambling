@@ -16,7 +16,11 @@ final class SubscriptionManager: NSObject, PurchasesDelegate {
     // RevenueCat Public API Key (App-specific Apple key starting with 'appl_')
     static var apiKey: String {
         get {
+            #if DEBUG
             UserDefaults.standard.string(forKey: "revenuecat_public_api_key") ?? defaultApiKey
+            #else
+            defaultApiKey
+            #endif
         }
         set {
             let trimmed = newValue.trimmingCharacters(in: .whitespacesAndNewlines)

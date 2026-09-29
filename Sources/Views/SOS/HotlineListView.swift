@@ -31,15 +31,13 @@ enum HotlineDirectory {
         switch code {
         case "AT":
             return ("Austria", [
-                HotlineInfo(name: "Austrian Gambling Help", number: "01 544 13 57"),
-                HotlineInfo(name: "Austrian Crisis Line", number: "142"),
-                HotlineInfo(name: "Addiction & Substance Counseling", number: "01 4000 53700")
+                HotlineInfo(name: "Spielsuchthilfe Wien", number: "01 544 13 57"),
+                HotlineInfo(name: "Telefonseelsorge Austria", number: "142")
             ])
         case "CH":
             return ("Switzerland", [
                 HotlineInfo(name: "SOS Gambling Help", number: "0800 040 080"),
-                HotlineInfo(name: "The Offering Hand Crisis Line", number: "143"),
-                HotlineInfo(name: "Careplay Counseling", number: "0800 801 112")
+                HotlineInfo(name: "Die Dargebotene Hand", number: "143")
             ])
         case "GB":
             return ("United Kingdom", [
@@ -48,7 +46,7 @@ enum HotlineDirectory {
             ])
         case "CA":
             return ("Canada", [
-                HotlineInfo(name: "Problem Gambling Helpline", number: "1-888-230-3505"),
+                HotlineInfo(name: "ConnexOntario Gambling Helpline", number: "1-888-230-3505"),
                 HotlineInfo(name: "Crisis Helpline", number: "988")
             ])
         case "AU":
@@ -78,13 +76,12 @@ enum HotlineDirectory {
             ])
         case "DE":
             return ("Germany", [
-                HotlineInfo(name: "BZgA Gambling Helpline", number: "0800 1 37 27 00"),
-                HotlineInfo(name: "Telefonseelsorge Crisis Line", number: "0800 111 0 111"),
-                HotlineInfo(name: "OASIS Exclusion Help", number: "0800 137 2700")
+                HotlineInfo(name: "BIÖG Gambling Helpline", number: "0800 1 37 27 00"),
+                HotlineInfo(name: "Telefonseelsorge Crisis Line", number: "0800 111 0 111")
             ])
         default: // "US" as standard
             return ("United States", [
-                HotlineInfo(name: "1-800-GAMBLER (NCPG)", number: "1-800-426-2537"),
+                HotlineInfo(name: "National Problem Gambling Helpline", number: "1-800-522-4700"),
                 HotlineInfo(name: "988 Suicide & Crisis Lifeline", number: "988"),
                 HotlineInfo(name: "SAMHSA National Helpline", number: "1-800-662-4357")
             ])

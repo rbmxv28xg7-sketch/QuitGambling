@@ -31,7 +31,7 @@ final class SelfAssessmentResult: Identifiable {
         case 3...7:
             return "Your responses indicate moderate risk that may lead to difficulty. We recommend activating full shield blocks and daily pledges."
         default:
-            return "Your score indicates problem gambling patterns. Please reach out to confidential support resources or call 1-800-GAMBLER."
+            return "Your score indicates problem gambling patterns. Please reach out to confidential support resources or call a gambling helpline (see Help)."
         }
     }
 

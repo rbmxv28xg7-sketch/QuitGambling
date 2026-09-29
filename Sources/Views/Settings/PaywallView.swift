@@ -212,7 +212,7 @@ struct PaywallView: View {
                                     // Annual Plan (Featured)
                                     planSelectionCard(
                                         id: "annual",
-                                        badge: "SAVE 50%".loc,
+                                        badge: annualSavingsBadge,
                                         title: "Annual".loc,
                                         price: annualMonthlyBreakdown,
                                         period: annualPeriodString
@@ -286,9 +286,11 @@ struct PaywallView: View {
                                 }
                                 .buttonStyle(PaywallPressableButtonStyle())
 
-                                Text("No commitment • Cancel anytime in App Store".loc)
+                                Text("Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account. Manage or cancel anytime in your App Store account settings. Lifetime is a one-time purchase.".loc)
                                     .font(.system(size: 10.5))
                                     .foregroundStyle(Design.Colors.textTertiary)
+                                    .multilineTextAlignment(.center)
+                                    .fixedSize(horizontal: false, vertical: true)
                             }
                             .padding(.horizontal, Design.Spacing.md)
                             .padding(.top, 2)
@@ -297,7 +299,7 @@ struct PaywallView: View {
                         // 5. Legal
                         VStack(spacing: 6) {
                             HStack(spacing: Design.Spacing.md) {
-                                Link("Privacy Policy".loc, destination: URL(string: "https://quitgambling.app/privacy")!)
+                                Link("Privacy Policy".loc, destination: URL(string: "https://lennertroehrig-ux.github.io/quitgambling-legal/#privacy")!)
                                     .font(.system(size: 10.5))
                                     .foregroundStyle(Design.Colors.textTertiary)
 
@@ -305,7 +307,7 @@ struct PaywallView: View {
                                     .font(.system(size: 10.5))
                                     .foregroundStyle(Design.Colors.textTertiary)
 
-                                Link("Terms of Service".loc, destination: URL(string: "https://quitgambling.app/terms")!)
+                                Link("Terms of Service".loc, destination: URL(string: "https://lennertroehrig-ux.github.io/quitgambling-legal/#terms")!)
                                     .font(.system(size: 10.5))
                                     .foregroundStyle(Design.Colors.textTertiary)
                             }
@@ -517,21 +519,31 @@ struct PaywallView: View {
             let str = formatter.string(from: NSNumber(value: monthly)) ?? String(format: "%.2f €", monthly)
             return "\(str) / \("mo".loc)"
         }
-        return "2,50 € / \("mo".loc)"
+        return "–"
+    }
+
+    /// Savings of the annual plan against twelve monthly payments, from the real StoreKit prices.
+    private var annualSavingsBadge: String {
+        guard let annual = annualPackage, let monthly = monthlyPackage else { return "BEST VALUE".loc }
+        let yearly = (annual.storeProduct.price as NSDecimalNumber).doubleValue
+        let twelveMonths = (monthly.storeProduct.price as NSDecimalNumber).doubleValue * 12
+        guard twelveMonths > 0 else { return "BEST VALUE".loc }
+        let percent = Int(((1 - yearly / twelveMonths) * 100).rounded())
+        return percent >= 5 ? "SAVE %d%%".loc(percent) : "BEST VALUE".loc
     }
 
     private var annualPeriodString: String {
         if let pkg = annualPackage {
             return "\(pkg.storeProduct.localizedPriceString) \("billed yearly".loc)"
         }
-        return "29,99 € \("billed yearly".loc)"
+        return "billed yearly".loc
     }
 
     private var monthlyPriceString: String {
         if let pkg = monthlyPackage {
             return "\(pkg.storeProduct.localizedPriceString) / \("mo".loc)"
         }
-        return "4,99 € / \("mo".loc)"
+        return "–"
     }
 
     private var monthlyPeriodString: String {
@@ -542,14 +554,14 @@ struct PaywallView: View {
         if let pkg = lifetimePackage {
             return "\(pkg.storeProduct.localizedPriceString) \("one-time".loc)"
         }
-        return "49,99 € \("one-time".loc)"
+        return "one-time".loc
     }
 
     private var lifetimeOnlyPriceString: String {
         if let pkg = lifetimePackage {
             return pkg.storeProduct.localizedPriceString
         }
-        return "49,99 €"
+        return "–"
     }
 
     private var purchaseCtaText: String {

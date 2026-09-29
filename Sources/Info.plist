@@ -12,15 +12,6 @@
 	<string>AppIcon</string>
 	<key>CFBundleIcons</key>
 	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>AppIcon</string>
-			</array>
-			<key>CFBundleIconName</key>
-			<string>AppIcon</string>
-		</dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
 			<key>CalculatorIcon</key>
@@ -44,9 +35,6 @@
 				<true/>
 			</dict>
 		</dict>
-	</dict>
-	<key>CFBundleIcons~ipad</key>
-	<dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
@@ -56,6 +44,9 @@
 			<key>CFBundleIconName</key>
 			<string>AppIcon</string>
 		</dict>
+	</dict>
+	<key>CFBundleIcons~ipad</key>
+	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
 			<key>CalculatorIcon</key>
@@ -81,6 +72,15 @@
 				<true/>
 			</dict>
 		</dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon</string>
+			</array>
+			<key>CFBundleIconName</key>
+			<string>AppIcon</string>
+		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
@@ -105,6 +105,10 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>settings-navigation</string>
@@ -112,10 +116,14 @@
 		<string>App-Prefs</string>
 		<string>prefs</string>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>13</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Protect your recovery journey, journal entries, and personal reflections with Face ID.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Quit Gambling protects you on-site and provides subtle mindfulness reminders when you dwell near a designated trigger zone.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Quit Gambling protects you on-site and provides subtle mindfulness reminders when you dwell near a designated trigger zone.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Quit Gambling needs your location to display trigger zones on the radar and center the map on your current location.</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UIRequiresFullScreen</key>
@@ -131,13 +139,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Quit Gambling needs your location to display trigger zones on the radar and center the map on your current location.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Quit Gambling protects you on-site and provides subtle mindfulness reminders when you dwell near a designated trigger zone.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Quit Gambling protects you on-site and provides subtle mindfulness reminders when you dwell near a designated trigger zone.</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>Protect your recovery journey, journal entries, and personal reflections with Face ID.</string>
 </dict>
 </plist>
