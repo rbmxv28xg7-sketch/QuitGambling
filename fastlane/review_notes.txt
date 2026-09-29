@@ -1,0 +1,15 @@
+Quit Gambling helps people STOP gambling. It contains no gambling, no odds, no betting tips and no real-money features.
+
+No account needed: all data is stored on the device.
+
+Unlock Pro for review without a purchase:
+More tab -> Quit Gambling Pro -> "Promocode eingeben" / "Enter promo code" -> SHIPATON2026 -> Redeem.
+
+Why the app uses these capabilities:
+- Family Controls (Screen Time): the user chooses gambling apps and websites to shield. Authorization is requested for the individual user (.individual) only when the user turns on the Shield.
+- Network Extension DNS settings: optional DNS shield. When the user turns it on, iOS asks the user to enable encrypted DNS using Control D's public "no-gambling" filter. It can be removed any time under Settings > General > VPN, DNS & Device Management.
+- Location (When In Use / Always): only for "danger zones" the user adds (e.g. a betting shop). iOS region monitoring shows a reminder when the user enters one. Location never leaves the device.
+- Safari Web Extension: overlays a mindful pause on known gambling websites; the check runs locally against a bundled hash list.
+- Alternate app icons (calculator, notes) are a privacy feature for users who do not want others to see a recovery app on their home screen.
+
+Helpline numbers shown in the app were verified against each operator's official website.
