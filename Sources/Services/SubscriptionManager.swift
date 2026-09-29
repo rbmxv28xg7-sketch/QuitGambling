@@ -28,7 +28,7 @@ final class SubscriptionManager: NSObject, PurchasesDelegate {
         }
     }
 
-    static let defaultApiKey = "appl_demo_quitgambling_shipathon"
+    static let defaultApiKey = "appl_bTcOJmQyfsRuhtjdHdywoPFeoXl"
 
     override init() {
         super.init()
