@@ -1,0 +1,38 @@
+# Build artifacts
+build/
+build_output/
+DerivedData/
+*.xcarchive
+
+# Xcode user data
+*.xcuserstate
+xcuserdata/
+*.xcuserdatad/
+
+# Root-level screenshots & test images (not part of the app)
+/device_*.png
+/phone_*.png
+/safari_*.png
+/screenshot*.png
+/dns_*.png
+/live_device_*.png
+
+# Root-level generated icons (originals are in Assets.xcassets)
+/CalculatorIcon-1024.png
+/NotesIcon-1024.png
+
+# Python scripts
+/*.py
+
+# Misc
+/cookies.txt
+/main
+/device_prefs.plist
+/exportOptions.plist
+/ExportOptions-export.plist
+/ExportOptions_local.plist
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db

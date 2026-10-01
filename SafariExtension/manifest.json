@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Quit Gambling Impuls-Bremse",
+  "version": "1.0.1",
+  "description": "Achtsame 5-Sekunden-Bremse und Schutzschild für Online-Casinos und Wettseiten.",
+  "icons": {
+    "48": "Icon.png",
+    "128": "Icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "gambling_hashes.bin"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ]
+}

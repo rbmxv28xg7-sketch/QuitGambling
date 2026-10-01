@@ -1,0 +1,185 @@
+{
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : ""
+      }
+    ]
+  },
+  "identifier" : "E2B7894F",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "49.99",
+      "familyShareable" : true,
+      "internalID" : "A1B2C3D4",
+      "localizations" : [
+        {
+          "description" : "Lifetime access to all Quit Gambling Pro recovery features.",
+          "displayName" : "Quit Gambling Pro Lifetime",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Lebenslanger Zugriff auf alle Quit Gambling Pro Funktionen.",
+          "displayName" : "Quit Gambling Pro Lebenslang",
+          "locale" : "de"
+        }
+      ],
+      "productID" : "lifetime",
+      "referenceName" : "Lifetime Access",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "de",
+    "_storefront" : "DEU",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21474836",
+      "localizations" : [
+        {
+          "description" : "Quit Gambling Pro Subscriptions",
+          "displayName" : "Quit Gambling Pro",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Quit Gambling Pro Abonnements",
+          "displayName" : "Quit Gambling Pro",
+          "locale" : "de"
+        }
+      ],
+      "name" : "QuitGambling_Subscriptions",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "64512301",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Full access to DNS shield, trigger radar and reports.",
+              "displayName" : "Monthly Pro",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Voller Zugriff auf DNS-Schutz, Gefahrenradar und Berichte.",
+              "displayName" : "Monatlich Pro",
+              "locale" : "de"
+            }
+          ],
+          "productID" : "monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly Subscription",
+          "subscriptionGroupID" : "21474836",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "29.99",
+          "familyShareable" : true,
+          "groupNumber" : 2,
+          "internalID" : "64512302",
+          "introductoryOffer" : {
+            "internalID" : "74512302",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W",
+            "type" : "introductory"
+          },
+          "localizations" : [
+            {
+              "description" : "Annual access with 7-day free trial. Save 50%.",
+              "displayName" : "Annual Pro (7-Day Trial)",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Jahreszugang mit 7 Tagen kostenloser Testphase. 50% sparen.",
+              "displayName" : "Jährlich Pro (7 Tage Test)",
+              "locale" : "de"
+            }
+          ],
+          "productID" : "yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual Subscription",
+          "subscriptionGroupID" : "21474836",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
