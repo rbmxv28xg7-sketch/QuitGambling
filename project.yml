@@ -70,6 +70,7 @@ targets:
         INFOPLIST_FILE: ShieldConfiguration/Info.plist
         SWIFT_VERSION: "6.0"
         TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_ENTITLEMENTS: ShieldConfiguration/ShieldConfiguration.entitlements
         CODE_SIGN_STYLE: Automatic
         SWIFT_STRICT_CONCURRENCY: complete
 
@@ -87,6 +88,7 @@ targets:
         INFOPLIST_FILE: ShieldAction/Info.plist
         SWIFT_VERSION: "6.0"
         TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_ENTITLEMENTS: ShieldAction/ShieldAction.entitlements
         CODE_SIGN_STYLE: Automatic
         SWIFT_STRICT_CONCURRENCY: complete
 
