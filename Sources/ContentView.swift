@@ -236,6 +236,10 @@ struct ContentView: View {
                 privacyManager.activateCamouflage()
             }
         }
+        .onAppear {
+            UIApplication.shared.applicationSupportsShakeToEdit = false
+            privacyManager.syncCurrentAlternateIcon()
+        }
     }
 
     // MARK: - Periodic Paywall Evaluation

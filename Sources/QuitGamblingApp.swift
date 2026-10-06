@@ -5,17 +5,6 @@ import NetworkExtension
 @main
 struct QuitGamblingApp: App {
 
-    init() {
-        // Disable system 'Shake to Undo' prompt so physical shaking activates camouflage cleanly
-        UIApplication.shared.applicationSupportsShakeToEdit = false
-
-        // Initialize StoreKit 2 native purchases
-        SubscriptionManager.configure()
-
-        Task {
-            await DNSProtectionService.shared.checkStatus()
-        }
-    }
 
     var body: some Scene {
         WindowGroup {

@@ -1071,7 +1071,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = U52XZVLMTC;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1086,7 +1086,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Quit Gambling";
 				INFOPLIST_KEY_CFBundleShortVersionString = 1.1;
-				INFOPLIST_KEY_CFBundleVersion = 17;
+				INFOPLIST_KEY_CFBundleVersion = 18;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -1100,7 +1100,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1239,7 +1239,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = U52XZVLMTC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1260,7 +1260,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Quit Gambling";
 				INFOPLIST_KEY_CFBundleShortVersionString = 1.1;
-				INFOPLIST_KEY_CFBundleVersion = 17;
+				INFOPLIST_KEY_CFBundleVersion = 18;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -1275,7 +1275,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};

@@ -78,11 +78,16 @@ final class PrivacyManager {
             shakeEnabled = UserDefaults.standard.bool(forKey: "isShakeToCamouflageEnabled")
         }
         self.isShakeToCamouflageEnabled = shakeEnabled
-
-        self.currentAlternateIcon = UIApplication.shared.alternateIconName ?? UserDefaults.standard.string(forKey: "savedAlternateIconName")
+        self.currentAlternateIcon = UserDefaults.standard.string(forKey: "savedAlternateIconName")
 
         if shakeEnabled {
             ShakeMotionService.shared.startMonitoring()
+        }
+    }
+
+    func syncCurrentAlternateIcon() {
+        if UIApplication.shared.supportsAlternateIcons {
+            self.currentAlternateIcon = UIApplication.shared.alternateIconName ?? UserDefaults.standard.string(forKey: "savedAlternateIconName")
         }
     }
 

@@ -13,10 +13,7 @@ final class ShakeMotionService {
     private var lastAcceleration: (x: Double, y: Double, z: Double) = (0, 0, 0)
     private var shakeCounter: Int = 0
 
-    private init() {
-        // Safe UIResponder swizzle for hardware / simulator motion events
-        _ = UIResponder.swizzleMotionEndedOnce
-    }
+    private init() {}
 
     // MARK: - CoreMotion Accelerometer Monitoring
 
@@ -76,27 +73,6 @@ final class ShakeMotionService {
 
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: .deviceDidShakeNotification, object: nil)
-        }
-    }
-}
-
-// MARK: - Safe UIResponder Swizzling (Zero Unrecognized Selector Exceptions)
-
-extension UIResponder {
-    static let swizzleMotionEndedOnce: Void = {
-        guard let originalMethod = class_getInstanceMethod(UIResponder.self, #selector(motionEnded(_:with:))),
-              let swizzledMethod = class_getInstanceMethod(UIResponder.self, #selector(qg_motionEnded(_:with:))) else { return }
-        method_exchangeImplementations(originalMethod, swizzledMethod)
-    }()
-
-    @objc func qg_motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        // Forward to original implementation safely on UIResponder
-        qg_motionEnded(motion, with: event)
-
-        if motion == .motionShake {
-            Task { @MainActor in
-                ShakeMotionService.shared.triggerShake()
-            }
         }
     }
 }
