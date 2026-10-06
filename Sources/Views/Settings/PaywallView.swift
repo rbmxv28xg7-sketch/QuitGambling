@@ -1,5 +1,5 @@
 import SwiftUI
-import RevenueCat
+import StoreKit
 
 /// Apple Craftsmanship Paywall for Quit Gambling Pro.
 /// Crystal-clear hierarchy: instant value recognition, prominent side-by-side pricing, and high-converting purchase CTA.
@@ -344,7 +344,7 @@ struct PaywallView: View {
             )
         }
         .task {
-            await subscriptionManager.fetchOfferings()
+            await subscriptionManager.loadProducts()
         }
     }
 
@@ -481,39 +481,26 @@ struct PaywallView: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: - Dynamic Offerings & Packages
+    // MARK: - Dynamic Products & Pricing
 
-    private var annualPackage: Package? {
-        if let pkg = subscriptionManager.currentOffering?.annual { return pkg }
-        return subscriptionManager.currentOffering?.availablePackages.first(where: {
-            $0.packageType == .annual || $0.identifier.localizedCaseInsensitiveContains("annual") || $0.identifier.localizedCaseInsensitiveContains("yearly")
-        })
+    private var annualProduct: Product? {
+        subscriptionManager.annualProduct
     }
 
-    private var monthlyPackage: Package? {
-        if let pkg = subscriptionManager.currentOffering?.monthly { return pkg }
-        return subscriptionManager.currentOffering?.availablePackages.first(where: {
-            $0.packageType == .monthly || $0.identifier.localizedCaseInsensitiveContains("monthly")
-        })
+    private var monthlyProduct: Product? {
+        subscriptionManager.monthlyProduct
     }
 
-    private var lifetimePackage: Package? {
-        if let pkg = subscriptionManager.currentOffering?.lifetime { return pkg }
-        return subscriptionManager.currentOffering?.availablePackages.first(where: {
-            $0.packageType == .lifetime || $0.identifier.localizedCaseInsensitiveContains("lifetime")
-        })
+    private var lifetimeProduct: Product? {
+        subscriptionManager.lifetimeProduct
     }
 
     private var annualMonthlyBreakdown: String {
-        if let pkg = annualPackage {
-            let monthly = (pkg.storeProduct.price as NSDecimalNumber).doubleValue / 12.0
+        if let product = annualProduct {
+            let monthly = (product.price as NSDecimalNumber).doubleValue / 12.0
             let formatter = NumberFormatter()
             formatter.numberStyle = .currency
-            if let pf = pkg.storeProduct.priceFormatter {
-                formatter.locale = pf.locale
-            } else {
-                formatter.locale = Locale.current
-            }
+            formatter.locale = Locale.current
             let str = formatter.string(from: NSNumber(value: monthly)) ?? String(format: "%.2f €", monthly)
             return "\(str) / \("mo".loc)"
         }
@@ -521,15 +508,15 @@ struct PaywallView: View {
     }
 
     private var annualPeriodString: String {
-        if let pkg = annualPackage {
-            return "\(pkg.storeProduct.localizedPriceString) \("billed yearly".loc)"
+        if let product = annualProduct {
+            return "\(product.displayPrice) \("billed yearly".loc)"
         }
         return "29,99 € \("billed yearly".loc)"
     }
 
     private var monthlyPriceString: String {
-        if let pkg = monthlyPackage {
-            return "\(pkg.storeProduct.localizedPriceString) / \("mo".loc)"
+        if let product = monthlyProduct {
+            return "\(product.displayPrice) / \("mo".loc)"
         }
         return "4,99 € / \("mo".loc)"
     }
@@ -539,15 +526,15 @@ struct PaywallView: View {
     }
 
     private var lifetimePriceString: String {
-        if let pkg = lifetimePackage {
-            return "\(pkg.storeProduct.localizedPriceString) \("one-time".loc)"
+        if let product = lifetimeProduct {
+            return "\(product.displayPrice) \("one-time".loc)"
         }
         return "49,99 € \("one-time".loc)"
     }
 
     private var lifetimeOnlyPriceString: String {
-        if let pkg = lifetimePackage {
-            return pkg.storeProduct.localizedPriceString
+        if let product = lifetimeProduct {
+            return product.displayPrice
         }
         return "49,99 €"
     }
@@ -570,44 +557,27 @@ struct PaywallView: View {
         SensoryFeedbackService.shared.selectionClick()
 
         Task {
-            let targetPackage: Package?
+            let productId: String
             switch selectedPackageId {
-            case "annual": targetPackage = annualPackage
-            case "monthly": targetPackage = monthlyPackage
-            case "lifetime": targetPackage = lifetimePackage
-            default: targetPackage = annualPackage
+            case "annual": productId = SubscriptionManager.yearlyId
+            case "monthly": productId = SubscriptionManager.monthlyId
+            case "lifetime": productId = SubscriptionManager.lifetimeId
+            default: productId = SubscriptionManager.yearlyId
             }
 
-            if let pkg = targetPackage {
-                do {
-                    let success = try await subscriptionManager.purchase(package: pkg)
-                    if success {
-                        SensoryFeedbackService.shared.successFeedback()
-                        alertMessage = "Welcome to Quit Gambling Pro. All features are now unlocked.".loc
-                        showAlert = true
-                    }
-                } catch {
-                    SensoryFeedbackService.shared.errorFeedback()
-                    alertMessage = String(format: "%@: %@", "Unable to complete purchase".loc, error.localizedDescription)
+            do {
+                let success = try await subscriptionManager.purchase(productId: productId)
+                if success {
+                    SensoryFeedbackService.shared.successFeedback()
+                    alertMessage = "Welcome to Quit Gambling Pro. All features are now unlocked.".loc
                     showAlert = true
                 }
-                isPurchasing = false
-                return
+            } catch {
+                SensoryFeedbackService.shared.errorFeedback()
+                alertMessage = String(format: "%@: %@", "Unable to complete purchase".loc, error.localizedDescription)
+                showAlert = true
             }
-
-            #if DEBUG
-            // Fallback for simulation / judge testing if no live package is attached
-            subscriptionManager.toggleDemoPro()
-            SensoryFeedbackService.shared.successFeedback()
-            alertMessage = "Quit Gambling Pro (Simulation unlocked)".loc
-            showAlert = true
             isPurchasing = false
-            #else
-            SensoryFeedbackService.shared.errorFeedback()
-            alertMessage = "Unable to complete purchase".loc
-            showAlert = true
-            isPurchasing = false
-            #endif
         }
     }
 

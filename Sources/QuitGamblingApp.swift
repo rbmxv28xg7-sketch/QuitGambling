@@ -9,7 +9,7 @@ struct QuitGamblingApp: App {
         // Disable system 'Shake to Undo' prompt so physical shaking activates camouflage cleanly
         UIApplication.shared.applicationSupportsShakeToEdit = false
 
-        // Initialize RevenueCat SDK for Shipathon 2026
+        // Initialize StoreKit 2 native purchases
         SubscriptionManager.configure()
 
         Task {

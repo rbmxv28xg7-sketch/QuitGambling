@@ -5,20 +5,16 @@ options:
     iOS: "18.0"
   xcodeVersion: "16.0"
   generateEmptyDirectories: true
-packages:
-  RevenueCat:
-    url: https://github.com/RevenueCat/purchases-ios.git
-    from: "5.0.0"
 settings:
   base:
     SWIFT_VERSION: "6.0"
     TARGETED_DEVICE_FAMILY: "1,2"
     DEVELOPMENT_TEAM: "U52XZVLMTC"
-    CURRENT_PROJECT_VERSION: "16"
+    CURRENT_PROJECT_VERSION: "17"
     MARKETING_VERSION: "1.1"
     INFOPLIST_KEY_CFBundleDisplayName: "Quit Gambling"
     INFOPLIST_KEY_CFBundleShortVersionString: "1.1"
-    INFOPLIST_KEY_CFBundleVersion: "16"
+    INFOPLIST_KEY_CFBundleVersion: "17"
     INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.healthcare-fitness"
     INFOPLIST_KEY_UIRequiresFullScreen: true
     INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: false
@@ -30,7 +26,6 @@ targets:
     sources:
       - path: Sources
     dependencies:
-      - package: RevenueCat
       - target: QuitGamblingShieldConfiguration
         embed: true
       - target: QuitGamblingShieldAction

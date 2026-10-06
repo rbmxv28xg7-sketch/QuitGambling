@@ -1,130 +1,122 @@
 import SwiftUI
-import RevenueCat
+import StoreKit
 
-/// Service managing RevenueCat in-app subscriptions, entitlements, and paywall offerings for Quit Gambling Pro.
+/// Custom StoreKit errors
+enum StoreError: LocalizedError {
+    case productNotFound
+    case failedVerification
+
+    var errorDescription: String? {
+        switch self {
+        case .productNotFound:
+            return "The requested product was not found.".loc
+        case .failedVerification:
+            return "Transaction verification failed.".loc
+        }
+    }
+}
+
+/// Service managing native StoreKit 2 in-app purchases, subscriptions, entitlements, and restore.
 @Observable
 @MainActor
-final class SubscriptionManager: NSObject, PurchasesDelegate {
+final class SubscriptionManager {
+
+    // MARK: - Product IDs matching App Store Connect
+    static let yearlyId = "yearly"
+    static let monthlyId = "monthly"
+    static let lifetimeId = "lifetime"
+    static let allProductIds: Set<String> = [yearlyId, monthlyId, lifetimeId]
 
     // MARK: - State Properties
-
     var isPro: Bool = false
-    var currentOffering: Offering? = nil
+    var products: [Product] = []
     var isLoading: Bool = false
     var errorMessage: String? = nil
 
-    // RevenueCat Public API Key (App-specific Apple key starting with 'appl_')
-    static var apiKey: String {
-        get {
-            UserDefaults.standard.string(forKey: "revenuecat_public_api_key") ?? defaultApiKey
-        }
-        set {
-            let trimmed = newValue.trimmingCharacters(in: .whitespacesAndNewlines)
-            UserDefaults.standard.set(trimmed, forKey: "revenuecat_public_api_key")
-        }
+    nonisolated(unsafe) private var updateListenerTask: Task<Void, Never>? = nil
+
+    // MARK: - Computed Product Helpers
+    var annualProduct: Product? {
+        products.first(where: { $0.id == Self.yearlyId })
     }
 
-    static let defaultApiKey = "appl_demo_quitgambling_shipathon"
+    var monthlyProduct: Product? {
+        products.first(where: { $0.id == Self.monthlyId })
+    }
 
-    override init() {
-        super.init()
+    var lifetimeProduct: Product? {
+        products.first(where: { $0.id == Self.lifetimeId })
+    }
+
+    // Backwards compatibility accessor
+    static var apiKey: String {
+        get { UserDefaults.standard.string(forKey: "revenuecat_public_api_key") ?? "" }
+        set { UserDefaults.standard.set(newValue, forKey: "revenuecat_public_api_key") }
+    }
+
+    init() {
         let isDirectPro = UserDefaults.standard.bool(forKey: "isProSubscribed")
         let isPromo = UserDefaults.standard.bool(forKey: "isPromoProUnlocked")
         self.isPro = isDirectPro || isPromo
+
+        startTransactionListener()
+    }
+
+    deinit {
+        updateListenerTask?.cancel()
     }
 
     // MARK: - Configuration Lifecycle
-
     static func configure() {
-        #if DEBUG
-        Purchases.logLevel = .debug
-        #else
-        Purchases.logLevel = .warn
-        #endif
-        Purchases.configure(withAPIKey: apiKey)
+        // Native StoreKit 2 connects directly to Apple's StoreKit servers without third-party SDKs
     }
 
     func attachDelegate() {
-        if Purchases.isConfigured {
-            Purchases.shared.delegate = self
+        if updateListenerTask == nil {
+            startTransactionListener()
         }
     }
 
-    // MARK: - PurchasesDelegate
+    // MARK: - StoreKit 2 Transaction Listener
+    func startTransactionListener() {
+        guard updateListenerTask == nil else { return }
 
-    nonisolated func purchases(_ purchases: Purchases, receivedUpdated customerInfo: CustomerInfo) {
-        Task { @MainActor in
-            self.handleCustomerInfo(customerInfo)
-        }
-    }
-
-    func updateCustomerStatus() async {
-        guard Purchases.isConfigured else { return }
-
-        isLoading = true
-        defer { isLoading = false }
-
-        do {
-            let customerInfo = try await Purchases.shared.customerInfo()
-            handleCustomerInfo(customerInfo)
-        } catch {
-            // Keep local state if offline
-            print("RevenueCat customerInfo fetch: \(error.localizedDescription)")
-        }
-    }
-
-    func fetchOfferings() async {
-        guard Purchases.isConfigured else { return }
-
-        isLoading = true
-        defer { isLoading = false }
-
-        do {
-            let offerings = try await Purchases.shared.offerings()
-            self.currentOffering = offerings.current
-            print("RevenueCat offerings loaded: \(String(describing: offerings.current?.identifier)), packages: \(offerings.current?.availablePackages.count ?? 0)")
-        } catch {
-            print("RevenueCat offerings fetch: \(error.localizedDescription)")
-        }
-    }
-
-    // MARK: - Purchases & Restore
-
-    func purchase(package: Package) async throws -> Bool {
-        guard !isPro else { return true }
-        isLoading = true
-        defer { isLoading = false }
-
-        do {
-            let result = try await Purchases.shared.purchase(package: package)
-            if !result.userCancelled {
-                handleCustomerInfo(result.customerInfo)
-                return self.isPro
+        updateListenerTask = Task.detached { [weak self] in
+            for await result in Transaction.updates {
+                guard let self else { break }
+                do {
+                    let transaction = try self.checkVerified(result)
+                    await self.updateCustomerStatus()
+                    await transaction.finish()
+                } catch {
+                    print("StoreKit 2 transaction update failed verification: \(error.localizedDescription)")
+                }
             }
-            return false
-        } catch {
-            self.errorMessage = error.localizedDescription
-            throw error
         }
     }
 
-    func restorePurchases() async throws -> Bool {
+    // MARK: - Products Fetching
+    func loadProducts() async {
         isLoading = true
         defer { isLoading = false }
 
         do {
-            let customerInfo = try await Purchases.shared.restorePurchases()
-            handleCustomerInfo(customerInfo)
-            return self.isPro
+            let loadedProducts = try await Product.products(for: Self.allProductIds)
+            self.products = loadedProducts.sorted(by: { $0.price < $1.price })
+            print("StoreKit 2 products loaded: \(loadedProducts.map { "\($0.id): \($0.displayPrice)" })")
         } catch {
+            print("StoreKit 2 products load error: \(error.localizedDescription)")
             self.errorMessage = error.localizedDescription
-            throw error
         }
     }
 
-    // MARK: - Helper
+    /// Backwards compatibility alias
+    func fetchOfferings() async {
+        await loadProducts()
+    }
 
-    func handleCustomerInfo(_ customerInfo: CustomerInfo) {
+    // MARK: - Entitlements & Customer Status
+    func updateCustomerStatus() async {
         // If user unlocked via promo code, keep Pro state active
         if isPromoUnlocked {
             self.isPro = true
@@ -132,26 +124,102 @@ final class SubscriptionManager: NSObject, PurchasesDelegate {
             return
         }
 
-        // "quit_gambling_pro", "pro", or "premium" entitlement identifier
-        let hasActivePro = customerInfo.entitlements["quit_gambling_pro"]?.isActive == true ||
-                           customerInfo.entitlements["pro"]?.isActive == true ||
-                           customerInfo.entitlements["premium"]?.isActive == true
+        var hasActivePro = false
+
+        for await result in Transaction.currentEntitlements {
+            do {
+                let transaction = try checkVerified(result)
+                if Self.allProductIds.contains(transaction.productID) && transaction.revocationDate == nil {
+                    if let expirationDate = transaction.expirationDate {
+                        if expirationDate > Date() {
+                            hasActivePro = true
+                            break
+                        }
+                    } else {
+                        // Non-consumable lifetime purchase
+                        hasActivePro = true
+                        break
+                    }
+                }
+            } catch {
+                print("Entitlement verification error: \(error.localizedDescription)")
+            }
+        }
 
         self.isPro = hasActivePro
         UserDefaults.standard.set(hasActivePro, forKey: "isProSubscribed")
     }
 
-    /// Whether Pro was activated via an authorized Promo Code
+    // MARK: - Purchases & Restore
+    func purchase(product: Product) async throws -> Bool {
+        guard !isPro else { return true }
+        isLoading = true
+        defer { isLoading = false }
+
+        let result = try await product.purchase()
+
+        switch result {
+        case .success(let verification):
+            let transaction = try checkVerified(verification)
+            await updateCustomerStatus()
+            await transaction.finish()
+            return self.isPro
+
+        case .userCancelled:
+            return false
+
+        case .pending:
+            return false
+
+        @unknown default:
+            return false
+        }
+    }
+
+    func purchase(productId: String) async throws -> Bool {
+        guard !isPro else { return true }
+
+        var targetProduct = products.first(where: { $0.id == productId })
+        if targetProduct == nil {
+            let fetched = try await Product.products(for: [productId])
+            targetProduct = fetched.first
+        }
+
+        guard let product = targetProduct else {
+            throw StoreError.productNotFound
+        }
+
+        return try await purchase(product: product)
+    }
+
+    func restorePurchases() async throws -> Bool {
+        isLoading = true
+        defer { isLoading = false }
+
+        try await AppStore.sync()
+        await updateCustomerStatus()
+        return self.isPro
+    }
+
+    // MARK: - Verification Helper
+    nonisolated func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
+        switch result {
+        case .unverified(_, let error):
+            throw error
+        case .verified(let safe):
+            return safe
+        }
+    }
+
+    // MARK: - Promo Code Support
     var isPromoUnlocked: Bool {
         UserDefaults.standard.bool(forKey: "isPromoProUnlocked")
     }
 
-    /// Returns the redeemed promo code name if present
     var redeemedPromoCode: String? {
         UserDefaults.standard.string(forKey: "redeemed_promo_code")
     }
 
-    /// Redeems an official promo code (SHIPATON2026) to unlock Pro features permanently
     @discardableResult
     func unlockWithPromoCode(_ code: String) -> Bool {
         let cleaned = code.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
@@ -165,7 +233,6 @@ final class SubscriptionManager: NSObject, PurchasesDelegate {
         return false
     }
 
-    /// Reset promo unlock status (e.g. for testing)
     func resetPromoUnlock() {
         UserDefaults.standard.removeObject(forKey: "isPromoProUnlocked")
         UserDefaults.standard.removeObject(forKey: "redeemed_promo_code")
@@ -173,7 +240,6 @@ final class SubscriptionManager: NSObject, PurchasesDelegate {
         self.isPro = false
     }
 
-    /// Development/Demo bypass for testing and Shipathon judges
     func toggleDemoPro() {
         isPro.toggle()
         UserDefaults.standard.set(isPro, forKey: "isProSubscribed")

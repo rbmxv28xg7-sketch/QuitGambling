@@ -14,7 +14,6 @@
 		03D36039684B8CFD728AC0B1 /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E030009A5738FA6A008A68 /* TrackerView.swift */; };
 		0591FF383BEF0ED574D66959 /* MinigameSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22608E32108D2F00457EE0B7 /* MinigameSessionManager.swift */; };
 		08998D4DF441C41EB561F7A1 /* sound_1_harmony.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9208389124C26835FF6DE74C /* sound_1_harmony.m4a */; };
-		08CEDD18A89861886E8912BB /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1732D39C7DF97527D62DF5 /* RevenueCat */; };
 		0C6E65DABDBDF2F33F84865B /* FreedomScoreCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8AF051207CCB8DAF1C9C6 /* FreedomScoreCalculator.swift */; };
 		0E4AA3D129BB06E187B7BC19 /* NotesIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 133200230615BED21B5D45D1 /* NotesIcon60x60@2x.png */; };
 		0EBAE8A081127A5CDFA3B365 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675AD287D57AA19BC7A84E16 /* OnboardingView.swift */; };
@@ -347,17 +346,6 @@
 		FED1128E360BA6A1DA30241D /* QuitGamblingShieldAction.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = QuitGamblingShieldAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF61D978F797B7D1D30F56C /* DailyCheckInSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCheckInSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		35D88CA0031C2CCEB3E40D40 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08CEDD18A89861886E8912BB /* RevenueCat in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		061297805844D287EA494369 /* Models */ = {
@@ -719,7 +707,6 @@
 			buildPhases = (
 				DA873F7225A897B48F29A7FD /* Sources */,
 				EB071433E9A11FD335C81499 /* Resources */,
-				35D88CA0031C2CCEB3E40D40 /* Frameworks */,
 				F372A97C8479D6B2D9830051 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -731,7 +718,6 @@
 			);
 			name = QuitGambling;
 			packageProductDependencies = (
-				0E1732D39C7DF97527D62DF5 /* RevenueCat */,
 			);
 			productName = QuitGambling;
 			productReference = 4A0D46C330DE3307D2CF907C /* QuitGambling.app */;
@@ -808,9 +794,6 @@
 			);
 			mainGroup = FAFFDE9C737B517537FDA500;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				6413F5F5173254ECA2561A37 /* XCRemoteSwiftPackageReference "purchases-ios" */,
-			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4C6453F499BCA09709645520 /* Products */;
 			projectDirPath = "";
@@ -1088,7 +1071,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = U52XZVLMTC;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1103,7 +1086,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Quit Gambling";
 				INFOPLIST_KEY_CFBundleShortVersionString = 1.1;
-				INFOPLIST_KEY_CFBundleVersion = 16;
+				INFOPLIST_KEY_CFBundleVersion = 17;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -1256,7 +1239,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = U52XZVLMTC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1277,7 +1260,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Quit Gambling";
 				INFOPLIST_KEY_CFBundleShortVersionString = 1.1;
-				INFOPLIST_KEY_CFBundleVersion = 16;
+				INFOPLIST_KEY_CFBundleVersion = 17;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -1410,25 +1393,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		6413F5F5173254ECA2561A37 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0E1732D39C7DF97527D62DF5 /* RevenueCat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6413F5F5173254ECA2561A37 /* XCRemoteSwiftPackageReference "purchases-ios" */;
-			productName = RevenueCat;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB72D5B60588E69D7D991965 /* Project object */;
 }
